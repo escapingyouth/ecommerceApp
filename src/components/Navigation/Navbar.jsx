@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useRef } from 'react';
+import { useState } from 'react';
 
 import { ReactComponent as Logo } from '../../assets/svgs/crown.svg';
 import './navbar.scss';
@@ -8,12 +8,12 @@ import PersonIcon from '@mui/icons-material/Person';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 const Navbar = () => {
-	const navRef = useRef();
+	const [menuOpen, setMenuOpen] = useState(false);
 
-	const handleShowNavMenu = (e) => {
-		e.target.classList.toggle('active');
-		navRef.current.classList.toggle('active');
+	const toggleMenu = (e) => {
+		setMenuOpen(!menuOpen);
 	};
+
 	return (
 		<nav className='navbar'>
 			<div className='logo-container'>
@@ -21,7 +21,7 @@ const Navbar = () => {
 					<Logo className='logo' />
 				</Link>
 			</div>
-			<ul className='nav-menu' ref={navRef}>
+			<ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
 				<li className='nav-link'>
 					<Link className='nav-item' to='/womens'>
 						Womens
@@ -51,7 +51,10 @@ const Navbar = () => {
 			<div className='right-menu'>
 				<PersonIcon fontSize='medium' className='person-icon' />
 				<ShoppingBagIcon fontSize='medium' className='bag-icon' />
-				<div className='hamburger' onClick={handleShowNavMenu}>
+				<div
+					className={`hamburger ${menuOpen ? 'active' : ''}`}
+					onClick={toggleMenu}
+				>
 					<span className='bar'></span>
 					<span className='bar'></span>
 					<span className='bar'></span>
