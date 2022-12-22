@@ -1,5 +1,5 @@
-import Navbar from '../Navigation/Navbar';
-import Slider from '../Slider/Slider';
+import Navbar from './Navigation/Navbar';
+import Slider from './Slider/Slider';
 
 const Header = () => {
 	return (

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-import { ReactComponent as Logo } from '../../assets/svgs/crown.svg';
+import { ReactComponent as Logo } from '../../../assets/svgs/crown.svg';
 import './navbar.scss';
 
 import PersonIcon from '@mui/icons-material/Person';
