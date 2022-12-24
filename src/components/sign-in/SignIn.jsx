@@ -5,8 +5,7 @@ import ButtonContainer from '../form-input/ButtonContainer';
 
 import {
 	signInWithGooglePopup,
-	signInAuthUserWithEmailAndPassword,
-	createUserDocumentFromAuth
+	signInAuthUserWithEmailAndPassword
 } from '../../utilities/firebaseConfig';
 
 const SignIn = ({ handleClick, handleClose }) => {
