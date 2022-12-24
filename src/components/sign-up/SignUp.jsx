@@ -1,6 +1,13 @@
 import { useState } from 'react';
+
 import FormInput from '../form-input/FormInput';
 import ButtonContainer from '../form-input/ButtonContainer';
+
+import {
+	signInWithGooglePopup,
+	createAuthUserWithEmailAndPassword,
+	createUserDocumentFromAuth
+} from '../../utilities/firebaseConfig';
 
 const defaultFormFields = {
 	name: '',
@@ -8,7 +15,7 @@ const defaultFormFields = {
 	password: '',
 	confirmPassword: ''
 };
-const SignUp = () => {
+const SignUp = ({ handleClose }) => {
 	const [form, setForm] = useState(defaultFormFields);
 	const { name, email, password, confirmPassword } = form;
 
@@ -16,9 +23,37 @@ const SignUp = () => {
 		const { name, value } = e.target;
 		setForm({ ...form, [name]: value });
 	};
-
-	const handleSubmit = (e) => {
+	const resetFormFields = () => {
+		setForm(defaultFormFields);
+	};
+	const handleSubmit = async (e) => {
 		e.preventDefault();
+
+		if (password !== confirmPassword) {
+			alert("Passwords don't match!");
+			return;
+		}
+
+		try {
+			const { user } = await createAuthUserWithEmailAndPassword(
+				email,
+				password
+			);
+			await createUserDocumentFromAuth(user, { name });
+			resetFormFields();
+			handleClose();
+		} catch (error) {
+			if (error.code === 'auth/email-already-in-use') {
+				alert('Email already in use');
+			} else {
+				console.log('User creation encountered an error', error);
+			}
+		}
+	};
+
+	const signInWithGoogle = async () => {
+		await signInWithGooglePopup();
+		handleClose();
 	};
 	return (
 		<form onSubmit={handleSubmit}>
@@ -63,7 +98,7 @@ const SignUp = () => {
 					onChange={handleChange}
 				/>
 			</div>
-			<ButtonContainer title='Register' />
+			<ButtonContainer title='Register' signInWithGoogle={signInWithGoogle} />
 		</form>
 	);
 };

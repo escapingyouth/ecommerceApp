@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { UserContext } from '../../../contexts/UserContext';
 
 import { ReactComponent as Logo } from '../../../assets/svgs/crown.svg';
 import './navbar.scss';
 
 import PersonIcon from '@mui/icons-material/Person';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+
+import { signOutUser } from '../../../utilities/firebaseConfig';
 
 import AuthBox from '../../modal/AuthBox';
 
@@ -19,6 +22,7 @@ const Navbar = () => {
 	const toggleMenu = (e) => {
 		setMenuOpen(!menuOpen);
 	};
+	const { currentUser } = useContext(UserContext);
 
 	return (
 		<>
@@ -56,11 +60,18 @@ const Navbar = () => {
 					</li>
 				</ul>
 				<div className='right-menu'>
-					<PersonIcon
-						fontSize='medium'
-						className='person-icon'
-						onClick={handleOpen}
-					/>
+					{currentUser ? (
+						<span className='sign-out' onClick={signOutUser}>
+							SIGN OUT
+						</span>
+					) : (
+						<PersonIcon
+							fontSize='medium'
+							className='person-icon'
+							onClick={handleOpen}
+						/>
+					)}
+
 					<ShoppingBagIcon fontSize='medium' className='bag-icon' />
 					<div
 						className={`hamburger ${menuOpen ? 'active' : ''}`}

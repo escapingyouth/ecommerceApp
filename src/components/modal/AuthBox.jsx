@@ -29,10 +29,12 @@ const AuthBox = ({ open, handleClose }) => {
 	let component;
 	switch (currentComponent) {
 		case 'SignIn':
-			component = <SignIn handleClick={handleClick} />;
+			component = (
+				<SignIn handleClick={handleClick} handleClose={handleClose} />
+			);
 			break;
 		case 'SignUp':
-			component = <SignUp />;
+			component = <SignUp handleClose={handleClose} />;
 			break;
 		default:
 			component = null;

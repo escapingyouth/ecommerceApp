@@ -101,6 +101,30 @@
 	align-items: center;
 	gap: 1rem;
 
+	.sign-out {
+		color: #fff;
+		font-size: 0.9rem;
+		font-weight: bold;
+		cursor: pointer;
+
+		&:hover {
+			color: #007bff;
+		}
+	}
+
+	.person-icon,
+	.bag-icon {
+		color: #fff;
+		cursor: pointer;
+
+		&:hover {
+			color: #007bff;
+		}
+	}
+	.bag-icon {
+		margin-bottom: 0.3rem;
+	}
+
 	.hamburger {
 		display: none;
 		cursor: pointer;
@@ -126,15 +150,5 @@
 		.hamburger.active .bar:nth-child(3) {
 			transform: translateY(-8px) rotate(-45deg);
 		}
-	}
-}
-
-.person-icon,
-.bag-icon {
-	color: #fff;
-	cursor: pointer;
-
-	&:hover {
-		color: #007bff;
 	}
 }
