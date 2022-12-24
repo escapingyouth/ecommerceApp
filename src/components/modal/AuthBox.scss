@@ -52,25 +52,25 @@
 				font-size: 1rem;
 				color: #495057;
 				text-transform: uppercase;
+				border: none;
+				background-color: transparent;
 
-				&:focus,
-				&:active,
+				&.active {
+					color: #000;
+				}
+
 				&:hover {
 					color: #000;
 				}
-				&:focus::after,
-				&:active::after {
-					width: 100%;
-				}
 
-				&::after {
+				&.active::after {
 					content: '';
 					display: block;
 					position: absolute;
 					height: 2px;
 					z-index: 3;
 					bottom: -0.35rem;
-					width: 0%;
+					width: 100%;
 					background-color: #000;
 					transition: all ease-in-out 200ms;
 				}

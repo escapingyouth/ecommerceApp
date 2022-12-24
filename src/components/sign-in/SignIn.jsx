@@ -2,7 +2,7 @@ import { useState } from 'react';
 import FormInput from '../form-input/FormInput';
 import ButtonContainer from '../form-input/ButtonContainer';
 
-const SignIn = () => {
+const SignIn = ({ handleClick }) => {
 	const [form, setForm] = useState({ email: '', password: '' });
 	const { email, password } = form;
 
@@ -38,7 +38,9 @@ const SignIn = () => {
 				/>
 			</div>
 			<ButtonContainer title='Sign In' />
-			<div className='new-user'>New User? Register </div>
+			<div className='new-user' onClick={() => handleClick('SignUp', 1)}>
+				New User? Register
+			</div>
 		</form>
 	);
 };

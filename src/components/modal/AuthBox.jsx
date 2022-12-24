@@ -6,23 +6,30 @@ import { useState } from 'react';
 import SignIn from '../sign-in/SignIn';
 import SignUp from '../sign-up/SignUp';
 
-import { Link } from 'react-router-dom';
-
 import { ReactComponent as CloseIcon } from '../../assets/svgs/cross.svg';
 
 import './AuthBox.scss';
 
 const AuthBox = ({ open, handleClose }) => {
 	const [currentComponent, setCurrentComponent] = useState('SignIn');
+	const [activeTab, setActiveTab] = useState(0);
 
-	const handleClick = (component) => {
+	const handleComponentChange = (component) => {
 		setCurrentComponent(component);
+	};
+	const handleTabClick = (index) => {
+		setActiveTab(index);
+	};
+
+	const handleClick = (component, index) => {
+		handleComponentChange(component);
+		handleTabClick(index);
 	};
 
 	let component;
 	switch (currentComponent) {
 		case 'SignIn':
-			component = <SignIn />;
+			component = <SignIn handleClick={handleClick} />;
 			break;
 		case 'SignUp':
 			component = <SignUp />;
@@ -47,14 +54,20 @@ const AuthBox = ({ open, handleClose }) => {
 						</div>
 						<div className='header_two'>
 							<div className='link-box'>
-								<Link className='sign-in' onClick={() => handleClick('SignIn')}>
+								<button
+									className={`sign-in ${activeTab === 0 ? 'active' : ''}`}
+									onClick={() => handleClick('SignIn', 0)}
+								>
 									Sign in
-								</Link>
+								</button>
 							</div>
 							<div className='link-box'>
-								<Link className='sign-up' onClick={() => handleClick('SignUp')}>
+								<button
+									className={`sign-up ${activeTab === 1 ? 'active' : ''}`}
+									onClick={() => handleClick('SignUp', 1)}
+								>
 									I'm new here
-								</Link>
+								</button>
 							</div>
 						</div>
 					</div>
