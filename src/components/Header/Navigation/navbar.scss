@@ -101,19 +101,9 @@
 	align-items: center;
 	gap: 1rem;
 
-	.sign-out {
-		color: #fff;
-		font-size: 0.9rem;
-		font-weight: bold;
-		cursor: pointer;
-
-		&:hover {
-			color: #007bff;
-		}
-	}
-
 	.person-icon,
-	.bag-icon {
+	.bag-icon,
+	.sign-out-icon {
 		color: #fff;
 		cursor: pointer;
 

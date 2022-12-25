@@ -7,10 +7,12 @@ import './navbar.scss';
 
 import PersonIcon from '@mui/icons-material/Person';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 import { signOutUser } from '../../../utilities/firebaseConfig';
 
-import AuthBox from '../../modal/AuthBox';
+import Auth from '../../auth/Auth';
+import ModalBox from '../../modal/ModalBox';
 
 const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -61,9 +63,11 @@ const Navbar = () => {
 				</ul>
 				<div className='right-menu'>
 					{currentUser ? (
-						<span className='sign-out' onClick={signOutUser}>
-							SIGN OUT
-						</span>
+						<LogoutIcon
+							className='sign-out-icon'
+							fontSize='medium'
+							onClick={signOutUser}
+						></LogoutIcon>
 					) : (
 						<PersonIcon
 							fontSize='medium'
@@ -83,7 +87,9 @@ const Navbar = () => {
 					</div>
 				</div>
 			</nav>
-			<AuthBox open={open} handleClose={handleClose} />
+			<ModalBox open={open} handleClose={handleClose}>
+				<Auth open={open} handleClose={handleClose} />
+			</ModalBox>
 		</>
 	);
 };

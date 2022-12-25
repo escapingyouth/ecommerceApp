@@ -1,11 +1,10 @@
 import Navbar from './navigation/Navbar';
-import Slider from './slider/Slider';
-
+import HeaderSlider from './header-slider/HeaderSlider';
 const Header = () => {
 	return (
 		<header>
 			<Navbar />
-			<Slider />
+			<HeaderSlider />
 		</header>
 	);
 };
