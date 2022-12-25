@@ -9,25 +9,31 @@ import 'swiper/css/navigation';
 // Import Swiper modules
 import { Keyboard, Autoplay, Pagination, Navigation } from 'swiper';
 
-const Slider = ({ children }) => {
+const Slider = ({
+	children,
+	slidesPerView,
+	slidesPerGroup,
+	loop,
+	autoplay,
+	breakpoints
+}) => {
 	return (
 		<>
 			<Swiper
 				spaceBetween={30}
-				centeredSlides={true}
-				autoplay={{
-					delay: 7500,
-					disableOnInteraction: false
-				}}
+				slidesPerView={slidesPerView}
+				slidesPerGroup={slidesPerGroup}
+				loop={loop}
 				keyboard={{
 					enabled: true
 				}}
+				autoplay={autoplay}
 				pagination={{
 					clickable: true
 				}}
+				breakpoints={breakpoints}
 				navigation={true}
 				modules={[Keyboard, Autoplay, Pagination, Navigation]}
-				className='mySwiper'
 			>
 				{children}
 			</Swiper>

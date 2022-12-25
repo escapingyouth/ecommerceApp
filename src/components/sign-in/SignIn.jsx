@@ -60,7 +60,7 @@ const SignIn = ({ handleClick, handleClose }) => {
 					onChange={handleChange}
 				/>
 				<FormInput
-					label='password'
+					label='Password'
 					labelFor='password'
 					type='password'
 					required
