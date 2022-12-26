@@ -2,8 +2,8 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 import './product-card.scss';
 
-const ProductCard = ({ shoe }) => {
-	const { name, price, primaryImage, secondaryImage } = shoe;
+const ProductCard = ({ product }) => {
+	const { name, price, primaryImage, secondaryImage } = product;
 	return (
 		<>
 			<article className='product-container'>

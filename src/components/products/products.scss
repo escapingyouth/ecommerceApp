@@ -8,36 +8,39 @@
 		margin-bottom: 2rem;
 	}
 
-	.swiper {
-		height: 35rem;
-		width: 95%;
-		margin: 0 auto;
-		padding: 1em;
+	.products-catalogue {
+		margin-bottom: 5rem;
+		.swiper {
+			height: 35rem;
+			width: 95%;
+			margin: 0 auto;
+			padding: 1em;
 
-		@media (min-width: 29em) and (max-width: 40em) {
-			width: 80%;
+			@media (min-width: 29em) and (max-width: 40em) {
+				width: 80%;
+			}
+			@media (min-width: 35em) and (max-width: 40em) {
+				width: 70%;
+			}
 		}
-		@media (min-width: 35em) and (max-width: 40em) {
-			width: 70%;
-		}
-	}
-	.swiper-slide {
-		padding: 1em;
-		position: relative;
-		height: 90%;
+		.swiper-slide {
+			padding: 1em;
+			position: relative;
+			height: 90%;
 
-		&:hover {
-			box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.25);
+			&:hover {
+				box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.25);
+			}
 		}
-	}
 
-	.swiper-button-prev:after,
-	.swiper-button-next:after {
-		font-size: 1rem;
-		font-weight: bold;
-		color: #000;
-	}
-	.swiper-pagination-bullet-active {
-		background-color: #000;
+		.swiper-button-prev:after,
+		.swiper-button-next:after {
+			font-size: 1rem;
+			font-weight: bold;
+			color: #000;
+		}
+		.swiper-pagination-bullet-active {
+			background-color: #000;
+		}
 	}
 }
