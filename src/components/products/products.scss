@@ -9,13 +9,21 @@
 	}
 
 	.swiper {
-		height: 70vh;
-		width: 90%;
+		height: 35rem;
+		width: 95%;
 		margin: 0 auto;
 		padding: 1em;
+
+		@media (min-width: 29em) and (max-width: 40em) {
+			width: 80%;
+		}
+		@media (min-width: 35em) and (max-width: 40em) {
+			width: 70%;
+		}
 	}
 	.swiper-slide {
-		padding: 2em;
+		padding: 1em;
+		position: relative;
 		height: 90%;
 
 		&:hover {
@@ -31,56 +39,5 @@
 	}
 	.swiper-pagination-bullet-active {
 		background-color: #000;
-	}
-	.product-slide-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-		height: 100%;
-		.product-details-container {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			width: 100%;
-
-			.product-details {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				height: 100%;
-
-				h3 {
-					font-size: 0.9rem;
-					font-weight: 500;
-					text-transform: uppercase;
-				}
-				p {
-					font-size: 0.9rem;
-				}
-			}
-
-			.product-icon-container {
-				background-color: #000;
-				padding: 0.8em;
-				cursor: pointer;
-
-				&:hover,
-				&:focus {
-					background-color: #007bff;
-				}
-
-				.product-icon {
-					color: #fff;
-				}
-			}
-		}
-	}
-
-	.product-slide-image {
-		width: 100%;
-		height: 50%;
-		object-fit: contain;
-		object-position: center;
 	}
 }

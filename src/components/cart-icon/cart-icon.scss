@@ -1,0 +1,28 @@
+.cart-icon-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		cursor: pointer;
+		.item-count {
+			color: #fff;
+		}
+		.bag-icon {
+			color: #007bff;
+		}
+	}
+	.bag-icon {
+		color: #fff;
+		font-size: 1.8rem;
+	}
+
+	.item-count {
+		position: absolute;
+		font-size: 0.75rem;
+		bottom: 9px;
+		color: #000;
+		font-weight: bold;
+	}
+}

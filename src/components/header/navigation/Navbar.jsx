@@ -6,8 +6,8 @@ import { ReactComponent as Logo } from '../../../assets/svgs/crown.svg';
 import './navbar.scss';
 
 import PersonIcon from '@mui/icons-material/Person';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import LogoutIcon from '@mui/icons-material/Logout';
+import CartIcon from '../../cart-icon/CartIcon';
 
 import { signOutUser } from '../../../utilities/firebaseConfig';
 
@@ -70,13 +70,13 @@ const Navbar = () => {
 						></LogoutIcon>
 					) : (
 						<PersonIcon
-							fontSize='medium'
+							fontSize='large'
 							className='person-icon'
 							onClick={handleOpen}
 						/>
 					)}
 
-					<ShoppingBagIcon fontSize='medium' className='bag-icon' />
+					<CartIcon />
 					<div
 						className={`hamburger ${menuOpen ? 'active' : ''}`}
 						onClick={toggleMenu}

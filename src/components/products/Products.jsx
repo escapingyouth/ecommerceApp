@@ -2,24 +2,14 @@ import { SwiperSlide } from 'swiper/react';
 import Slider from '../slider/Slider';
 
 import { shoes } from './ProductList';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+
+import ProductCard from '../product-card/ProductCard';
 import './products.scss';
 
 const Products = () => {
 	const renderedShoes = shoes.map((shoe, index) => (
-		<SwiperSlide key={index}>
-			<article className='product-slide-container'>
-				<img src={shoe.src} alt={shoe.alt} className='product-slide-image' />
-				<div className='product-details-container'>
-					<div className='product-details'>
-						<h3 className='product-name'>{shoe.name}</h3>
-						<p className='product-price'>{shoe.price}</p>
-					</div>
-					<div className='product-icon-container'>
-						<ShoppingBagIcon fontSize='large' className='product-icon' />
-					</div>
-				</div>
-			</article>
+		<SwiperSlide key={shoe.id}>
+			<ProductCard shoe={shoe} />
 		</SwiperSlide>
 	));
 	return (
@@ -32,7 +22,7 @@ const Products = () => {
 					slidesPerView={4}
 					slidesPerGroup={4}
 					breakpoints={{
-						400: {
+						200: {
 							slidesPerView: 1,
 							spaceBetween: 20
 						},
