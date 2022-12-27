@@ -10,6 +10,7 @@
 
 	.products-catalogue {
 		margin-bottom: 5rem;
+
 		.swiper {
 			height: 35rem;
 			width: 95%;
@@ -41,6 +42,16 @@
 		}
 		.swiper-pagination-bullet-active {
 			background-color: #000;
+		}
+	}
+
+	.mens,
+	.womens {
+		& .product-image-container {
+			& img.image-hover {
+				object-fit: cover;
+				object-position: top;
+			}
 		}
 	}
 }

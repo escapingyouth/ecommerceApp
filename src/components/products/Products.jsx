@@ -1,5 +1,6 @@
 import Shoes from './shoes/Shoes';
 import Mens from './mens/Mens';
+import Womens from './womens/Womens';
 import './products.scss';
 
 const Products = () => {
@@ -13,6 +14,9 @@ const Products = () => {
 				</div>
 				<div className='products-catalogue mens'>
 					<Mens />
+				</div>
+				<div className='products-catalogue womens'>
+					<Womens />
 				</div>
 			</section>
 		</>

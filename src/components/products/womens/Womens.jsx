@@ -1,21 +1,21 @@
 import { SwiperSlide } from 'swiper/react';
 
-import { shoes } from '../../../product-data/product-data';
+import { womens } from '../../../product-data/product-data';
 
 import ProductsSlider from '../ProductsSlider';
 import ProductCard from '../../product-card/ProductCard';
 
-const Shoes = () => {
-	const renderedShoes = shoes.map((product) => (
+const Womens = () => {
+	const renderedwomens = womens.map((product) => (
 		<SwiperSlide key={product.id}>
 			<ProductCard product={product} />
 		</SwiperSlide>
 	));
 	return (
 		<>
-			<ProductsSlider>{renderedShoes}</ProductsSlider>
+			<ProductsSlider>{renderedwomens}</ProductsSlider>
 		</>
 	);
 };
 
-export default Shoes;
+export default Womens;

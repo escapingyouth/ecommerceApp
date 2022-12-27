@@ -1,7 +1,6 @@
 import { SwiperSlide } from 'swiper/react';
 
-import { mens } from './MensList';
-import './mens.scss';
+import { mens } from '../../../product-data/product-data';
 
 import ProductsSlider from '../ProductsSlider';
 import ProductCard from '../../product-card/ProductCard';
