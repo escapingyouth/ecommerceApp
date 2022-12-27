@@ -10,17 +10,17 @@ import mens_3_hover from '../../../assets/images/mens/mens_3_hover.webp';
 import mens_4 from '../../../assets/images/mens/mens_4.webp';
 import mens_4_hover from '../../../assets/images/mens/mens_4_hover.webp';
 
-// import mens_5 from '../../../assets/images/mens/mens_5.jpg';
-// import mens_5_hover from '../../../assets/images/mens/mens_5_hover.jpg';
+import mens_5 from '../../../assets/images/mens/mens_5.jpg';
+import mens_5_hover from '../../../assets/images/mens/mens_5_hover.webp';
 
-// import mens_6 from '../../../assets/images/mens/mens_6.webp';
-// import mens_6_hover from '../../../assets/images/mens/mens_6_hover.webp';
+import mens_6 from '../../../assets/images/mens/mens_6.webp';
+import mens_6_hover from '../../../assets/images/mens/mens_6_hover.webp';
 
-// import mens_7 from '../../../assets/images/mens/mens_7.webp';
-// import mens_7_hover from '../../../assets/images/mens/mens_7_hover.webp';
+import mens_7 from '../../../assets/images/mens/mens_7.webp';
+import mens_7_hover from '../../../assets/images/mens/mens_7_hover.webp';
 
-// import mens_8 from '../../../assets/images/mens/mens_8.webp';
-// import mens_8_hover from '../../../assets/images/mens/mens_8_hover.webp';
+import mens_8 from '../../../assets/images/mens/mens_8.webp';
+import mens_8_hover from '../../../assets/images/mens/mens_8_hover.webp';
 
 export const mens = [
 	{
@@ -50,33 +50,33 @@ export const mens = [
 		price: 'GH₵700',
 		primaryImage: mens_4,
 		secondaryImage: mens_4_hover
+	},
+	{
+		id: '5',
+		name: 'Shredded Jeans',
+		price: 'GH₵150',
+		primaryImage: mens_5,
+		secondaryImage: mens_5_hover
+	},
+	{
+		id: '6',
+		name: 'Helmut Lang t-shirt',
+		price: 'GH₵210',
+		primaryImage: mens_6,
+		secondaryImage: mens_6_hover
+	},
+	{
+		id: '7',
+		name: 'Dolce & Gabana Jacket',
+		price: 'GH₵600',
+		primaryImage: mens_7,
+		secondaryImage: mens_7_hover
+	},
+	{
+		id: '8',
+		name: 'Embroidered black coat',
+		price: 'GH₵350',
+		primaryImage: mens_8,
+		secondaryImage: mens_8_hover
 	}
-	// {
-	// 	id: '5',
-	// 	name: 'Nike X Ambush',
-	// 	price: 'GH₵250',
-	// 	primaryImage: mens_5,
-	// 	secondaryImage: mens_5_hover
-	// },
-	// {
-	// 	id: '6',
-	// 	name: 'black ankle-boots',
-	// 	price: 'GH₵500',
-	// 	primaryImage: mens_6,
-	// 	secondaryImage: mens_6_hover
-	// },
-	// {
-	// 	id: '7',
-	// 	name: 'logo-printed Dolce & Gabana',
-	// 	price: 'GH₵600',
-	// 	primaryImage: mens_7,
-	// 	secondaryImage: mens_7_hover
-	// },
-	// {
-	// 	id: '8',
-	// 	name: 'Converse high-tops',
-	// 	price: 'GH₵350',
-	// 	primaryImage: mens_8,
-	// 	secondaryImage: mens_8_hover
-	// }
 ];

@@ -6,11 +6,11 @@ import './header-slider.scss';
 import images from './ImageList';
 
 const HeaderSlider = () => {
-	const renderedImages = images.map(({ id, imageUrl }) => {
+	const renderedImages = images.map(({ id, imageSource }) => {
 		return (
 			<SwiperSlide key={id}>
 				<div className='header-slide-container'>
-					<img src={imageUrl} alt='slide' className='header-slide-image' />
+					<img src={imageSource} alt='slide' className='header-slide-image' />
 				</div>
 			</SwiperSlide>
 		);

@@ -12,7 +12,7 @@ import { Keyboard, Autoplay, Pagination, Navigation } from 'swiper';
 const Slider = ({
 	children,
 	slidesPerView,
-	slidesPerGroup,
+
 	loop,
 	autoplay,
 	breakpoints
@@ -22,7 +22,6 @@ const Slider = ({
 			<Swiper
 				spaceBetween={30}
 				slidesPerView={slidesPerView}
-				slidesPerGroup={slidesPerGroup}
 				loop={loop}
 				keyboard={{
 					enabled: true
