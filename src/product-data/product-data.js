@@ -25,6 +25,15 @@ import womens_6 from '../assets/images/womens/womens_6.webp';
 import womens_7 from '../assets/images/womens/womens_7.webp';
 import womens_8 from '../assets/images/womens/womens_8.jpg';
 
+import accessories_1 from '../assets/images/accessories/accessories_1.webp';
+import accessories_2 from '../assets/images/accessories/accessories_2.jpg';
+import accessories_3 from '../assets/images/accessories/accessories_3.jpg';
+import accessories_4 from '../assets/images/accessories/accessories_4.webp';
+import accessories_5 from '../assets/images/accessories/accessories_5.webp';
+import accessories_6 from '../assets/images/accessories/accessories_6.webp';
+import accessories_7 from '../assets/images/accessories/accessories_7.webp';
+import accessories_8 from '../assets/images/accessories/accessories_8.jpg';
+
 import shoe_1_hover from '../assets/images/shoes/shoe_1_hover.webp';
 import shoe_2_hover from '../assets/images/shoes/shoe_2_hover.webp';
 import shoe_3_hover from '../assets/images/shoes/shoe_3_hover.webp';
@@ -51,6 +60,15 @@ import womens_5_hover from '../assets/images/womens/womens_5_hover.webp';
 import womens_6_hover from '../assets/images/womens/womens_6_hover.webp';
 import womens_7_hover from '../assets/images/womens/womens_7_hover.webp';
 import womens_8_hover from '../assets/images/womens/womens_8_hover.webp';
+
+import accessories_1_hover from '../assets/images/accessories/accessories_1_hover.webp';
+import accessories_2_hover from '../assets/images/accessories/accessories_2_hover.jpg';
+import accessories_3_hover from '../assets/images/accessories/accessories_3_hover.webp';
+import accessories_4_hover from '../assets/images/accessories/accessories_4_hover.webp';
+import accessories_5_hover from '../assets/images/accessories/accessories_5_hover.webp';
+import accessories_6_hover from '../assets/images/accessories/accessories_6_hover.webp';
+import accessories_7_hover from '../assets/images/accessories/accessories_7_hover.webp';
+import accessories_8_hover from '../assets/images/accessories/accessories_8_hover.jpg';
 
 export const shoes = [
 	{
@@ -169,6 +187,7 @@ export const mens = [
 		secondaryImage: mens_8_hover
 	}
 ];
+
 export const womens = [
 	{
 		id: '1',
@@ -225,5 +244,63 @@ export const womens = [
 		price: 'GH₵350',
 		primaryImage: womens_8,
 		secondaryImage: womens_8_hover
+	}
+];
+export const accessories = [
+	{
+		id: '1',
+		name: 'green sunglasses',
+		price: 'GH₵50',
+		primaryImage: accessories_1,
+		secondaryImage: accessories_1_hover
+	},
+	{
+		id: '2',
+		name: 'embroided-logo cashmere cap',
+		price: 'GH₵75',
+		primaryImage: accessories_2,
+		secondaryImage: accessories_2_hover
+	},
+	{
+		id: '3',
+		name: 'Vintage-check scarf',
+		price: 'GH₵100',
+		primaryImage: accessories_3,
+		secondaryImage: accessories_3_hover
+	},
+	{
+		id: '4',
+		name: 'ferragamo belt',
+		price: 'GH₵140',
+		primaryImage: accessories_4,
+		secondaryImage: accessories_4_hover
+	},
+	{
+		id: '5',
+		name: 'Dolce & Gabana iPhone 13 case',
+		price: 'GH₵90',
+		primaryImage: accessories_5,
+		secondaryImage: accessories_5_hover
+	},
+	{
+		id: '6',
+		name: 'square-frame sunglasses',
+		price: 'GH₵150',
+		primaryImage: accessories_6,
+		secondaryImage: accessories_6_hover
+	},
+	{
+		id: '7',
+		name: 'Bang & Olufsen headphones',
+		price: 'GH₵800',
+		primaryImage: accessories_7,
+		secondaryImage: accessories_7_hover
+	},
+	{
+		id: '8',
+		name: 'Dolce & Gabana leather wallet',
+		price: 'GH₵350',
+		primaryImage: accessories_8,
+		secondaryImage: accessories_8_hover
 	}
 ];
