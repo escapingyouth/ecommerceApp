@@ -72,58 +72,58 @@ import accessories_8_hover from '../assets/images/accessories/accessories_8_hove
 
 export const shoes = [
 	{
-		id: '1',
+		id: 1,
 		name: 'White trainers',
-		price: 'GH₵200',
+		price: 200,
 		primaryImage: shoe_1,
 		secondaryImage: shoe_1_hover
 	},
 	{
-		id: '2',
+		id: 2,
 		name: 'Dolce & Gabana',
-		price: 'GH₵600',
+		price: 600,
 		primaryImage: shoe_2,
 		secondaryImage: shoe_2_hover
 	},
 	{
-		id: '3',
+		id: 3,
 		name: 'Blue hightop boots',
-		price: 'GH₵400',
+		price: 400,
 		primaryImage: shoe_3,
 		secondaryImage: shoe_3_hover
 	},
 	{
-		id: '4',
+		id: 4,
 		name: 'Off-white sneakers',
-		price: 'GH₵300',
+		price: 300,
 		primaryImage: shoe_4,
 		secondaryImage: shoe_4_hover
 	},
 	{
-		id: '5',
+		id: 5,
 		name: 'Nike X Ambush',
-		price: 'GH₵250',
+		price: 250,
 		primaryImage: shoe_5,
 		secondaryImage: shoe_5_hover
 	},
 	{
-		id: '6',
+		id: 6,
 		name: 'black ankle-boots',
-		price: 'GH₵500',
+		price: 500,
 		primaryImage: shoe_6,
 		secondaryImage: shoe_6_hover
 	},
 	{
-		id: '7',
+		id: 7,
 		name: 'logo-printed Dolce & Gabana',
-		price: 'GH₵600',
+		price: 600,
 		primaryImage: shoe_7,
 		secondaryImage: shoe_7_hover
 	},
 	{
-		id: '8',
+		id: 8,
 		name: 'Converse high-tops',
-		price: 'GH₵350',
+		price: 350,
 		primaryImage: shoe_8,
 		secondaryImage: shoe_8_hover
 	}
@@ -131,58 +131,58 @@ export const shoes = [
 
 export const mens = [
 	{
-		id: '1',
+		id: 1,
 		name: 'Black polo shirt',
-		price: 'GH₵55',
+		price: 50,
 		primaryImage: mens_1,
 		secondaryImage: mens_1_hover
 	},
 	{
-		id: '2',
+		id: 2,
 		name: 'polkadot shirt',
-		price: 'GH₵100',
+		price: 100,
 		primaryImage: mens_2,
 		secondaryImage: mens_2_hover
 	},
 	{
-		id: '3',
+		id: 3,
 		name: 'White plain shirt',
-		price: 'GH₵400',
+		price: 400,
 		primaryImage: mens_3,
 		secondaryImage: mens_3_hover
 	},
 	{
-		id: '4',
+		id: 4,
 		name: 'Full suit',
-		price: 'GH₵700',
+		price: 700,
 		primaryImage: mens_4,
 		secondaryImage: mens_4_hover
 	},
 	{
-		id: '5',
+		id: 5,
 		name: 'Shredded Jeans',
-		price: 'GH₵150',
+		price: 150,
 		primaryImage: mens_5,
 		secondaryImage: mens_5_hover
 	},
 	{
-		id: '6',
+		id: 6,
 		name: 'Helmut Lang t-shirt',
-		price: 'GH₵210',
+		price: 200,
 		primaryImage: mens_6,
 		secondaryImage: mens_6_hover
 	},
 	{
-		id: '7',
+		id: 7,
 		name: 'Dolce & Gabana Jacket',
-		price: 'GH₵600',
+		price: 600,
 		primaryImage: mens_7,
 		secondaryImage: mens_7_hover
 	},
 	{
-		id: '8',
+		id: 8,
 		name: 'Embroidered black coat',
-		price: 'GH₵350',
+		price: 350,
 		primaryImage: mens_8,
 		secondaryImage: mens_8_hover
 	}
@@ -190,116 +190,116 @@ export const mens = [
 
 export const womens = [
 	{
-		id: '1',
+		id: 1,
 		name: 'Long black dress',
-		price: 'GH₵420',
+		price: 400,
 		primaryImage: womens_1,
 		secondaryImage: womens_1_hover
 	},
 	{
-		id: '2',
+		id: 2,
 		name: 'Button-detail knitted dress',
-		price: 'GH₵500',
+		price: 500,
 		primaryImage: womens_2,
 		secondaryImage: womens_2_hover
 	},
 	{
-		id: '3',
+		id: 3,
 		name: 'Light blue silk dress',
-		price: 'GH₵400',
+		price: 400,
 		primaryImage: womens_3,
 		secondaryImage: womens_3_hover
 	},
 	{
-		id: '4',
+		id: 4,
 		name: 'cropped cut-out top',
-		price: 'GH₵300',
+		price: 300,
 		primaryImage: womens_4,
 		secondaryImage: womens_4_hover
 	},
 	{
-		id: '5',
+		id: 5,
 		name: 'Oscar de la Renta short dress',
-		price: 'GH₵150',
+		price: 150,
 		primaryImage: womens_5,
 		secondaryImage: womens_5_hover
 	},
 	{
-		id: '6',
+		id: 6,
 		name: 'Logo printed sweater',
-		price: 'GH₵400',
+		price: 400,
 		primaryImage: womens_6,
 		secondaryImage: womens_6_hover
 	},
 	{
-		id: '7',
+		id: 7,
 		name: 'Gucci Jacket',
-		price: 'GH₵800',
+		price: 800,
 		primaryImage: womens_7,
 		secondaryImage: womens_7_hover
 	},
 	{
-		id: '8',
+		id: 8,
 		name: 'Snakeskin-print trousers',
-		price: 'GH₵350',
+		price: 350,
 		primaryImage: womens_8,
 		secondaryImage: womens_8_hover
 	}
 ];
 export const accessories = [
 	{
-		id: '1',
+		id: 1,
 		name: 'green sunglasses',
-		price: 'GH₵50',
+		price: 50,
 		primaryImage: accessories_1,
 		secondaryImage: accessories_1_hover
 	},
 	{
-		id: '2',
+		id: 2,
 		name: 'embroided-logo cashmere cap',
-		price: 'GH₵75',
+		price: 75,
 		primaryImage: accessories_2,
 		secondaryImage: accessories_2_hover
 	},
 	{
-		id: '3',
+		id: 3,
 		name: 'Vintage-check scarf',
-		price: 'GH₵100',
+		price: 100,
 		primaryImage: accessories_3,
 		secondaryImage: accessories_3_hover
 	},
 	{
-		id: '4',
+		id: 4,
 		name: 'ferragamo belt',
-		price: 'GH₵140',
+		price: 140,
 		primaryImage: accessories_4,
 		secondaryImage: accessories_4_hover
 	},
 	{
-		id: '5',
+		id: 5,
 		name: 'Dolce & Gabana iPhone 13 case',
-		price: 'GH₵90',
+		price: 90,
 		primaryImage: accessories_5,
 		secondaryImage: accessories_5_hover
 	},
 	{
-		id: '6',
+		id: 6,
 		name: 'square-frame sunglasses',
-		price: 'GH₵150',
+		price: 150,
 		primaryImage: accessories_6,
 		secondaryImage: accessories_6_hover
 	},
 	{
-		id: '7',
+		id: 7,
 		name: 'Bang & Olufsen headphones',
-		price: 'GH₵800',
+		price: 800,
 		primaryImage: accessories_7,
 		secondaryImage: accessories_7_hover
 	},
 	{
-		id: '8',
+		id: 8,
 		name: 'Dolce & Gabana leather wallet',
-		price: 'GH₵350',
+		price: 350,
 		primaryImage: accessories_8,
 		secondaryImage: accessories_8_hover
 	}

@@ -1,11 +1,11 @@
 import Slider from '../../slider/Slider';
 import { SwiperSlide } from 'swiper/react';
 
-import './header-slider.scss';
+import './main-slider.scss';
 
 import images from './ImageList';
 
-const HeaderSlider = () => {
+const MainSlider = () => {
 	const renderedImages = images.map(({ id, imageSource }) => {
 		return (
 			<SwiperSlide key={id}>
@@ -30,4 +30,4 @@ const HeaderSlider = () => {
 	);
 };
 
-export default HeaderSlider;
+export default MainSlider;

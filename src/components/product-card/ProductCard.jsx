@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
 				<div className='product-details-container'>
 					<div className='product-details'>
 						<h3 className='product-name'>{name}</h3>
-						<span className='product-price'>{price}</span>
+						<span className='product-price'>GH₵{price}</span>
 					</div>
 					<div className='product-icon-container'>
 						<ShoppingBagIcon fontSize='medium' className='product-icon' />

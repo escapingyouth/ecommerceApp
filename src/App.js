@@ -1,11 +1,17 @@
-import Header from './components/header/Header';
-import Products from './components/products/Products';
+import { Routes, Route } from 'react-router-dom';
+
+import Navbar from './components/routes/navigation/Navbar';
+import Home from './components/routes/home/Home';
 
 const App = () => {
 	return (
 		<>
-			<Header />
-			<Products />
+			<Routes>
+				<Route path='/' element={<Navbar />}>
+					<Route index element={<Home />} />
+					{/* <Route path='checkout' element={<Checkout />} /> */}
+				</Route>
+			</Routes>
 		</>
 	);
 };
