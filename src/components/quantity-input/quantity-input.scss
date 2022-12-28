@@ -1,0 +1,24 @@
+.quantity-input-container {
+	display: flex;
+	align-items: center;
+	margin-right: 1rem;
+	width: 40%;
+	.increment-button,
+	.decrement-button {
+		font-size: 1.2rem;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+		padding: 0.05em 0.2em;
+
+		&:hover {
+			background-color: #f8f9fa;
+		}
+	}
+	.quantity {
+		text-align: center;
+		border-bottom: 1px solid #000;
+		width: 100%;
+		padding-bottom: 0.3em;
+	}
+}

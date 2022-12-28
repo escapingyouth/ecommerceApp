@@ -1,9 +1,17 @@
+import { useContext } from 'react';
+import { CartContext } from '../../contexts/CartContext';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 import './product-card.scss';
 
 const ProductCard = ({ product }) => {
+	const { setIsCartOpen, addItemToCart } = useContext(CartContext);
 	const { name, price, primaryImage, secondaryImage } = product;
+
+	const addProductToCart = () => {
+		addItemToCart(product);
+		setIsCartOpen(true);
+	};
 	return (
 		<>
 			<article className='product-container'>
@@ -20,7 +28,7 @@ const ProductCard = ({ product }) => {
 						<h3 className='product-name'>{name}</h3>
 						<span className='product-price'>GH₵{price}</span>
 					</div>
-					<div className='product-icon-container'>
+					<div className='product-icon-container' onClick={addProductToCart}>
 						<ShoppingBagIcon fontSize='medium' className='product-icon' />
 					</div>
 				</div>

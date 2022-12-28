@@ -14,8 +14,9 @@ import CartIcon from '../../cart-icon/CartIcon';
 
 import { signOutUser } from '../../../utilities/firebaseConfig';
 
-import Auth from '../../auth/Auth';
 import ModalBox from '../../modal/ModalBox';
+import Auth from '../../auth/Auth';
+import CartDropdown from '../../cart-dropdown/CartDropdown';
 
 const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -94,6 +95,7 @@ const Navbar = () => {
 				<ModalBox open={open} handleClose={handleClose}>
 					<Auth handleClose={handleClose} />
 				</ModalBox>
+				<CartDropdown />
 			</header>
 			<Outlet />
 		</>

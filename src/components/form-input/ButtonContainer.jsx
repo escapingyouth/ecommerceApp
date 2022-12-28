@@ -1,20 +1,17 @@
 import { ReactComponent as GoogleLogo } from '../../assets/svgs/google.svg';
+import Button from '../button/Button';
 
 const ButtonContainer = ({ title, signInWithGoogle }) => {
 	return (
 		<>
 			<div className='buttons-container'>
-				<button type='submit' className='sign-in-button'>
+				<Button type='submit' buttonType='primary'>
 					{title}
-				</button>
-				<button
-					type='button'
-					className='sign-in-google'
-					onClick={signInWithGoogle}
-				>
+				</Button>
+				<Button type='button' buttonType='google' onClick={signInWithGoogle}>
 					<GoogleLogo className='google-icon' />
 					<span>Continue With Google</span>
-				</button>
+				</Button>
 			</div>
 		</>
 	);

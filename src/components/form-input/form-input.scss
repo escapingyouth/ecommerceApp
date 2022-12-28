@@ -3,6 +3,10 @@ form {
 	overflow-y: scroll;
 	padding: 0 0.1rem;
 
+	&::-webkit-scrollbar-thumb {
+		background-color: #75787a;
+	}
+
 	@media only screen and (max-width: 33em) {
 		overflow: unset;
 	}
