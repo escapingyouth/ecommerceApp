@@ -30,26 +30,54 @@
 		}
 	}
 	.cart-item-quantity-container {
+		.quantity-input-container {
+			margin-right: 1rem;
+			width: 40%;
+		}
 		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
-
-		.delete-icon {
-			width: 1.5rem;
-			height: 1.5rem;
-			cursor: pointer;
-			color: #495057;
-
-			&:hover {
-				color: #007bff;
-			}
-		}
 
 		.price {
 			width: max-content;
 			font-weight: 500;
 			margin-left: 0.5rem;
 		}
+	}
+}
+
+.quantity-input-container {
+	display: flex;
+	align-items: center;
+
+	.increment-button,
+	.decrement-button {
+		font-size: 1.2rem;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+		padding: 0.05em 0.2em;
+
+		&:hover {
+			background-color: #f8f9fa;
+		}
+	}
+	.quantity {
+		text-align: center;
+		border-bottom: 1px solid #000;
+		width: 100%;
+		padding-bottom: 0.3em;
+	}
+}
+
+.delete-icon {
+	width: 1.5rem;
+	height: 1.5rem;
+	cursor: pointer;
+	color: #495057;
+
+	&:hover {
+		color: #007bff;
 	}
 }

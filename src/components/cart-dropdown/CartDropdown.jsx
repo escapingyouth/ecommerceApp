@@ -20,6 +20,10 @@ const CartDropdown = () => {
 	const goToCheckoutHandler = () => {
 		navigate('/checkout');
 	};
+
+	const renderedCartItems = cartItems.map((item) => (
+		<CartItem key={item.id} cartItem={item}></CartItem>
+	));
 	return (
 		<>
 			<div className={`cart-dropdown-container ${isCartOpen ? 'active' : ''}`}>
@@ -27,11 +31,7 @@ const CartDropdown = () => {
 					<span>Basket</span>
 					<CloseIcon className='close-icon' onClick={closeCart} />
 				</div>
-				<div className='cart-items'>
-					{cartItems.map((item) => (
-						<CartItem key={item.id} cartItem={item}></CartItem>
-					))}
-				</div>
+				<div className='cart-items'>{renderedCartItems}</div>
 
 				<div className='cart-totals'>
 					<div className='cart-totals-sub'>
