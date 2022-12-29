@@ -44,6 +44,11 @@
 			font-weight: 500;
 			margin-left: 0.5rem;
 		}
+		.delete-icon {
+			&:hover {
+				color: #007bff;
+			}
+		}
 	}
 }
 
@@ -76,8 +81,4 @@
 	height: 1.5rem;
 	cursor: pointer;
 	color: #495057;
-
-	&:hover {
-		color: #007bff;
-	}
 }
