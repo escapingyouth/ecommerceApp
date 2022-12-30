@@ -24,24 +24,6 @@ const Checkout = () => {
 			<h1>Shopping Cart</h1>
 			<div className='checkout-container'>
 				<div className='cart-details'>
-					<div className='checkout-header'>
-						<div className='header-block'>
-							<span>Product</span>
-						</div>
-						<div className='header-block'>
-							<span>Description</span>
-						</div>
-						<div className='header-block'>
-							<span>Price</span>
-						</div>
-						<div className='header-block'>
-							<span>Qty</span>
-						</div>
-						<div className='header-block'>
-							<span>Total</span>
-						</div>
-						<div className='header-block'></div>
-					</div>
 					<div className='checkout-items'>{renderedCheckoutItems}</div>
 				</div>
 				<div className='order-container'>
