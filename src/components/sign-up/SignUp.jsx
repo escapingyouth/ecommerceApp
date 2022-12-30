@@ -15,6 +15,7 @@ const defaultFormFields = {
 	password: '',
 	confirmPassword: ''
 };
+
 const SignUp = ({ handleClose }) => {
 	const [form, setForm] = useState(defaultFormFields);
 	const { name, email, password, confirmPassword } = form;
@@ -23,9 +24,11 @@ const SignUp = ({ handleClose }) => {
 		const { name, value } = e.target;
 		setForm({ ...form, [name]: value });
 	};
+
 	const resetFormFields = () => {
 		setForm(defaultFormFields);
 	};
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
@@ -55,6 +58,7 @@ const SignUp = ({ handleClose }) => {
 		await signInWithGooglePopup();
 		handleClose();
 	};
+
 	return (
 		<form onSubmit={handleSubmit}>
 			<div className='form-group'>

@@ -1,11 +1,13 @@
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { CartContext } from '../../contexts/CartContext';
+
 import { ReactComponent as CloseIcon } from '../../assets/svgs/cross.svg';
 
 import Button from '../button/Button';
 import CartItem from '../cart-item/CartItem';
-import { CartContext } from '../../contexts/CartContext';
+
 import './cart-dropdown.scss';
 
 const CartDropdown = () => {

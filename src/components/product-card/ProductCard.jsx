@@ -1,6 +1,8 @@
 import { useContext } from 'react';
+
 import { CartContext } from '../../contexts/CartContext';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+
+import { ReactComponent as ShoppingBagIcon } from '../../assets/svgs/bag-icon.svg';
 
 import './product-card.scss';
 
@@ -29,7 +31,7 @@ const ProductCard = ({ product }) => {
 						<span className='product-price'>GH₵{price}</span>
 					</div>
 					<div className='product-icon-container' onClick={addProductToCart}>
-						<ShoppingBagIcon fontSize='medium' className='product-icon' />
+						<ShoppingBagIcon className='product-icon' />
 					</div>
 				</div>
 			</article>

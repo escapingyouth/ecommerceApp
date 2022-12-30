@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from 'react';
+
 import {
 	onAuthStateChangedListener,
 	createUserDocumentFromAuth
@@ -23,5 +24,6 @@ export const UserProvider = ({ children }) => {
 
 		return unsubscribe;
 	}, []);
+
 	return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };

@@ -2,7 +2,7 @@ import { SwiperSlide } from 'swiper/react';
 
 import { accessories } from '../../../product-data/product-data';
 
-import ProductsSlider from '../ProductsSlider';
+import ProductSlider from '../ProductSlider';
 import ProductCard from '../../product-card/ProductCard';
 
 const Accessories = () => {
@@ -13,7 +13,7 @@ const Accessories = () => {
 	));
 	return (
 		<>
-			<ProductsSlider>{renderedAccessories}</ProductsSlider>
+			<ProductSlider>{renderedAccessories}</ProductSlider>
 		</>
 	);
 };

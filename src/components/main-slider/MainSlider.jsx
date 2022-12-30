@@ -1,9 +1,9 @@
-import Slider from '../../slider/Slider';
+import Slider from '../slider/Slider';
 import { SwiperSlide } from 'swiper/react';
 
-import './main-slider.scss';
-
 import images from './ImageList';
+
+import './main-slider.scss';
 
 const MainSlider = () => {
 	const renderedImages = images.map(({ id, imageSource }) => {

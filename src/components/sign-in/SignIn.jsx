@@ -16,6 +16,7 @@ const SignIn = ({ handleClick, handleClose }) => {
 		const { name, value } = e.target;
 		setForm({ ...form, [name]: value });
 	};
+
 	const resetFormFields = () => {
 		setForm({ email: '', password: '' });
 	};
@@ -47,6 +48,7 @@ const SignIn = ({ handleClick, handleClose }) => {
 		await signInWithGooglePopup();
 		handleClose();
 	};
+
 	return (
 		<form onSubmit={handleSubmit}>
 			<div className='form-group'>

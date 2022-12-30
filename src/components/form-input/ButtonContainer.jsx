@@ -1,4 +1,5 @@
 import { ReactComponent as GoogleLogo } from '../../assets/svgs/google.svg';
+
 import Button from '../button/Button';
 
 const ButtonContainer = ({ title, signInWithGoogle }) => {

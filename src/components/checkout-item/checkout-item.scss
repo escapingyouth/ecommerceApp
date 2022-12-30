@@ -1,0 +1,66 @@
+.checkout-item {
+	display: grid;
+	font-size: 0.9rem;
+	grid-template-columns: repeat(6, 1fr);
+	place-items: center;
+	padding: 1em 0;
+	border-bottom: 1px solid #ccc;
+	.image-container {
+		width: 3.5rem;
+		img {
+			width: 100%;
+		}
+	}
+
+	.item-name {
+		color: #014ba0;
+		text-transform: capitalize;
+		&:hover {
+			font-style: italic;
+		}
+	}
+
+	.quantity-input-container {
+		width: 60%;
+	}
+	.item-total {
+		font-weight: 500;
+	}
+	.delete-icon {
+		color: #014ba0;
+	}
+	@media screen and (max-width: 26em) {
+		display: block;
+		padding-bottom: 2em;
+		position: relative;
+
+		.image-container {
+			width: 5rem;
+		}
+
+		.item-name {
+			position: absolute;
+			top: 10%;
+			left: 40%;
+		}
+		.item-price {
+			position: absolute;
+			top: 40%;
+			left: 40%;
+		}
+		.item-total {
+			display: none;
+		}
+		.quantity-input-container {
+			position: absolute;
+			width: 20%;
+			left: 40%;
+			bottom: 20%;
+		}
+		.delete-icon {
+			position: absolute;
+			right: 1%;
+			bottom: 20%;
+		}
+	}
+}

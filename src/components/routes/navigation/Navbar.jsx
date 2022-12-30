@@ -1,22 +1,20 @@
-import { Link, Outlet } from 'react-router-dom';
-
 import { useState, useContext } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 
 import { UserContext } from '../../../contexts/UserContext';
 
 import { ReactComponent as Logo } from '../../../assets/svgs/crown.svg';
-import './navbar.scss';
-
-import PersonIcon from '@mui/icons-material/Person';
-import LogoutIcon from '@mui/icons-material/Logout';
-
+import { ReactComponent as PersonIcon } from '../../../assets/svgs/person-icon.svg';
 import CartIcon from '../../cart-icon/CartIcon';
-
-import { signOutUser } from '../../../utilities/firebaseConfig';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 import ModalBox from '../../modal/ModalBox';
 import Auth from '../../auth/Auth';
 import CartDropdown from '../../cart-dropdown/CartDropdown';
+
+import { signOutUser } from '../../../utilities/firebaseConfig';
+
+import './navbar.scss';
 
 const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -70,15 +68,10 @@ const Navbar = () => {
 						{currentUser ? (
 							<LogoutIcon
 								className='sign-out-icon'
-								fontSize='medium'
 								onClick={signOutUser}
 							></LogoutIcon>
 						) : (
-							<PersonIcon
-								fontSize='large'
-								className='person-icon'
-								onClick={handleOpen}
-							/>
+							<PersonIcon className='person-icon' onClick={handleOpen} />
 						)}
 
 						<CartIcon />

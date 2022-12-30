@@ -1,6 +1,6 @@
 import Slider from '../slider/Slider';
 
-const ProductsSlider = ({ children }) => {
+const ProductSlider = ({ children }) => {
 	return (
 		<>
 			<Slider
@@ -39,4 +39,4 @@ const ProductsSlider = ({ children }) => {
 	);
 };
 
-export default ProductsSlider;
+export default ProductSlider;

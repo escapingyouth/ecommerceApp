@@ -2,7 +2,7 @@ import { SwiperSlide } from 'swiper/react';
 
 import { mens } from '../../../product-data/product-data';
 
-import ProductsSlider from '../ProductsSlider';
+import ProductSlider from '../ProductSlider';
 import ProductCard from '../../product-card/ProductCard';
 
 const Mens = () => {
@@ -13,7 +13,7 @@ const Mens = () => {
 	));
 	return (
 		<>
-			<ProductsSlider>{renderedMens}</ProductsSlider>
+			<ProductSlider>{renderedMens}</ProductSlider>
 		</>
 	);
 };

@@ -1,4 +1,4 @@
-import MainSlider from '../../main-slider/header-slider/MainSlider';
+import MainSlider from '../../main-slider/MainSlider';
 import Products from '../../products/Products';
 
 const Home = () => {
