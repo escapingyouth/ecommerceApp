@@ -4,7 +4,7 @@ form {
 	padding: 0 0.1rem;
 
 	&::-webkit-scrollbar-thumb {
-		background-color: #75787a;
+		background-color: #ccc;
 	}
 
 	@media only screen and (max-width: 33em) {
@@ -20,7 +20,7 @@ form {
 			width: 100%;
 			padding: 1em 0.5em;
 			margin: 0.7rem 0 1.4rem 0;
-			border: 1px solid #ced4da;
+			border: 1px solid #ccc;
 			border-radius: 3px;
 			font-size: 0.9rem;
 

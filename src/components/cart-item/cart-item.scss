@@ -1,60 +1,39 @@
 .cart-item-container {
-	position: relative;
 	display: flex;
-	margin-bottom: 2rem;
+	justify-content: space-between;
+	padding: 1em;
 	border-bottom: 1px solid #ccc;
-	padding: 1em 0;
 
+	.image-container {
+		width: 5rem;
+
+		img {
+			width: 100%;
+		}
+	}
 	.cart-item-details {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
-		width: 100%;
-		.cart-item-name {
-			font-size: 1rem;
-			text-transform: capitalize;
-			margin-left: 0.5rem;
-		}
-	}
-	.cart-item-image-container {
-		img {
-			width: 5rem;
+		justify-content: space-evenly;
 
-			@media screen and (max-width: 48em) {
-				width: 3.5rem;
-			}
-
-			&:hover {
-				opacity: 0.9;
-			}
-		}
-	}
-	.cart-item-quantity-container {
-		.quantity-input-container {
-			margin-right: 1rem;
-			width: 40%;
-		}
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-
-		.price {
-			width: max-content;
+		.name {
 			font-weight: 500;
-			margin-left: 0.5rem;
+			text-transform: capitalize;
+			font-size: 0.8rem;
 		}
-		.delete-icon {
-			&:hover {
-				color: #007bff;
-			}
+
+		.remove {
+			font-size: 0.7rem;
+			cursor: pointer;
 		}
 	}
 }
 
-.quantity-input-container {
+.quantity-control-container {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
+	justify-content: space-evenly;
 
 	.increment-button,
 	.decrement-button {
@@ -70,15 +49,5 @@
 	}
 	.quantity {
 		text-align: center;
-		border-bottom: 1px solid #000;
-		width: 100%;
-		padding-bottom: 0.3em;
 	}
-}
-
-.delete-icon {
-	width: 1.5rem;
-	height: 1.5rem;
-	cursor: pointer;
-	color: #495057;
 }

@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { UserContext } from '../../../contexts/UserContext';
 
 import { ReactComponent as Logo } from '../../../assets/svgs/crown.svg';
-import { ReactComponent as PersonIcon } from '../../../assets/svgs/person-icon.svg';
+import { ReactComponent as ProfileIcon } from '../../../assets/svgs/profile-icon.svg';
 import CartIcon from '../../cart-icon/CartIcon';
 import LogoutIcon from '@mui/icons-material/Logout';
 
@@ -71,7 +71,7 @@ const Navbar = () => {
 								onClick={signOutUser}
 							></LogoutIcon>
 						) : (
-							<PersonIcon className='person-icon' onClick={handleOpen} />
+							<ProfileIcon className='profile-icon' onClick={handleOpen} />
 						)}
 
 						<CartIcon />
