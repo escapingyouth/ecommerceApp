@@ -21,6 +21,7 @@ const CartDropdown = () => {
 	const navigate = useNavigate();
 	const goToCheckoutHandler = () => {
 		navigate('/checkout');
+		setIsCartOpen(false);
 	};
 
 	const renderedCartItems = cartItems.map((item) => (

@@ -6,11 +6,12 @@ import { ReactComponent as ShoppingBagIcon } from '../../assets/svgs/bag-icon.sv
 
 import './cart-icon.scss';
 
-const CartIcon = () => {
+const CartIcon = ({ setMenuOpen }) => {
 	const { isCartOpen, setIsCartOpen, cartCount } = useContext(CartContext);
 
 	const toggleIsCartOpen = () => {
 		setIsCartOpen(!isCartOpen);
+		setMenuOpen(false);
 	};
 	return (
 		<div className='cart-icon-container' onClick={toggleIsCartOpen}>

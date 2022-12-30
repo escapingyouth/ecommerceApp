@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
 import { UserContext } from '../../../contexts/UserContext';
@@ -27,6 +27,16 @@ const Navbar = () => {
 		setMenuOpen(!menuOpen);
 	};
 	const { currentUser } = useContext(UserContext);
+
+	useEffect(() => {
+		function handleClick(event) {
+			toggleMenu();
+		}
+		// document.addEventListener('click', handleClick);
+		return () => {
+			document.removeEventListener('click', handleClick);
+		};
+	});
 
 	return (
 		<>
@@ -74,7 +84,7 @@ const Navbar = () => {
 							<ProfileIcon className='profile-icon' onClick={handleOpen} />
 						)}
 
-						<CartIcon />
+						<CartIcon setMenuOpen={setMenuOpen} />
 						<div
 							className={`hamburger ${menuOpen ? 'active' : ''}`}
 							onClick={toggleMenu}

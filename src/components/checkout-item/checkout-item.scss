@@ -7,8 +7,10 @@
 	padding: 1em 0;
 	margin-bottom: 2rem;
 	border-bottom: 1px solid #ccc;
+
 	.image-container {
-		width: 3rem;
+		width: 5rem;
+		min-width: 3rem;
 		img {
 			width: 100%;
 		}
