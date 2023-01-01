@@ -9,7 +9,16 @@ import {
 	createUserWithEmailAndPassword
 } from 'firebase/auth';
 
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
+import {
+	getFirestore,
+	doc,
+	getDoc,
+	setDoc,
+	collection,
+	getDocs,
+	writeBatch,
+	query
+} from 'firebase/firestore';
 
 const firebaseConfig = {
 	apiKey: 'AIzaSyCVsMSx_oH4L81KwzTD3tOQgl2Fovnoyxc',
@@ -56,10 +65,50 @@ export const onAuthStateChangedListener = (callback) => {
 	onAuthStateChanged(auth, callback);
 };
 
-// CREATE USER METHODS
 const db = getFirestore();
 
-export const createUserDocumentFromAuth = async (userAuth, additionalInfo) => {
+// ADD PRODUCT DATA TO FIRESTORE DATABASE
+export const addCollectionAndDocuments = async (
+	collectionKeys,
+	objectsToAdd
+) => {
+	const collectionRef = collection(db, collectionKeys);
+	const batch = writeBatch(db);
+
+	objectsToAdd.forEach((object) => {
+		const docRef = doc(collectionRef, object.title.toLowerCase());
+		batch.set(docRef, object);
+	});
+
+	await batch.commit();
+
+	console.log('done');
+};
+
+// GET PRODUCT DATA FROM FIRESTORE DATABASE
+export const getCategoriesAndDocuments = async () => {
+	const collectionRef = collection(db, 'categories');
+
+	// q is the query to the firestore. It helps us to get the data from the firestore
+	const q = query(collectionRef);
+
+	const querySnapshot = await getDocs(q);
+
+	const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+		const { title, items } = docSnapshot.data();
+		acc[title.toLowerCase()] = items;
+
+		return acc;
+	}, {});
+
+	return categoryMap;
+};
+
+// CREATE USER METHOD
+export const createUserDocumentFromAuth = async (
+	userAuth,
+	additionalInfo = {}
+) => {
 	if (!userAuth) return;
 
 	const userDocRef = doc(db, 'users', userAuth.uid);

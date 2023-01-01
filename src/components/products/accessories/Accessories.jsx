@@ -1,19 +1,27 @@
+import { useContext } from 'react';
+
 import { SwiperSlide } from 'swiper/react';
 
-import { accessories } from '../../../product-data/product-data';
+import { CategoriesContext } from '../../../contexts/CategoriesContext';
 
 import ProductSlider from '../ProductSlider';
 import ProductCard from '../../product-card/ProductCard';
 
 const Accessories = () => {
-	const renderedAccessories = accessories.map((product) => (
-		<SwiperSlide key={product.id}>
-			<ProductCard product={product} />
-		</SwiperSlide>
-	));
+	const { categoriesMap } = useContext(CategoriesContext);
+
+	const { accessories } = categoriesMap;
+
 	return (
 		<>
-			<ProductSlider>{renderedAccessories}</ProductSlider>
+			<ProductSlider>
+				{accessories &&
+					accessories.map((product) => (
+						<SwiperSlide key={product.id}>
+							<ProductCard product={product} />
+						</SwiperSlide>
+					))}
+			</ProductSlider>
 		</>
 	);
 };

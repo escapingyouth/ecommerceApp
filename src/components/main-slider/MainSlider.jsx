@@ -1,7 +1,7 @@
 import Slider from '../slider/Slider';
 import { SwiperSlide } from 'swiper/react';
 
-import images from './ImageList';
+import images from './images';
 
 import './main-slider.scss';
 
