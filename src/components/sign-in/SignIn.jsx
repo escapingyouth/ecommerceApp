@@ -6,7 +6,7 @@ import ButtonContainer from '../form-input/ButtonContainer';
 import {
 	signInWithGooglePopup,
 	signInAuthUserWithEmailAndPassword
-} from '../../utilities/firebaseConfig';
+} from '../../utilities/firebase/firebaseConfig';
 
 const SignIn = ({ handleClick, handleClose }) => {
 	const [form, setForm] = useState({ email: '', password: '' });

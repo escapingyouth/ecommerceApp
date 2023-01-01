@@ -12,7 +12,7 @@ import ModalBox from '../../modal/ModalBox';
 import Auth from '../../auth/Auth';
 import CartDropdown from '../../cart-dropdown/CartDropdown';
 
-import { signOutUser } from '../../../utilities/firebaseConfig';
+import { signOutUser } from '../../../utilities/firebase/firebaseConfig';
 
 import './navbar.scss';
 
@@ -50,12 +50,17 @@ const Navbar = () => {
 					<ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
 						<li className='nav-link'>
 							<Link className='nav-item' to='/womens'>
-								Womens
+								Women
 							</Link>
 						</li>
 						<li className='nav-link'>
 							<Link className='nav-item' to='/mens'>
-								Mens
+								Men
+							</Link>
+						</li>
+						<li className='nav-link'>
+							<Link className='nav-item' to='/kids'>
+								Kids
 							</Link>
 						</li>
 						<li className='nav-link'>

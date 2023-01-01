@@ -7,7 +7,7 @@ import {
 	signInWithGooglePopup,
 	createAuthUserWithEmailAndPassword,
 	createUserDocumentFromAuth
-} from '../../utilities/firebaseConfig';
+} from '../../utilities/firebase/firebaseConfig';
 
 const defaultFormFields = {
 	name: '',
