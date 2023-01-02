@@ -1,4 +1,8 @@
-.modal-container {
+import styled from 'styled-components';
+
+import Box from '@mui/material/Box';
+
+export const ModalContainer = styled(Box)`
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -15,4 +19,4 @@
 		height: 100%;
 		border-radius: 0px;
 	}
-}
+`;

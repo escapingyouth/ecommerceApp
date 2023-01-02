@@ -2,9 +2,18 @@ import { useContext } from 'react';
 
 import { CartContext } from '../../contexts/CartContext';
 
-import { ReactComponent as CrossIcon } from '../../assets/svgs/cross.svg';
+import CloseIcon from '../close-icon/CloseIcon';
 
-import './checkout-item.scss';
+import {
+	CheckoutItemContainer,
+	CheckoutImageContainer,
+	ItemDetails,
+	ItemTotal
+} from './checkout-item.styles';
+import {
+	QuantityButton,
+	QuantityControlContainer
+} from '../cart-item/cart-item.styles';
 
 const CheckoutItem = ({ cartItem }) => {
 	const { name, primaryImage, price, quantity } = cartItem;
@@ -17,29 +26,25 @@ const CheckoutItem = ({ cartItem }) => {
 
 	const clearItemHandler = () => clearItemFromCart(cartItem);
 	return (
-		<div className='checkout-item'>
-			<div className='image-container'>
+		<CheckoutItemContainer>
+			<CheckoutImageContainer>
 				<img src={primaryImage} alt={name} />
-			</div>
-			<div className='item-details'>
+			</CheckoutImageContainer>
+			<ItemDetails>
 				<span className='name'>{name}</span>
 				<span className='price'>GH₵{price}</span>
-				<div className='quantity-control-container'>
-					<button className='decrement-button' onClick={removeItemHandler}>
-						-
-					</button>
+				<QuantityControlContainer>
+					<QuantityButton onClick={removeItemHandler}>-</QuantityButton>
 					<span className='quantity'>{quantity}</span>
-					<button className='increment-button' onClick={addItemHandler}>
-						+
-					</button>
-				</div>
-			</div>
+					<QuantityButton onClick={addItemHandler}>+</QuantityButton>
+				</QuantityControlContainer>
+			</ItemDetails>
 
-			<div className='item-total'>
-				<CrossIcon onClick={clearItemHandler} className='clear' />
+			<ItemTotal>
+				<CloseIcon onClick={clearItemHandler} />
 				<span>GH₵{price * quantity}</span>
-			</div>
-		</div>
+			</ItemTotal>
+		</CheckoutItemContainer>
 	);
 };
 

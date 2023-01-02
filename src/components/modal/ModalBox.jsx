@@ -1,7 +1,6 @@
 import Modal from '@mui/material/Modal';
-import Box from '@mui/material/Box';
 
-import './modal-box.scss';
+import { ModalContainer } from './modal-box.styles';
 
 const ModalBox = ({ open, handleClose, children }) => {
 	return (
@@ -11,7 +10,7 @@ const ModalBox = ({ open, handleClose, children }) => {
 			aria-labelledby='modal-modal-title'
 			aria-describedby='modal-modal-description'
 		>
-			<Box className='modal-container'>{children}</Box>
+			<ModalContainer>{children}</ModalContainer>
 		</Modal>
 	);
 };

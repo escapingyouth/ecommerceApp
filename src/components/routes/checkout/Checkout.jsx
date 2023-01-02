@@ -5,8 +5,15 @@ import { CartContext } from '../../../contexts/CartContext';
 
 import CheckoutItem from '../../checkout-item/CheckoutItem';
 import Button from '../../button/Button';
+import { ButtonTypeClasses } from '../../button/Button';
 
-import './checkout.scss';
+import {
+	CheckoutSection,
+	CheckoutContainer,
+	CheckoutItems,
+	CartDetails,
+	OrderContainer
+} from './checkout.styles';
 
 const Checkout = () => {
 	const { cartItems, cartTotal, cartCount } = useContext(CartContext);
@@ -20,32 +27,32 @@ const Checkout = () => {
 		return <CheckoutItem key={cartItem.id} cartItem={cartItem}></CheckoutItem>;
 	});
 	return (
-		<section className='checkout-section'>
+		<CheckoutSection>
 			<h1>Shopping Cart</h1>
-			<div className='checkout-container'>
-				<div className='cart-details'>
-					<div className='checkout-items'>{renderedCheckoutItems}</div>
-				</div>
-				<div className='order-container'>
+			<CheckoutContainer>
+				<CartDetails>
+					<CheckoutItems>{renderedCheckoutItems}</CheckoutItems>
+				</CartDetails>
+				<OrderContainer>
 					<div className='order-details'>
 						<div className='cart-totals-sub'>
-							<span className='total-items'>{cartCount} items</span>
-							<span className='total-price'> GH₵{cartTotal}</span>
+							<span className='items'>{cartCount} items</span>
+							<span className='price'> GH₵{cartTotal}</span>
 						</div>
 						<div className='cart-totals-main'>
-							<span className='total-title'>Total</span>
-							<span className='total-price'>GH₵{cartTotal}</span>
+							<span className='title'>Total</span>
+							<span className='price'>GH₵{cartTotal}</span>
 						</div>
 					</div>
 					<div className='order-buttons'>
 						<Button buttonType='inverted'>Proceed to checkout</Button>
 					</div>
-				</div>
-			</div>
-			<Button buttonType='primary' onClick={goToHometHandler}>
+				</OrderContainer>
+			</CheckoutContainer>
+			<Button buttonType={ButtonTypeClasses.base} onClick={goToHometHandler}>
 				Continue Shopping
 			</Button>
-		</section>
+		</CheckoutSection>
 	);
 };
 

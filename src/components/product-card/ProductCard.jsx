@@ -4,8 +4,15 @@ import { CartContext } from '../../contexts/CartContext';
 
 import { ReactComponent as ShoppingBagIcon } from '../../assets/svgs/bag-icon.svg';
 
-import './product-card.scss';
-
+import {
+	ProductContainer,
+	ProductDetails,
+	ProductDetailsContainer,
+	ProductIconContainer,
+	ProductImage,
+	ProductImageContainer,
+	ProductImageHover
+} from './product-card..styles';
 const ProductCard = ({ product }) => {
 	const { setIsCartOpen, addItemToCart } = useContext(CartContext);
 	const { name, price, primaryImage, secondaryImage } = product;
@@ -16,25 +23,21 @@ const ProductCard = ({ product }) => {
 	};
 	return (
 		<>
-			<article className='product-container'>
-				<figure className='product-image-container'>
-					<img src={primaryImage} alt='shoe' className='product-image' />
-					<img
-						src={secondaryImage}
-						alt='shoe'
-						className='product-image image-hover'
-					/>
-				</figure>
-				<div className='product-details-container'>
-					<div className='product-details'>
+			<ProductContainer>
+				<ProductImageContainer>
+					<ProductImage src={primaryImage} alt='shoe' />
+					<ProductImageHover src={secondaryImage} alt='shoe' />
+				</ProductImageContainer>
+				<ProductDetailsContainer>
+					<ProductDetails>
 						<h3 className='product-name'>{name}</h3>
 						<span className='product-price'>GH₵{price}</span>
-					</div>
-					<div className='product-icon-container' onClick={addProductToCart}>
-						<ShoppingBagIcon className='product-icon' />
-					</div>
-				</div>
-			</article>
+					</ProductDetails>
+					<ProductIconContainer onClick={addProductToCart}>
+						<ShoppingBagIcon />
+					</ProductIconContainer>
+				</ProductDetailsContainer>
+			</ProductContainer>
 		</>
 	);
 };

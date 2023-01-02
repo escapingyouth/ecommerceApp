@@ -1,10 +1,10 @@
-import './form-input.scss';
+import { Input } from './form-input.styles';
 
 const FormInput = ({ label, labelFor, ...otherProps }) => {
 	return (
 		<>
 			<label htmlFor={labelFor}>{label}</label>
-			<input {...otherProps} className='form-input' />
+			<Input {...otherProps} />
 		</>
 	);
 };

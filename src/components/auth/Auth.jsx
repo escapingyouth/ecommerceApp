@@ -1,11 +1,17 @@
 import { useState } from 'react';
 
-import { ReactComponent as CloseIcon } from '../../assets/svgs/cross.svg';
-
 import SignIn from '../sign-in/SignIn';
 import SignUp from '../sign-up/SignUp';
 
-import './auth.scss';
+import {
+	AuthContainer,
+	AuthHeader,
+	AuthButton,
+	AuthLinksContainer,
+	LinkBox
+} from './auth.styles';
+
+import CloseIcon from '../close-icon/CloseIcon';
 
 const Auth = ({ handleClose }) => {
 	const [currentComponent, setCurrentComponent] = useState('SignIn');
@@ -38,30 +44,30 @@ const Auth = ({ handleClose }) => {
 	}
 	return (
 		<>
-			<div className='auth-container'>
-				<div className='auth-header'>
+			<AuthContainer>
+				<AuthHeader>
 					<h2>Come on in</h2>
-					<CloseIcon onClick={handleClose} className='close-icon' />
-				</div>
-				<div className='auth-links-container'>
-					<div className='link-box'>
-						<button
-							className={`sign-in ${activeTab === 0 ? 'active' : ''}`}
+					<CloseIcon onClick={handleClose} />
+				</AuthHeader>
+				<AuthLinksContainer>
+					<LinkBox>
+						<AuthButton
+							isActiveTab={activeTab === 0}
 							onClick={() => handleClick('SignIn', 0)}
 						>
 							Sign in
-						</button>
-					</div>
-					<div className='link-box'>
-						<button
-							className={`sign-up ${activeTab === 1 ? 'active' : ''}`}
+						</AuthButton>
+					</LinkBox>
+					<LinkBox>
+						<AuthButton
+							isActiveTab={activeTab === 1}
 							onClick={() => handleClick('SignUp', 1)}
 						>
 							I'm new here
-						</button>
-					</div>
-				</div>
-			</div>
+						</AuthButton>
+					</LinkBox>
+				</AuthLinksContainer>
+			</AuthContainer>
 			{component}
 		</>
 	);

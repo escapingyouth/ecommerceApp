@@ -1,13 +1,15 @@
 import { useState } from 'react';
 
 import FormInput from '../form-input/FormInput';
-import ButtonContainer from '../form-input/ButtonContainer';
+import ButtonGroup from '../form-input/ButtonGroup';
 
 import {
 	signInWithGooglePopup,
 	createAuthUserWithEmailAndPassword,
 	createUserDocumentFromAuth
 } from '../../utilities/firebase/firebaseConfig';
+
+import { Form, FormGroup } from '../form-input/form-input.styles';
 
 const defaultFormFields = {
 	name: '',
@@ -60,8 +62,8 @@ const SignUp = ({ handleClose }) => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<div className='form-group'>
+		<Form onSubmit={handleSubmit}>
+			<FormGroup>
 				<FormInput
 					label='Name'
 					labelFor='name'
@@ -101,9 +103,9 @@ const SignUp = ({ handleClose }) => {
 					value={confirmPassword}
 					onChange={handleChange}
 				/>
-			</div>
-			<ButtonContainer title='Register' signInWithGoogle={signInWithGoogle} />
-		</form>
+			</FormGroup>
+			<ButtonGroup title='Register' signInWithGoogle={signInWithGoogle} />
+		</Form>
 	);
 };
 

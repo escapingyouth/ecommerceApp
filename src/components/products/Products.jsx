@@ -3,27 +3,27 @@ import Mens from './mens/Mens';
 import Womens from './womens/Womens';
 import Accessories from './accessories/Accessories';
 
-import './products.scss';
+import { ProductsSection, ProductsCatalogue } from './products.styles';
 
 const Products = () => {
 	return (
 		<>
-			<section className='products'>
+			<ProductsSection>
 				<h1 className='products-title'>Featured products</h1>
 
-				<div className='products-catalogue shoes'>
+				<ProductsCatalogue id='shoes'>
 					<Shoes />
-				</div>
-				<div className='products-catalogue mens'>
+				</ProductsCatalogue>
+				<ProductsCatalogue id='mens'>
 					<Mens />
-				</div>
-				<div className='products-catalogue womens'>
+				</ProductsCatalogue>
+				<ProductsCatalogue id='womens'>
 					<Womens />
-				</div>
-				<div className='products-catalogue accessories'>
+				</ProductsCatalogue>
+				<ProductsCatalogue id='accessories'>
 					<Accessories />
-				</div>
-			</section>
+				</ProductsCatalogue>
+			</ProductsSection>
 		</>
 	);
 };

@@ -3,12 +3,20 @@ import { useNavigate } from 'react-router-dom';
 
 import { CartContext } from '../../contexts/CartContext';
 
-import { ReactComponent as CloseIcon } from '../../assets/svgs/cross.svg';
-
+import CloseIcon from '../close-icon/CloseIcon';
 import Button from '../button/Button';
 import CartItem from '../cart-item/CartItem';
 
-import './cart-dropdown.scss';
+import {
+	CartDropdownContainer,
+	CartDropdownHeader,
+	CartItems,
+	CartTotals,
+	CartButtonsContainer,
+	EmptyMessage
+} from './cart-dropdown.styles.jsx';
+
+import { ButtonTypeClasses } from '../button/Button';
 
 const CartDropdown = () => {
 	const { isCartOpen, setIsCartOpen, cartItems, cartTotal, cartCount } =
@@ -29,14 +37,20 @@ const CartDropdown = () => {
 	));
 	return (
 		<>
-			<div className={`cart-dropdown-container ${isCartOpen ? 'active' : ''}`}>
-				<div className='cart-dropdown-header'>
+			<CartDropdownContainer isCartOpen={isCartOpen}>
+				<CartDropdownHeader>
 					<span>Basket</span>
 					<CloseIcon className='close-icon' onClick={closeCart} />
-				</div>
-				<div className='cart-items'>{renderedCartItems}</div>
+				</CartDropdownHeader>
+				<CartItems>
+					{cartItems.length ? (
+						renderedCartItems
+					) : (
+						<EmptyMessage>Your cart is empty</EmptyMessage>
+					)}
+				</CartItems>
 
-				<div className='cart-totals'>
+				<CartTotals>
 					<div className='cart-totals-sub'>
 						<span className='total-items'>{cartCount} items</span>
 						<span className='total-price'> GH₵{cartTotal}</span>
@@ -45,14 +59,17 @@ const CartDropdown = () => {
 						<span className='total-title'>Total</span>
 						<span className='total-price'>GH₵{cartTotal}</span>
 					</div>
-				</div>
-				<div className='cart-buttons'>
-					<Button buttonType='inverted'>Checkout</Button>
-					<Button buttonType='inverted' onClick={goToCheckoutHandler}>
+				</CartTotals>
+				<CartButtonsContainer>
+					<Button buttonType={ButtonTypeClasses.inverted}>Checkout</Button>
+					<Button
+						buttonType={ButtonTypeClasses.inverted}
+						onClick={goToCheckoutHandler}
+					>
 						Basket
 					</Button>
-				</div>
-			</div>
+				</CartButtonsContainer>
+			</CartDropdownContainer>
 		</>
 	);
 };

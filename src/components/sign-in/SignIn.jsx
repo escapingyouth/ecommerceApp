@@ -1,13 +1,14 @@
 import { useState } from 'react';
 
 import FormInput from '../form-input/FormInput';
-import ButtonContainer from '../form-input/ButtonContainer';
+import ButtonGroup from '../form-input/ButtonGroup';
 
 import {
 	signInWithGooglePopup,
 	signInAuthUserWithEmailAndPassword
 } from '../../utilities/firebase/firebaseConfig';
 
+import { Form, FormGroup, NewUser } from '../form-input/form-input.styles';
 const SignIn = ({ handleClick, handleClose }) => {
 	const [form, setForm] = useState({ email: '', password: '' });
 	const { email, password } = form;
@@ -50,8 +51,8 @@ const SignIn = ({ handleClick, handleClose }) => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<div className='form-group'>
+		<Form onSubmit={handleSubmit}>
+			<FormGroup>
 				<FormInput
 					label='Email'
 					labelFor='email'
@@ -71,12 +72,12 @@ const SignIn = ({ handleClick, handleClose }) => {
 					value={password}
 					onChange={handleChange}
 				/>
-			</div>
-			<ButtonContainer title='Sign In' signInWithGoogle={signInWithGoogle} />
-			<div className='new-user' onClick={() => handleClick('SignUp', 1)}>
+			</FormGroup>
+			<ButtonGroup title='Sign In' signInWithGoogle={signInWithGoogle} />
+			<NewUser onClick={() => handleClick('SignUp', 1)}>
 				New User? Register
-			</div>
-		</form>
+			</NewUser>
+		</Form>
 	);
 };
 
