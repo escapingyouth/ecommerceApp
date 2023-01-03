@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+import womens from '../../assets/images/shop-cards/womens.jpg';
+import mens from '../../assets/images/shop-cards/mens.jpg';
+import kids from '../../assets/images/shop-cards/kids.jpg';
+import shoes from '../../assets/images/shop-cards/shoes.jpg';
+import beauty from '../../assets/images/shop-cards/beauty.jpg';
+import accessories from '../../assets/images/shop-cards/accessories.jpg';
+
 import { Link } from 'react-router-dom';
 
 export const ShopCardContainer = styled.div`
@@ -7,6 +14,56 @@ export const ShopCardContainer = styled.div`
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(6, 100vh);
 	row-gap: 0.3rem;
+
+	.shop-womens {
+		background: linear-gradient(
+				to right,
+				rgba(0, 0, 0, 0.4),
+				rgba(0, 0, 0, 0.4)
+			),
+			url(${womens}) center/cover no-repeat;
+	}
+
+	.shop-mens {
+		background: linear-gradient(
+				to right,
+				rgba(0, 0, 0, 0.4),
+				rgba(0, 0, 0, 0.4)
+			),
+			url(${mens}) center/cover no-repeat;
+	}
+	.shop-kids {
+		background: linear-gradient(
+				to right,
+				rgba(0, 0, 0, 0.4),
+				rgba(0, 0, 0, 0.4)
+			),
+			url(${kids}) center/cover no-repeat;
+	}
+	.shop-shoes {
+		background: linear-gradient(
+				to right,
+				rgba(0, 0, 0, 0.4),
+				rgba(0, 0, 0, 0.4)
+			),
+			url(${shoes}) center/cover no-repeat;
+	}
+	.shop-beauty {
+		background: linear-gradient(
+				to right,
+				rgba(0, 0, 0, 0.4),
+				rgba(0, 0, 0, 0.4)
+			),
+			url(${beauty}) center/cover no-repeat;
+	}
+	.shop-accessories {
+		background: linear-gradient(
+				to right,
+				rgba(0, 0, 0, 0.4),
+				rgba(0, 0, 0, 0.4)
+			),
+			url(${accessories}) center/cover no-repeat;
+	}
 
 	@media screen and (max-width: 57em) {
 		grid-template-columns: repeat(2, 1fr);

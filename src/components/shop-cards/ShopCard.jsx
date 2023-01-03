@@ -4,7 +4,6 @@ import {
 	ShopCardText,
 	ShopLink
 } from './shop-card.styles';
-import './shop-card.scss';
 
 const ShopCard = () => {
 	return (
