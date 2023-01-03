@@ -2,6 +2,7 @@ import MainSlider from '../../main-slider/MainSlider';
 import Products from '../../products/Products';
 import Directory from '../../directory/Directory';
 import AboutUs from '../../about-us/AboutUs';
+import Footer from '../../footer/Footer';
 
 const Home = () => {
 	return (
@@ -12,6 +13,7 @@ const Home = () => {
 				<Directory />
 				<AboutUs />
 			</main>
+			<Footer />
 		</>
 	);
 };
