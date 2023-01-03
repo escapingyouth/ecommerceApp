@@ -17,15 +17,7 @@ const MainSlider = () => {
 	});
 	return (
 		<>
-			<Slider
-				autoplay={{
-					delay: 7500,
-					disableOnInteraction: false
-				}}
-				loop={true}
-			>
-				{renderedImages}
-			</Slider>
+			<Slider loop={true}>{renderedImages}</Slider>
 		</>
 	);
 };

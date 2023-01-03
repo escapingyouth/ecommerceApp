@@ -7,16 +7,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // Import Swiper modules
-import { Keyboard, Autoplay, Pagination, Navigation } from 'swiper';
+import { Keyboard, Pagination, Navigation } from 'swiper';
 
-const Slider = ({
-	children,
-	slidesPerView,
-
-	loop,
-	autoplay,
-	breakpoints
-}) => {
+const Slider = ({ children, slidesPerView, loop, breakpoints }) => {
 	return (
 		<>
 			<Swiper
@@ -26,13 +19,12 @@ const Slider = ({
 				keyboard={{
 					enabled: true
 				}}
-				autoplay={autoplay}
 				pagination={{
 					clickable: true
 				}}
 				breakpoints={breakpoints}
 				navigation={true}
-				modules={[Keyboard, Autoplay, Pagination, Navigation]}
+				modules={[Keyboard, Pagination, Navigation]}
 			>
 				{children}
 			</Swiper>
