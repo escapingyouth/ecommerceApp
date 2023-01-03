@@ -57,9 +57,9 @@ export const ProductsCatalogue = styled.div`
 	.swiper-button-next:after {
 		font-size: 1rem;
 		font-weight: bold;
-		color: #000;
+		color: #007bff;
 	}
 	.swiper-pagination-bullet-active {
-		background-color: #000;
+		background-color: #007bff;
 	}
 `;

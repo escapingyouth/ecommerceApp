@@ -9,7 +9,7 @@ const Products = () => {
 	return (
 		<>
 			<ProductsSection>
-				<h1 className='products-title'>Featured products</h1>
+				<h1>Featured products</h1>
 
 				<ProductsCatalogue id='shoes'>
 					<Shoes />

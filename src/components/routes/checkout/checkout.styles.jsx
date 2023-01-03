@@ -11,7 +11,7 @@ export const CheckoutSection = styled.section`
 		font-size: 2.5rem;
 		font-weight: 500;
 	}
-	${BaseButton} {
+	& > ${BaseButton} {
 		display: inline-block;
 		width: max-content;
 		padding: 1em;
@@ -40,7 +40,7 @@ export const CheckoutContainer = styled.div`
 	margin: 1.8rem 0;
 	width: 100%;
 
-	@media screen and (max-width: 34em) {
+	@media screen and (max-width: 42em) {
 		display: block;
 	}
 `;
@@ -51,6 +51,10 @@ export const CheckoutItems = styled.div`
 `;
 export const CartDetails = styled.div`
 	flex-basis: 70%;
+
+	@media screen and (max-width: 52em) {
+		flex-basis: 60%;
+	}
 	@media screen and (max-width: 34em) {
 		margin-bottom: 2rem;
 	}
@@ -59,6 +63,10 @@ export const OrderContainer = styled.div`
 	flex-basis: 30%;
 	padding: 1em;
 	border: 1px solid #ccc;
+
+	@media screen and (max-width: 52em) {
+		flex-basis: 40%;
+	}
 
 	.cart-totals-sub,
 	.cart-totals-main {

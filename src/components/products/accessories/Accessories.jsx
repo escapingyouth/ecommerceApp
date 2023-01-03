@@ -16,11 +16,13 @@ const Accessories = () => {
 		<>
 			<ProductSlider>
 				{accessories &&
-					accessories.map((product) => (
-						<SwiperSlide key={product.id}>
-							<ProductCard product={product} />
-						</SwiperSlide>
-					))}
+					accessories
+						.filter((_, index) => index < 9)
+						.map((product) => (
+							<SwiperSlide key={product.id}>
+								<ProductCard product={product} />
+							</SwiperSlide>
+						))}
 			</ProductSlider>
 		</>
 	);

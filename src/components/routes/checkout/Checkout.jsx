@@ -45,7 +45,9 @@ const Checkout = () => {
 						</div>
 					</div>
 					<div className='order-buttons'>
-						<Button buttonType='inverted'>Proceed to checkout</Button>
+						<Button buttonType={ButtonTypeClasses.inverted}>
+							Proceed to checkout
+						</Button>
 					</div>
 				</OrderContainer>
 			</CheckoutContainer>
