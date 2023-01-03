@@ -1,13 +1,12 @@
 import MainSlider from '../../main-slider/MainSlider';
 import Products from '../../products/Products';
-import ShopCard from '../../shop-cards/ShopCard';
-
+import Directory from '../../directory/Directory';
 const Home = () => {
 	return (
 		<>
 			<MainSlider />
 			<Products />
-			<ShopCard />
+			<Directory />
 		</>
 	);
 };
