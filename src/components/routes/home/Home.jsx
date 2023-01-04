@@ -1,7 +1,7 @@
 import MainSlider from '../../main-slider/MainSlider';
 import Products from '../../products/Products';
 import Directory from '../../directory/Directory';
-import AboutUs from '../../about-us/AboutUs';
+import OurBrand from '../../our-brand/OurBrand';
 import Footer from '../../footer/Footer';
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
 			<main>
 				<Products />
 				<Directory />
-				<AboutUs />
+				<OurBrand />
 			</main>
 			<Footer />
 		</>

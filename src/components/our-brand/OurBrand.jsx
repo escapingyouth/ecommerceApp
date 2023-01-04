@@ -5,23 +5,23 @@ import {
 	BrandTextContainer,
 	BrandImage,
 	BrandIconsContainer
-} from './about-us.styles';
+} from './our-brand.styles';
 
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const AboutUs = () => {
+const OurBrand = () => {
 	return (
 		<BrandSection>
-			<h1>About us</h1>
+			<h1>Meet our brand</h1>
 
 			<BrandContainer>
 				<BrandImage></BrandImage>
 				<BrandTextContainer>
 					<div>
-						<h2>About Kings and Queens</h2>
+						<h2>Who are we?</h2>
 						<p>
 							Kings and Queens is an online store for regal clothing and
 							accessories. Our team is passionate about fashion and history, and
@@ -52,4 +52,4 @@ const AboutUs = () => {
 	);
 };
 
-export default AboutUs;
+export default OurBrand;
