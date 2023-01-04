@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ProductImageHover } from '../product-card/product-card..styles';
+import { ProductImageHover } from '../product-card/product-card.styles';
 
 export const ProductsSection = styled.section`
 	margin: 10rem 0;
@@ -13,16 +13,10 @@ export const ProductsSection = styled.section`
 	}
 
 	#mens,
-	#womens,
-	#accessories {
+	#womens {
 		& ${ProductImageHover} {
 			object-fit: cover;
 			object-position: top;
-		}
-	}
-	#accessories {
-		& ${ProductImageHover} {
-			object-position: center;
 		}
 	}
 `;
@@ -44,13 +38,7 @@ export const ProductsCatalogue = styled.div`
 		}
 	}
 	.swiper-slide {
-		padding: 1em;
-		position: relative;
 		height: 90%;
-
-		&:hover {
-			box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.25);
-		}
 	}
 
 	.swiper-button-prev:after,

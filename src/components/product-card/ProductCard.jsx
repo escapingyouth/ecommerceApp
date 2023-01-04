@@ -12,7 +12,7 @@ import {
 	ProductImage,
 	ProductImageContainer,
 	ProductImageHover
-} from './product-card..styles';
+} from './product-card.styles';
 const ProductCard = ({ product }) => {
 	const { setIsCartOpen, addItemToCart } = useContext(CartContext);
 	const { name, price, primaryImage, secondaryImage } = product;
@@ -25,18 +25,18 @@ const ProductCard = ({ product }) => {
 		<>
 			<ProductContainer>
 				<ProductImageContainer>
-					<ProductImage src={primaryImage} alt='shoe' />
-					<ProductImageHover src={secondaryImage} alt='shoe' />
+					<ProductImage src={primaryImage} alt={name} />
+					<ProductImageHover src={secondaryImage} alt={name} />
 				</ProductImageContainer>
 				<ProductDetailsContainer>
 					<ProductDetails>
 						<h3 className='product-name'>{name}</h3>
 						<span className='product-price'>GH₵{price}</span>
 					</ProductDetails>
-					<ProductIconContainer onClick={addProductToCart}>
-						<ShoppingBagIcon />
-					</ProductIconContainer>
 				</ProductDetailsContainer>
+				<ProductIconContainer onClick={addProductToCart}>
+					<ShoppingBagIcon />
+				</ProductIconContainer>
 			</ProductContainer>
 		</>
 	);

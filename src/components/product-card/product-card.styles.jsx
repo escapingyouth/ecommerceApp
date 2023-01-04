@@ -34,6 +34,7 @@ export const ProductContainer = styled.article`
 
 	&:hover {
 		cursor: pointer;
+		box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.25);
 	}
 
 	&:hover ${ProductImageHover} {
@@ -46,6 +47,7 @@ export const ProductDetailsContainer = styled.div`
 `;
 export const ProductDetails = styled.div`
 	height: 100%;
+	padding: 1em;
 
 	h3 {
 		font-size: 0.9rem;
