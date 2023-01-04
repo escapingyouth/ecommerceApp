@@ -47,22 +47,22 @@ const Navigation = () => {
 					</LogoContainer>
 
 					<NavMenu isActive={menuOpen}>
-						<NavLink className='nav-link'>
+						<NavLink>
 							<NavItem to='/mens'>Men</NavItem>
 						</NavLink>
 						<NavLink>
 							<NavItem to='/womens'>Women</NavItem>
 						</NavLink>
-						<NavLink className='nav-link'>
+						<NavLink>
 							<NavItem to='/kids'>Kids</NavItem>
 						</NavLink>
-						<NavLink className='nav-link'>
+						<NavLink>
 							<NavItem to='/shoes'>Shoes</NavItem>
 						</NavLink>
-						<NavLink className='nav-link'>
+						<NavLink>
 							<NavItem to='/beauty'>Beauty</NavItem>
 						</NavLink>
-						<NavLink className='nav-link'>
+						<NavLink>
 							<NavItem to='/accessories'>Accessories</NavItem>
 						</NavLink>
 					</NavMenu>
