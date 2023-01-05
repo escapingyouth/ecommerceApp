@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import brandImage from '../../assets/images/about-us/1.jpg';
+import brandImage from '../../assets/images/our-brand/1.webp';
 
 export const BrandSection = styled.section`
 	margin: 10rem 0;

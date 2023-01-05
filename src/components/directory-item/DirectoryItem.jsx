@@ -10,42 +10,42 @@ const DirectoryItem = () => {
 			id: 1,
 			title: "men's collection",
 			linkUrl: "shop men's",
-			imageUrl: 'https://i.ibb.co/LzJ6d9j/mens.jpg',
+			imageUrl: 'https://i.ibb.co/zxKWYz6/mens.webp',
 			route: '/mens'
 		},
 		{
 			id: 2,
 			title: "women's collection",
 			linkUrl: "shop women's",
-			imageUrl: 'https://i.ibb.co/hxG4rjP/womens.jpg',
+			imageUrl: 'https://i.ibb.co/zxc0Zt6/womens.webp',
 			route: '/womens'
 		},
 		{
 			id: 3,
 			title: 'junior collection',
 			linkUrl: "shop kid's",
-			imageUrl: 'https://i.ibb.co/PMZ6T5v/kids.jpg',
+			imageUrl: 'https://i.ibb.co/3CWT31y/kids.webp',
 			route: '/kids'
 		},
 		{
 			id: 4,
 			title: 'shoes collection',
 			linkUrl: 'shop shoes',
-			imageUrl: 'https://i.ibb.co/BgjL36c/shoes.jpg',
+			imageUrl: 'https://i.ibb.co/ys7Vn0H/shoes.webp',
 			route: '/shoes'
 		},
 		{
 			id: 5,
 			title: 'beauty collection',
 			linkUrl: 'shop beauty',
-			imageUrl: 'https://i.ibb.co/ZMtfQBq/beauty.jpg',
+			imageUrl: 'https://i.ibb.co/GCnzJD2/beauty.webp',
 			route: '/beauty'
 		},
 		{
 			id: 6,
 			title: 'accessories collection',
 			linkUrl: 'shop accessories',
-			imageUrl: 'https://i.ibb.co/k1NCdD7/accessories.jpg',
+			imageUrl: 'https://i.ibb.co/p0z4Ptv/accessories.webp',
 			route: '/accessories'
 		}
 	];

@@ -1,9 +1,9 @@
-import image_1 from '../../assets/images/header/1.jpg';
-import image_2 from '../../assets/images/header/2.jpg';
-import image_3 from '../../assets/images/header/3.jpg';
-import image_4 from '../../assets/images/header/4.jpg';
-import image_5 from '../../assets/images/header/5.jpg';
-import image_6 from '../../assets/images/header/6.jpg';
+import image_1 from '../../assets/images/header/1.webp';
+import image_2 from '../../assets/images/header/2.webp';
+import image_3 from '../../assets/images/header/3.webp';
+import image_4 from '../../assets/images/header/4.webp';
+import image_5 from '../../assets/images/header/5.webp';
+import image_6 from '../../assets/images/header/6.webp';
 
 const images = [
 	{ id: 1, imageSource: image_1 },
