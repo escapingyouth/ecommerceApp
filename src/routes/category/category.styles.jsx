@@ -6,7 +6,7 @@ import {
 	ProductImageHover,
 	ProductImage,
 	ProductContainer
-} from '../../product-card/product-card.styles';
+} from '../../components/product-card/product-card.styles';
 
 export const CategoryContainer = styled.div`
 	margin-top: 6rem;
@@ -15,7 +15,6 @@ export const CategoryContainer = styled.div`
 	h1 {
 		margin-bottom: 1rem;
 		text-transform: capitalize;
-		/* text-align: center; */
 		font-weight: bold;
 		font-size: 3rem;
 	}
@@ -23,7 +22,7 @@ export const CategoryContainer = styled.div`
 	p {
 		font-weight: bold;
 		font-size: 1rem;
-		margin-bottom: 5rem;
+		margin-bottom: 2rem;
 	}
 
 	${ProductContainer} {
@@ -66,6 +65,32 @@ export const CategoryLink = styled(Link)`
 	&:last-child {
 		font-weight: bold;
 		text-transform: capitalize;
+	}
+`;
+
+export const FilterContainer = styled.div`
+	/* display: flex; */
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 1em;
+	margin-bottom: 6rem;
+
+	input {
+		display: block;
+		font-family: inherit;
+		width: 10%;
+		padding: 0.5em;
+		border: 1px solid #ccc;
+		font-size: 0.8rem;
+		appearance: none;
+
+		&::-webkit-search-cancel-button {
+			appearance: none;
+		}
+
+		&:focus {
+			outline: 1px solid #000;
+		}
 	}
 `;
 

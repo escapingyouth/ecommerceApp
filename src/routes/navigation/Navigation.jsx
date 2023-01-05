@@ -1,16 +1,16 @@
 import { useState, useContext } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { UserContext } from '../../../contexts/UserContext';
+import { UserContext } from '../../contexts/UserContext';
 
-import { ReactComponent as Logo } from '../../../assets/svgs/crown.svg';
-import CartIcon from '../../cart-icon/CartIcon';
+import { ReactComponent as Logo } from '../../assets/svgs/crown.svg';
+import CartIcon from '../../components/cart-icon/CartIcon';
 
-import ModalBox from '../../modal/ModalBox';
-import Auth from '../../auth/Auth';
-import CartDropdown from '../../cart-dropdown/CartDropdown';
+import ModalBox from '../../components/modal/ModalBox';
+import Auth from '../../components/auth/Auth';
+import CartDropdown from '../../components/cart-dropdown/CartDropdown';
 
-import { signOutUser } from '../../../utilities/firebase/firebaseConfig';
+import { signOutUser } from '../../utilities/firebase/firebaseConfig';
 
 import {
 	Header,

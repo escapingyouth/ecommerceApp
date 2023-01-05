@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import styled, { css } from 'styled-components';
 
-import { ReactComponent as ProfileSvg } from '../../../assets/svgs/profile-icon.svg';
+import { ReactComponent as ProfileSvg } from '../../assets/svgs/profile-icon.svg';
 import LogoutIcon from '@mui/icons-material/Logout';
 
 export const Header = styled.header`

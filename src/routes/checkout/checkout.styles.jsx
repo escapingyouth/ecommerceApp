@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BaseButton } from '../../button/button.styles';
+import { BaseButton } from '../../components/button/button.styles';
 
 export const CheckoutSection = styled.section`
 	margin: 7rem auto;

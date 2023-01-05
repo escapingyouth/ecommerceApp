@@ -1,15 +1,16 @@
 import { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 
-import Footer from '../../footer/Footer';
+import Footer from '../../components/footer/Footer';
 
-import { CategoriesContext } from '../../../contexts/CategoriesContext';
-import ProductCard from '../../product-card/ProductCard';
+import { CategoriesContext } from '../../contexts/CategoriesContext';
+import ProductCard from '../../components/product-card/ProductCard';
 
 import {
 	CategoryContainer,
 	CategoryLinkContainer,
 	CategoryLink,
+	FilterContainer,
 	CategoryProducts
 } from './category.styles';
 
@@ -19,11 +20,24 @@ const Category = () => {
 	const { category } = useParams();
 
 	const [products, setProducts] = useState(categoriesMap[category]);
+	const [filteredProducts, setFilteredProducts] = useState(products);
+
+	const [searchProduct, setSearchProduct] = useState('');
 
 	useEffect(() => {
 		setProducts(categoriesMap[category]);
 	}, [category, categoriesMap]);
 
+	useEffect(() => {
+		const newFilteredProducts = products.filter((product) =>
+			product.name.toLowerCase().includes(searchProduct)
+		);
+		setFilteredProducts(newFilteredProducts);
+	}, [searchProduct, products]);
+
+	const handleChange = (e) => {
+		setSearchProduct(e.target.value.toLowerCase());
+	};
 	let content;
 	switch (category) {
 		case 'mens':
@@ -72,10 +86,18 @@ const Category = () => {
 				</CategoryLinkContainer>
 				<h1>{category}</h1>
 				{content}
+				<FilterContainer>
+					<input
+						type='search'
+						placeholder='search product'
+						onChange={handleChange}
+						value={searchProduct}
+					/>
+				</FilterContainer>
 
 				<CategoryProducts>
-					{products &&
-						products.map((product) => (
+					{filteredProducts &&
+						filteredProducts.map((product) => (
 							<ProductCard key={product.id} product={product} />
 						))}
 				</CategoryProducts>

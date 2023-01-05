@@ -1,11 +1,11 @@
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { CartContext } from '../../../contexts/CartContext';
+import { CartContext } from '../../contexts/CartContext';
 
-import CheckoutItem from '../../checkout-item/CheckoutItem';
-import Button from '../../button/Button';
-import { ButtonTypeClasses } from '../../button/Button';
+import CheckoutItem from '../../components/checkout-item/CheckoutItem';
+import Button from '../../components/button/Button';
+import { ButtonTypeClasses } from '../../components/button/Button';
 
 import {
 	CheckoutSection,

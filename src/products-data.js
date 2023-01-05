@@ -185,6 +185,128 @@ const PRODUCT_DATA = [
 		]
 	},
 	{
+		title: 'kids',
+		items: [
+			{
+				id: uuidv4(),
+				name: 'Long black dress',
+				price: 400,
+				primaryImage: 'https://i.ibb.co/7y1Kdxx/1.webp',
+				secondaryImage: 'https://i.ibb.co/2qb3z2k/1.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Button-detail knitted dress',
+				price: 500,
+				primaryImage: 'https://i.ibb.co/mSv7qH4/2.jpg',
+				secondaryImage: 'https://i.ibb.co/wygzr0P/2.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Light blue silk dress',
+				price: 400,
+				primaryImage: 'https://i.ibb.co/QFTXMq9/3.webp',
+				secondaryImage: 'https://i.ibb.co/dtyn6Vn/3.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'cropped cut-out top',
+				price: 300,
+				primaryImage: 'https://i.ibb.co/YBt7Vdn/4.webp',
+				secondaryImage: 'https://i.ibb.co/P62QpFr/4.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Oscar de la Renta short dress',
+				price: 150,
+				primaryImage: 'https://i.ibb.co/vmHF0p7/5.jpg',
+				secondaryImage: 'https://i.ibb.co/tP1RKfM/5.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Logo printed sweater',
+				price: 400,
+				primaryImage: 'https://i.ibb.co/xj8Ynkr/6.webp',
+				secondaryImage: 'https://i.ibb.co/vwCMSsP/6.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Gucci Jacket',
+				price: 800,
+				primaryImage: 'https://i.ibb.co/JqzNbsX/7.webp',
+				secondaryImage: 'https://i.ibb.co/tm6f2XD/7.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Snakeskin-print trousers',
+				price: 350,
+				primaryImage: 'https://i.ibb.co/34c1fQn/8.jpg',
+				secondaryImage: 'https://i.ibb.co/s9RVskm/8.webp'
+			}
+		]
+	},
+	{
+		title: 'beauty',
+		items: [
+			{
+				id: uuidv4(),
+				name: 'Long black dress',
+				price: 400,
+				primaryImage: 'https://i.ibb.co/7y1Kdxx/1.webp',
+				secondaryImage: 'https://i.ibb.co/2qb3z2k/1.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Button-detail knitted dress',
+				price: 500,
+				primaryImage: 'https://i.ibb.co/mSv7qH4/2.jpg',
+				secondaryImage: 'https://i.ibb.co/wygzr0P/2.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Light blue silk dress',
+				price: 400,
+				primaryImage: 'https://i.ibb.co/QFTXMq9/3.webp',
+				secondaryImage: 'https://i.ibb.co/dtyn6Vn/3.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'cropped cut-out top',
+				price: 300,
+				primaryImage: 'https://i.ibb.co/YBt7Vdn/4.webp',
+				secondaryImage: 'https://i.ibb.co/P62QpFr/4.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Oscar de la Renta short dress',
+				price: 150,
+				primaryImage: 'https://i.ibb.co/vmHF0p7/5.jpg',
+				secondaryImage: 'https://i.ibb.co/tP1RKfM/5.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Logo printed sweater',
+				price: 400,
+				primaryImage: 'https://i.ibb.co/xj8Ynkr/6.webp',
+				secondaryImage: 'https://i.ibb.co/vwCMSsP/6.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Gucci Jacket',
+				price: 800,
+				primaryImage: 'https://i.ibb.co/JqzNbsX/7.webp',
+				secondaryImage: 'https://i.ibb.co/tm6f2XD/7.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Snakeskin-print trousers',
+				price: 350,
+				primaryImage: 'https://i.ibb.co/34c1fQn/8.jpg',
+				secondaryImage: 'https://i.ibb.co/s9RVskm/8.webp'
+			}
+		]
+	},
+	{
 		title: 'accessories',
 		items: [
 			{
