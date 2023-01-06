@@ -59,6 +59,78 @@ const PRODUCT_DATA = [
 				price: 350,
 				primaryImage: 'https://i.ibb.co/6RQ6RgX/8.webp',
 				secondaryImage: 'https://i.ibb.co/GssjmH8/8.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Alexander McQueen broques',
+				price: 650,
+				primaryImage: '	https://i.ibb.co/3zKMHnZ/9.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Cagole pointed-toe boots',
+				price: 850,
+				primaryImage: '			https://i.ibb.co/bFBGrCd/10.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Red knee-length boots',
+				price: 800,
+				primaryImage: 'https://i.ibb.co/Zm5dGnF/11.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'leather knee-length boots',
+				price: 900,
+				primaryImage: 'https://i.ibb.co/k19X9Zb/12.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Off-white mid-top sneakers',
+				price: 500,
+				primaryImage: 'https://i.ibb.co/W2zyLwK/13.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Jimmy Choo sandals',
+				price: 600,
+				primaryImage: 'https://i.ibb.co/4JKXJts/14.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'logo-embossed slides',
+				price: 150,
+				primaryImage: 'https://i.ibb.co/gvC7k0v/15.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Gucci horsebit loafers',
+				price: 600,
+				primaryImage: 'https://i.ibb.co/PDyjM2Q/16.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Dolce & Gabbana low-top sneakers',
+				price: 400,
+				primaryImage: 'https://i.ibb.co/VYJz1Tr/17.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Valentino Garavani sandals',
+				price: 750,
+				primaryImage: 'https://i.ibb.co/Ns5wjvP/18.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Chamonix ankle boots',
+				price: 850,
+				primaryImage: 'https://i.ibb.co/nMwbLNM/19.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'GANNI leather sneakers',
+				price: 500,
+				primaryImage: 'https://i.ibb.co/QkRpq5d/20.webp'
 			}
 		]
 	},
@@ -68,7 +140,7 @@ const PRODUCT_DATA = [
 			{
 				id: uuidv4(),
 				name: 'Black polo shirt',
-				price: 50,
+				price: 120,
 				primaryImage: 'https://i.ibb.co/zG9t07z/1.webp',
 				secondaryImage: 'https://i.ibb.co/hM1P9yR/1.webp'
 			},
@@ -120,6 +192,79 @@ const PRODUCT_DATA = [
 				price: 350,
 				primaryImage: 'https://i.ibb.co/ZfFdZKV/8.webp',
 				secondaryImage: 'https://i.ibb.co/FhqTPFW/8.webp'
+			},
+
+			{
+				id: uuidv4(),
+				name: 'striped loose-fit shirt',
+				price: 400,
+				primaryImage: 'https://i.ibb.co/L6LCbrq/9.jpg'
+			},
+			{
+				id: uuidv4(),
+				name: 'button-up checked jacket',
+				price: 300,
+				primaryImage: 'https://i.ibb.co/gd0BK0X/10.jpg'
+			},
+			{
+				id: uuidv4(),
+				name: 'Casablanca jumper',
+				price: 500,
+				primaryImage: 'https://i.ibb.co/X8X80tD/11.jpg'
+			},
+			{
+				id: uuidv4(),
+				name: 'Brown track pants',
+				price: 130,
+				primaryImage: 'https://i.ibb.co/Y7wyxXD/12.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Zip-up coat',
+				price: 550,
+				primaryImage: 'https://i.ibb.co/Xx9rvQg/13.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Cashmere roll-neck jumper',
+				price: 200,
+				primaryImage: 'https://i.ibb.co/B3sLCh0/14.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Versace T-shirt',
+				price: 400,
+				primaryImage: 'https://i.ibb.co/VCQjL10/15.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Cotton sweatshirt',
+				price: 300,
+				primaryImage: 'https://i.ibb.co/wSYGXMc/16.jpg'
+			},
+			{
+				id: uuidv4(),
+				name: 'Black track shorts',
+				price: 200,
+				primaryImage: 'https://i.ibb.co/pbK11zG/17.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Black single-breasted blazer',
+				price: 700,
+				primaryImage: 'https://i.ibb.co/4PdngwM/18.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Pony-embroided shrt',
+				price: 500,
+				primaryImage: 'https://i.ibb.co/KKQQyrf/19.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Logo padded coat',
+				price: 500,
+				primaryImage: 'https://i.ibb.co/s5W5XKG/20.webp'
 			}
 		]
 	},
