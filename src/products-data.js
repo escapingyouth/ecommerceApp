@@ -331,7 +331,73 @@ const PRODUCT_DATA = [
 				id: uuidv4(),
 				name: 'Black asymmetric dress',
 				price: 623,
-				primaryImage: 'https://i.ibb.co/34c1fQn/8.jpg'
+				primaryImage: 'https://i.ibb.co/k3wsy5P/9.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Gold Corset dress',
+				price: 500,
+				primaryImage: 'https://i.ibb.co/sb2GcQM/10.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Belted puffer coat',
+				price: 600,
+				primaryImage: 'https://i.ibb.co/vXYFfCX/11.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Polka dot-print dress',
+				price: 450,
+				primaryImage: 'https://i.ibb.co/nj9XbbQ/12.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Cut-out blazer-dress',
+				price: 300,
+				primaryImage: 'https://i.ibb.co/1n94hPX/13.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Sequin midi dress',
+				price: 800,
+				primaryImage: 'https://i.ibb.co/p2ttbsD/14.jpg'
+			},
+			{
+				id: uuidv4(),
+				name: 'Zimmermann trim dress',
+				price: 900,
+				primaryImage: 'https://i.ibb.co/vZrx2GF/15.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'sierra ribbed-knit dress',
+				price: 300,
+				primaryImage: 'https://i.ibb.co/0CXD686/16.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'High-neck zipper jumper',
+				price: 280,
+				primaryImage: 'https://i.ibb.co/BVxZ29c/17.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Dolce & Gabbana printed short dress',
+				price: 980,
+				primaryImage: 'https://i.ibb.co/N79nRgh/18.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Straight-leg cargo trousers',
+				price: 540,
+				primaryImage: 'https://i.ibb.co/wBqjhP2/19.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Rhinestone-embellished dress',
+				price: 1040,
+				primaryImage: 'https://i.ibb.co/8z3N0Km/20.webp'
 			}
 		]
 	},
