@@ -10,7 +10,12 @@ const MainSlider = () => {
 		return (
 			<SwiperSlide key={id}>
 				<div className='header-slide-container'>
-					<img src={imageSource} alt='slide' className='header-slide-image' />
+					<img
+						src={imageSource}
+						alt='slide'
+						loading='lazy'
+						className='header-slide-image'
+					/>
 				</div>
 			</SwiperSlide>
 		);

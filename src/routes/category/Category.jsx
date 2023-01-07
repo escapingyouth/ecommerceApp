@@ -10,7 +10,7 @@ import {
 	CategoryContainer,
 	CategoryLinkContainer,
 	CategoryLink,
-	FilterContainer,
+	// FilterContainer,
 	CategoryProducts
 } from './category.styles';
 
@@ -20,24 +20,24 @@ const Category = () => {
 	const { category } = useParams();
 
 	const [products, setProducts] = useState(categoriesMap[category]);
-	const [filteredProducts, setFilteredProducts] = useState(products);
+	// const [filteredProducts, setFilteredProducts] = useState(products);
 
-	const [searchProduct, setSearchProduct] = useState('');
+	// const [searchProduct, setSearchProduct] = useState('');
 
 	useEffect(() => {
 		setProducts(categoriesMap[category]);
 	}, [category, categoriesMap]);
 
-	useEffect(() => {
-		const newFilteredProducts = products.filter((product) =>
-			product.name.toLowerCase().includes(searchProduct)
-		);
-		setFilteredProducts(newFilteredProducts);
-	}, [searchProduct, products]);
+	// useEffect(() => {
+	// 	const newFilteredProducts = products.filter((product) =>
+	// 		product.name.toLowerCase().includes(searchProduct)
+	// 	);
+	// 	setFilteredProducts(newFilteredProducts);
+	// }, [searchProduct, products]);
 
-	const handleChange = (e) => {
-		setSearchProduct(e.target.value.toLowerCase());
-	};
+	// const handleChange = (e) => {
+	// 	setSearchProduct(e.target.value.toLowerCase());
+	// };
 	let content;
 	switch (category) {
 		case 'mens':
@@ -86,18 +86,18 @@ const Category = () => {
 				</CategoryLinkContainer>
 				<h1>{category}</h1>
 				{content}
-				<FilterContainer>
+				{/* <FilterContainer>
 					<input
 						type='search'
 						placeholder='search product'
 						onChange={handleChange}
 						value={searchProduct}
 					/>
-				</FilterContainer>
+				</FilterContainer> */}
 
 				<CategoryProducts>
-					{filteredProducts &&
-						filteredProducts.map((product) => (
+					{products &&
+						products.map((product) => (
 							<ProductCard key={product.id} product={product} />
 						))}
 				</CategoryProducts>

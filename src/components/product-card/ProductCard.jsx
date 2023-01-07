@@ -25,8 +25,8 @@ const ProductCard = ({ product }) => {
 		<>
 			<ProductContainer>
 				<ProductImageContainer>
-					<ProductImage src={primaryImage} alt={name} />
-					<ProductImageHover src={secondaryImage} alt={name} />
+					<ProductImage src={primaryImage} loading='lazy' alt={name} />
+					<ProductImageHover src={secondaryImage} loading='lazy' alt={name} />
 				</ProductImageContainer>
 				<ProductDetailsContainer>
 					<ProductDetails>

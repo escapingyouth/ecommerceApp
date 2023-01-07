@@ -263,7 +263,7 @@ const PRODUCT_DATA = [
 			{
 				id: uuidv4(),
 				name: 'Logo padded coat',
-				price: 500,
+				price: 600,
 				primaryImage: 'https://i.ibb.co/s5W5XKG/20.webp'
 			}
 		]
@@ -326,6 +326,12 @@ const PRODUCT_DATA = [
 				price: 350,
 				primaryImage: 'https://i.ibb.co/34c1fQn/8.jpg',
 				secondaryImage: 'https://i.ibb.co/s9RVskm/8.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Black asymmetric dress',
+				price: 623,
+				primaryImage: 'https://i.ibb.co/34c1fQn/8.jpg'
 			}
 		]
 	},

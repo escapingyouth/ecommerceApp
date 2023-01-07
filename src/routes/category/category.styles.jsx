@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 import {
 	ProductImageHover,
 	ProductImage,
-	ProductContainer
+	ProductContainer,
+	ProductDetails
 } from '../../components/product-card/product-card.styles';
 
 export const CategoryContainer = styled.div`
@@ -22,13 +23,19 @@ export const CategoryContainer = styled.div`
 	p {
 		font-weight: bold;
 		font-size: 1rem;
-		margin-bottom: 2rem;
+		margin-bottom: 6rem;
+	}
+
+	${ProductDetails} {
+		padding: 0;
 	}
 
 	${ProductContainer} {
 		height: 90%;
 		position: relative;
+		padding: 3em 2em;
 	}
+
 	${ProductImageHover} {
 		display: none;
 	}

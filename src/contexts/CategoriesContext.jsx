@@ -6,11 +6,14 @@ import { getCategoriesAndDocuments } from '../utilities/firebase/firebaseConfig.
 // import PRODUCT_DATA from '../products-data.js';
 
 export const CategoriesContext = createContext({
-	categoriesMap: {}
+	categoriesMap: {},
+	loading: true,
+	setLoading: () => {}
 });
 
 export const CategoriesProvider = ({ children }) => {
 	const [categoriesMap, setCategoriesMap] = useState({});
+	const [loading, setLoading] = useState(true);
 
 	// useEffect(() => {
 	// 	addCollectionAndDocuments('categories', PRODUCT_DATA);
@@ -20,12 +23,13 @@ export const CategoriesProvider = ({ children }) => {
 		const getCategoriesMap = async () => {
 			const categoryMap = await getCategoriesAndDocuments();
 			setCategoriesMap(categoryMap);
+			setLoading(false);
 		};
 
 		getCategoriesMap();
 	}, []);
 
-	const value = { categoriesMap };
+	const value = { categoriesMap, loading, setLoading };
 	return (
 		<CategoriesContext.Provider value={value}>
 			{children}

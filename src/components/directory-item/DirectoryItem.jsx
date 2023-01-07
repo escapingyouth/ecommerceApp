@@ -10,7 +10,7 @@ const DirectoryItem = () => {
 			id: 1,
 			title: "men's collection",
 			linkUrl: "shop men's",
-			imageUrl: 'https://i.ibb.co/zxKWYz6/mens.webp',
+			imageUrl: 'https://i.ibb.co/dJqTvWP/mens.webp',
 			route: '/mens'
 		},
 		{
@@ -24,28 +24,28 @@ const DirectoryItem = () => {
 			id: 3,
 			title: 'junior collection',
 			linkUrl: "shop kid's",
-			imageUrl: 'https://i.ibb.co/3CWT31y/kids.webp',
+			imageUrl: 'https://i.ibb.co/6sw37xf/kids.webp',
 			route: '/kids'
 		},
 		{
 			id: 4,
 			title: 'shoes collection',
 			linkUrl: 'shop shoes',
-			imageUrl: 'https://i.ibb.co/ys7Vn0H/shoes.webp',
+			imageUrl: 'https://i.ibb.co/4pLS47v/shoes.webp',
 			route: '/shoes'
 		},
 		{
 			id: 5,
 			title: 'beauty collection',
 			linkUrl: 'shop beauty',
-			imageUrl: 'https://i.ibb.co/GCnzJD2/beauty.webp',
+			imageUrl: 'https://i.ibb.co/XWNxRhd/beauty.webp',
 			route: '/beauty'
 		},
 		{
 			id: 6,
 			title: 'accessories collection',
 			linkUrl: 'shop accessories',
-			imageUrl: 'https://i.ibb.co/p0z4Ptv/accessories.webp',
+			imageUrl: 'https://i.ibb.co/Hh38V8t/accessories.webp',
 			route: '/accessories'
 		}
 	];
