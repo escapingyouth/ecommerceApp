@@ -17,7 +17,7 @@ const DirectoryItem = () => {
 			id: 2,
 			title: "women's collection",
 			linkUrl: "shop women's",
-			imageUrl: 'https://i.ibb.co/zxc0Zt6/womens.webp',
+			imageUrl: 'https://i.ibb.co/n139hfW/womens.webp',
 			route: '/womens'
 		},
 		{
