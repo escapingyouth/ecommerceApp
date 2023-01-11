@@ -55,6 +55,11 @@ export const CartItems = styled.div`
 	height: 50%;
 	overflow-y: auto;
 
+	&::-webkit-scrollbar {
+		width: 0.4rem;
+		background-color: #f5f5f5;
+	}
+
 	&::-webkit-scrollbar-thumb {
 		background-color: #ccc;
 	}

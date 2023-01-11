@@ -5,6 +5,11 @@ export const Form = styled.form`
 	overflow-y: scroll;
 	padding: 0 0.1rem;
 
+	&::-webkit-scrollbar {
+		width: 0.4rem;
+		background-color: #f5f5f5;
+	}
+
 	&::-webkit-scrollbar-thumb {
 		background-color: #ccc;
 	}

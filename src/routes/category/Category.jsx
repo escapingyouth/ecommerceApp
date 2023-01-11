@@ -82,7 +82,8 @@ const Category = () => {
 			<CategoryContainer>
 				<CategoryLinkContainer>
 					<CategoryLink to='/'>Home</CategoryLink>
-					<CategoryLink to={`/${category}`}> / {category}</CategoryLink>
+					<span> / </span>
+					<CategoryLink to={`/${category}`}>{category}</CategoryLink>
 				</CategoryLinkContainer>
 				<h1>{category}</h1>
 				{content}

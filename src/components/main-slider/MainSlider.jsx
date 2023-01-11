@@ -9,7 +9,7 @@ const MainSlider = () => {
 	const renderedImages = images.map(({ id, imageSource }) => {
 		return (
 			<SwiperSlide key={id}>
-				<div className='header-slide-container'>
+				<div>
 					<img
 						src={imageSource}
 						alt='slide'
