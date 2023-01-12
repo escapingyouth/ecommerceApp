@@ -14,13 +14,12 @@ import {
 	ProductImageHover
 } from './product-card.styles';
 const ProductCard = ({ product }) => {
-	// const { setIsCartOpen } = useContext(CartContext);
-	const { addItemToCart } = useContext(CartContext);
+	const { setIsCartOpen, addItemToCart } = useContext(CartContext);
 	const { name, price, primaryImage, secondaryImage } = product;
 
 	const addProductToCart = () => {
 		addItemToCart(product);
-		// setIsCartOpen(true);
+		setIsCartOpen(true);
 	};
 	return (
 		<>
