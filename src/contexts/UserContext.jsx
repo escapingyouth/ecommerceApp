@@ -24,7 +24,7 @@ const userReducer = (state, action) => {
 				currentUser: payload
 			};
 		default:
-			console.log(`Unhandled state of type ${type} in userReducer`);
+			throw new Error(`Unhandled state of type ${type} in userReducer`);
 	}
 };
 
