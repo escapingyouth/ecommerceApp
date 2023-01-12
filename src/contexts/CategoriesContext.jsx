@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from 'react';
 
-// import { addCollectionAndDocuments } from '../utilities/firebaseConfig.js';
+// import { addCollectionAndDocuments } from '../utilities/firebase/firebaseConfig.js';
 import { getCategoriesAndDocuments } from '../utilities/firebase/firebaseConfig.js';
 
 // import PRODUCT_DATA from '../products-data.js';

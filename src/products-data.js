@@ -532,10 +532,123 @@ const PRODUCT_DATA = [
 		items: [
 			{
 				id: uuidv4(),
-				name: 'Long black dress',
+				name: 'Harmonia cushion-cut bracelet',
+				price: 430,
+				primaryImage: 'https://i.ibb.co/ySrspFR/1.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'XXL rope chain bracelet',
+				price: 340,
+				primaryImage: 'https://i.ibb.co/vVBGBcV/2.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'The Curve mini bucket bag',
+				price: 950,
+				primaryImage: 'https://i.ibb.co/rZYD18b/3.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Chroma hoop earrings',
+				price: 640,
+				primaryImage: 'https://i.ibb.co/KsKZ5L2/4.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Embellished skull clutch bag',
+				price: 1200,
+				primaryImage: 'https://i.ibb.co/94QkTCc/5.jpg'
+			},
+			{
+				id: uuidv4(),
+				name: 'Greca drop earrings',
+				price: 433,
+				primaryImage: 'https://i.ibb.co/tm7Nhdj/6.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'La Medusa top-handle bag',
+				price: 880,
+				primaryImage: 'https://i.ibb.co/bsML7r5/7.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Medusa pendant necklace',
+				price: 455,
+				primaryImage: 'https://i.ibb.co/RNJdwjK/8.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Valentino Garavani crystal-studded bag',
+				price: 2500,
+				primaryImage: 'https://i.ibb.co/m94xqwf/9.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Chunky hoop earrings',
+				price: 150,
+				primaryImage: 'https://i.ibb.co/QnXrX63/10.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Mineral eye liner',
 				price: 400,
-				primaryImage: 'https://i.ibb.co/7y1Kdxx/1.webp',
-				secondaryImage: 'https://i.ibb.co/2qb3z2k/1.webp'
+				primaryImage: 'https://i.ibb.co/vVWr2Wn/11.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Natural mineral mascara',
+				price: 450,
+				primaryImage: 'https://i.ibb.co/MPPG9r2/12.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Classic mineral lipstick',
+				price: 370,
+				primaryImage: 'https://i.ibb.co/Mfs8zFL/13.jpg'
+			},
+			{
+				id: uuidv4(),
+				name: 'Vegan stippling brush',
+				price: 120,
+				primaryImage: 'https://i.ibb.co/h1Mg6S0/14.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Glamour eye lashes',
+				price: 100,
+				primaryImage: 'https://i.ibb.co/N3dCGMZ/15.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Lip repair balm',
+				price: 150,
+				primaryImage: 'https://i.ibb.co/wYnyLDF/16.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Water eye makeup remover',
+				price: 200,
+				primaryImage: 'https://i.ibb.co/Y2hBJB0/17.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Natural pain relief oil',
+				price: 575,
+				primaryImage: 'https://i.ibb.co/NVmsfwM/18.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Pre-cleansing oil',
+				price: 600,
+				primaryImage: 'https://i.ibb.co/kqC6vM5/19.webp'
+			},
+			{
+				id: uuidv4(),
+				name: 'Makeup palette',
+				price: 300,
+				primaryImage: 'https://i.ibb.co/B6sZ2f1/20.jpg'
 			}
 		]
 	},

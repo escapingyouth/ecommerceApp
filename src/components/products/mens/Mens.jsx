@@ -17,7 +17,7 @@ const Mens = () => {
 			<ProductSlider>
 				{mens &&
 					mens
-						.filter((_, index) => index < 9)
+						.filter((_, index) => index < 8)
 						.map((product) => (
 							<SwiperSlide key={product.id}>
 								<ProductCard product={product} />
