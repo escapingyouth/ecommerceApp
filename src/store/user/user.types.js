@@ -1,5 +1,5 @@
-const userTypes = {
+const userActionTypes = {
 	setCurrentUser: 'user/SET_CURRENT_USER'
 };
 
-export default userTypes;
+export default userActionTypes;

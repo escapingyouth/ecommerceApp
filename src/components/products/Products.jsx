@@ -1,11 +1,8 @@
-import { useContext } from 'react';
-
+import { useSelector } from 'react-redux';
 import Shoes from './shoes/Shoes';
 import Mens from './mens/Mens';
 import Womens from './womens/Womens';
 import Accessories from './accessories/Accessories';
-
-import { CategoriesContext } from '../../contexts/CategoriesContext';
 
 import {
 	ProductsSection,
@@ -13,13 +10,15 @@ import {
 	LoadingIcon
 } from './products.styles';
 
+import { selectIsLoading } from '../../store/categories/categories.selector';
+
 const Products = () => {
-	const { loading } = useContext(CategoriesContext);
+	const isLoading = useSelector(selectIsLoading);
 	return (
 		<>
 			<ProductsSection>
 				<h1>Featured products</h1>
-				{loading ? (
+				{isLoading ? (
 					<LoadingIcon />
 				) : (
 					<>

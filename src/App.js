@@ -3,10 +3,13 @@ import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import {
 	createUserDocumentFromAuth,
-	onAuthStateChangedListener
+	onAuthStateChangedListener,
+	getCategoriesAndDocuments
 } from './utilities/firebase/firebaseConfig';
 
 import setCurrentUser from './store/user/user.action';
+import { setCategories } from './store/categories/categories.action';
+import { setIsLoading } from './store/categories/categories.action';
 
 import Navigation from './routes/navigation/Navigation';
 import Home from './routes/home/Home';
@@ -25,6 +28,16 @@ const App = () => {
 		});
 
 		return unsubscribe;
+	}, [dispatch]);
+
+	useEffect(() => {
+		const getCategoriesMap = async () => {
+			const categoriesArray = await getCategoriesAndDocuments();
+			dispatch(setCategories(categoriesArray));
+			dispatch(setIsLoading(false));
+		};
+
+		getCategoriesMap();
 	}, [dispatch]);
 
 	return (

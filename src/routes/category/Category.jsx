@@ -1,43 +1,30 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-import Footer from '../../components/footer/Footer';
+import { selectCategoriesMap } from '../../store/categories/categories.selector';
 
-import { CategoriesContext } from '../../contexts/CategoriesContext';
 import ProductCard from '../../components/product-card/ProductCard';
+import Footer from '../../components/footer/Footer';
 
 import {
 	CategoryContainer,
 	CategoryLinkContainer,
 	CategoryLink,
-	// FilterContainer,
 	CategoryProducts
 } from './category.styles';
 
 const Category = () => {
-	const { categoriesMap } = useContext(CategoriesContext);
-
 	const { category } = useParams();
 
-	const [products, setProducts] = useState(categoriesMap[category]);
-	// const [filteredProducts, setFilteredProducts] = useState(products);
+	const categoriesMap = useSelector(selectCategoriesMap);
 
-	// const [searchProduct, setSearchProduct] = useState('');
+	const [products, setProducts] = useState(categoriesMap[category]);
 
 	useEffect(() => {
 		setProducts(categoriesMap[category]);
 	}, [category, categoriesMap]);
 
-	// useEffect(() => {
-	// 	const newFilteredProducts = products.filter((product) =>
-	// 		product.name.toLowerCase().includes(searchProduct)
-	// 	);
-	// 	setFilteredProducts(newFilteredProducts);
-	// }, [searchProduct, products]);
-
-	// const handleChange = (e) => {
-	// 	setSearchProduct(e.target.value.toLowerCase());
-	// };
 	let content;
 	switch (category) {
 		case 'mens':
@@ -87,14 +74,6 @@ const Category = () => {
 				</CategoryLinkContainer>
 				<h1>{category}</h1>
 				{content}
-				{/* <FilterContainer>
-					<input
-						type='search'
-						placeholder='search product'
-						onChange={handleChange}
-						value={searchProduct}
-					/>
-				</FilterContainer> */}
 
 				<CategoryProducts>
 					{products &&

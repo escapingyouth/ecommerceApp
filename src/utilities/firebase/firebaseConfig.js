@@ -65,7 +65,7 @@ export const onAuthStateChangedListener = (callback) => {
 	onAuthStateChanged(auth, callback);
 };
 
-const db = getFirestore();
+const db = getFirestore(app);
 
 // ADD PRODUCT DATA TO FIRESTORE DATABASE
 export const addCollectionAndDocuments = async (
@@ -93,14 +93,7 @@ export const getCategoriesAndDocuments = async () => {
 
 	const querySnapshot = await getDocs(q);
 
-	const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
-		const { title, items } = docSnapshot.data();
-		acc[title.toLowerCase()] = items;
-
-		return acc;
-	}, {});
-
-	return categoryMap;
+	return querySnapshot.docs.map((docSnapshot) => docSnapshot.data());
 };
 
 // CREATE USER METHOD

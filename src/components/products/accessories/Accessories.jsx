@@ -1,14 +1,14 @@
-import { useContext } from 'react';
+import { useSelector } from 'react-redux';
+
+import { selectCategoriesMap } from '../../../store/categories/categories.selector';
 
 import { SwiperSlide } from 'swiper/react';
-
-import { CategoriesContext } from '../../../contexts/CategoriesContext';
 
 import ProductSlider from '../ProductSlider';
 import ProductCard from '../../product-card/ProductCard';
 
 const Accessories = () => {
-	const { categoriesMap } = useContext(CategoriesContext);
+	const categoriesMap = useSelector(selectCategoriesMap);
 
 	const { accessories } = categoriesMap;
 
