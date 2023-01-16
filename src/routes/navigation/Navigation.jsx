@@ -1,7 +1,6 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-
-import { UserContext } from '../../contexts/UserContext';
+import { useSelector } from 'react-redux';
 
 import { ReactComponent as Logo } from '../../assets/svgs/crown.svg';
 import CartIcon from '../../components/cart-icon/CartIcon';
@@ -11,6 +10,8 @@ import Auth from '../../components/auth/Auth';
 import CartDropdown from '../../components/cart-dropdown/CartDropdown';
 
 import { signOutUser } from '../../utilities/firebase/firebaseConfig';
+
+import selectCurrentUser from '../../store/user/user.selector';
 
 import {
 	Header,
@@ -36,7 +37,8 @@ const Navigation = () => {
 	const toggleMenu = (e) => {
 		setMenuOpen(!menuOpen);
 	};
-	const { currentUser } = useContext(UserContext);
+
+	const currentUser = useSelector(selectCurrentUser);
 
 	return (
 		<>
