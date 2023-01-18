@@ -41,6 +41,7 @@ export const FooterContent = styled.div`
 	}
 	@media screen and (max-width: 50em) {
 		width: 100%;
+
 		p {
 			margin-bottom: 3rem;
 		}
@@ -55,6 +56,7 @@ export const FooterList = styled.ul`
 export const FooterLinksContainer = styled(Link)`
 	display: flex;
 	flex-direction: column;
+
 	@media screen and (max-width: 50em) {
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -62,12 +64,15 @@ export const FooterLinksContainer = styled(Link)`
 `;
 export const FooterLink = styled(Link)`
 	color: #fff;
+
 	&:hover {
 		color: #007bff;
 	}
+
 	&:not(:last-child) {
 		margin-bottom: 0.6rem;
 	}
+
 	@media screen and (max-width: 50em) {
 		&:not(:last-child) {
 			margin-right: 1rem;
@@ -89,6 +94,7 @@ export const FooterEnd = styled.div`
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+
 	@media screen and (max-width: 50em) {
 		justify-content: space-between;
 	}
@@ -97,10 +103,12 @@ export const FooterEnd = styled.div`
 export const Copyright = styled.div`
 	width: 50%;
 `;
+
 export const FooterIconsContainer = styled.div`
 	${FooterLink}:not(:last-child) {
 		margin-right: 1rem;
 	}
+
 	@media screen and (max-width: 50em) {
 		${FooterLink}:not(:last-child) {
 			margin-right: 0.3rem;
@@ -112,6 +120,7 @@ export const ContactIcon = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
+
 	&:not(:last-child) {
 		margin-bottom: 1rem;
 	}

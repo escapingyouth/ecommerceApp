@@ -56,6 +56,7 @@ export const ProductDetails = styled.div`
 		text-transform: uppercase;
 		margin-bottom: 1rem;
 	}
+
 	span {
 		font-size: 0.9rem;
 		letter-spacing: 1px;

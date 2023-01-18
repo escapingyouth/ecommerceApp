@@ -1,6 +1,8 @@
-import { useContext } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { CartContext } from '../../contexts/CartContext';
+import { selectCartItems } from '../../store/cart/cart.selector';
+
+import { setIsCartOpen, addItemToCart } from '../../store/cart/cart.action';
 
 import { ReactComponent as ShoppingBagIcon } from '../../assets/svgs/bag-icon.svg';
 
@@ -13,14 +15,19 @@ import {
 	ProductImageContainer,
 	ProductImageHover
 } from './product-card.styles';
+
 const ProductCard = ({ product }) => {
-	const { setIsCartOpen, addItemToCart } = useContext(CartContext);
+	const dispatch = useDispatch();
+
+	const cartItems = useSelector(selectCartItems);
+
 	const { name, price, primaryImage, secondaryImage } = product;
 
 	const addProductToCart = () => {
-		addItemToCart(product);
-		setIsCartOpen(true);
+		dispatch(addItemToCart(cartItems, product));
+		dispatch(setIsCartOpen(true));
 	};
+
 	return (
 		<>
 			<ProductContainer>

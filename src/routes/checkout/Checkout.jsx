@@ -1,7 +1,11 @@
-import { useContext } from 'react';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { CartContext } from '../../contexts/CartContext';
+import {
+	selectCartItems,
+	selectCartCount,
+	selectCartTotal
+} from '../../store/cart/cart.selector';
 
 import CheckoutItem from '../../components/checkout-item/CheckoutItem';
 import Button from '../../components/button/Button';
@@ -16,7 +20,9 @@ import {
 } from './checkout.styles';
 
 const Checkout = () => {
-	const { cartItems, cartTotal, cartCount } = useContext(CartContext);
+	const cartItems = useSelector(selectCartItems);
+	const cartCount = useSelector(selectCartCount);
+	const cartTotal = useSelector(selectCartTotal);
 
 	const navigate = useNavigate();
 	const goToHometHandler = () => {

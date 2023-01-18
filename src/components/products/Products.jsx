@@ -14,6 +14,7 @@ import { selectIsLoading } from '../../store/categories/categories.selector';
 
 const Products = () => {
 	const isLoading = useSelector(selectIsLoading);
+
 	return (
 		<>
 			<ProductsSection>

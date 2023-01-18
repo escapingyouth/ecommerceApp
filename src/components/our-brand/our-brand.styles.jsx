@@ -16,16 +16,20 @@ export const BrandSection = styled.section`
 export const BrandContainer = styled.div`
 	display: flex;
 	height: 75vh;
+
 	@media screen and (max-width: 57em) {
 		display: block;
 		height: 60vh;
 	}
+
 	@media screen and (max-width: 48em) {
 		height: 70vh;
 	}
+
 	@media screen and (max-width: 34em) {
 		height: 90vh;
 	}
+
 	@media screen and (max-width: 26em) {
 		height: 90vh;
 	}
@@ -48,6 +52,7 @@ export const BrandTextContainer = styled.div`
 		text-transform: uppercase;
 		margin-bottom: 1.5rem;
 	}
+
 	p {
 		text-align: justify;
 		margin-bottom: 2rem;
@@ -57,14 +62,18 @@ export const BrandTextContainer = styled.div`
 		font-weight: 600;
 		text-transform: uppercase;
 	}
+
 	@media screen and (max-width: 57em) {
 		padding: 4em;
 	}
+
 	@media screen and (max-width: 26em) {
 		padding: 2em;
+
 		h2 {
 			font-size: 1.4rem;
 		}
+
 		p {
 			font-size: 0.8rem;
 		}
@@ -72,17 +81,20 @@ export const BrandTextContainer = styled.div`
 `;
 export const BrandImage = styled.div`
 	flex-basis: 50%;
+
 	background: ${`linear-gradient(
 				to right,
 				rgba(0, 123, 255,0.4),
 				rgba(0, 123, 255,0.4)
 			),url(${brandImage}) center/cover no-repeat`};
+
 	background-blend-mode: multiply;
 
 	@media screen and (max-width: 57em) {
 		width: 100%;
 		height: 50%;
 	}
+
 	@media screen and (max-width: 26em) {
 		width: 100%;
 		height: 40%;
