@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { selectCartItems } from '../../store/cart/cart.selector';
 
-import { setIsCartOpen, addItemToCart } from '../../store/cart/cart.action';
+import { addItemToCart } from '../../store/cart/cart.action';
 
 import { ReactComponent as ShoppingBagIcon } from '../../assets/svgs/bag-icon.svg';
 
@@ -25,7 +25,6 @@ const ProductCard = ({ product }) => {
 
 	const addProductToCart = () => {
 		dispatch(addItemToCart(cartItems, product));
-		dispatch(setIsCartOpen(true));
 	};
 
 	return (
