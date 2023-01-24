@@ -2,22 +2,30 @@ import categoriesActionTypes from './categories.types';
 
 const categoriesDefaultState = {
 	categories: [],
-	isLoading: true
+	isLoading: false,
+	error: null
 };
 
 const categoriesReducer = (state = categoriesDefaultState, action = {}) => {
 	const { type, payload } = action;
 
 	switch (type) {
-		case categoriesActionTypes.setCategories:
+		case categoriesActionTypes.fetchCategoriesStart:
 			return {
 				...state,
-				categories: payload
+				isLoading: true
 			};
-		case categoriesActionTypes.setIsLoading:
+		case categoriesActionTypes.fetchCategoriesSuccess:
 			return {
 				...state,
-				isLoading: payload
+				categories: payload,
+				isLoading: false
+			};
+		case categoriesActionTypes.fetchCategoriesFailure:
+			return {
+				...state,
+				isLoading: false,
+				error: payload
 			};
 		default:
 			return state;

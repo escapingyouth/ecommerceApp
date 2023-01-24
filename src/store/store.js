@@ -7,19 +7,21 @@ import storage from 'redux-persist/lib/storage';
 
 import rootReducer from './rootReducer';
 
+import thunk from 'redux-thunk';
+
 const logger = createLogger();
 
 const persistConfig = {
 	key: 'root',
 	storage,
-	blacklist: ['user']
+	whitelist: ['cart']
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
 	reducer: persistedReducer,
-	middleware: [process.env.NODE_ENV !== 'production' && logger].filter(Boolean),
+	middleware: [process.env.NODE_ENV !== 'production' && logger, thunk],
 	devTools: process.env.NODE_ENV !== 'production'
 });
 
