@@ -66,6 +66,20 @@ export const onAuthStateChangedListener = (callback) => {
 	onAuthStateChanged(auth, callback);
 };
 
+// THS RETURNS A NEW PROMISE WITH USER AUTH DATA
+export const getCurrentUser = () => {
+	return new Promise((resolve, reject) => {
+		const unsubscribe = onAuthStateChanged(
+			auth,
+			(userAuth) => {
+				unsubscribe();
+				resolve(userAuth);
+			},
+			reject
+		);
+	});
+};
+
 const db = getFirestore(app);
 
 // ADD PRODUCT DATA TO FIRESTORE DATABASE
@@ -123,5 +137,5 @@ export const createUserDocumentFromAuth = async (
 			console.log('Error creating user', error.message);
 		}
 	}
-	return userDocRef;
+	return userSnapshot;
 };

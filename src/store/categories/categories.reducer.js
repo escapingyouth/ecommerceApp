@@ -21,7 +21,7 @@ const categoriesReducer = (state = categoriesDefaultState, action = {}) => {
 				categories: payload,
 				isLoading: false
 			};
-		case categoriesActionTypes.fetchCategoriesFailure:
+		case categoriesActionTypes.fetchCategoriesFailed:
 			return {
 				...state,
 				isLoading: false,

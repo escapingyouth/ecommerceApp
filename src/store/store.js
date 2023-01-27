@@ -7,9 +7,13 @@ import storage from 'redux-persist/lib/storage';
 
 import rootReducer from './rootReducer';
 
-import thunk from 'redux-thunk';
+import createSagaMiddleware from '@redux-saga/core';
+
+import rootSaga from './rootSaga';
 
 const logger = createLogger();
+
+const sagaMiddleware = createSagaMiddleware();
 
 const persistConfig = {
 	key: 'root',
@@ -21,8 +25,10 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
 	reducer: persistedReducer,
-	middleware: [process.env.NODE_ENV !== 'production' && logger, thunk],
+	middleware: [process.env.NODE_ENV !== 'production' && logger, sagaMiddleware],
 	devTools: process.env.NODE_ENV !== 'production'
 });
 
 export const persistor = persistStore(store);
+
+sagaMiddleware.run(rootSaga);

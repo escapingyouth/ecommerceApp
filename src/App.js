@@ -1,13 +1,10 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
-import {
-	createUserDocumentFromAuth,
-	onAuthStateChangedListener
-} from './utilities/firebase/firebaseConfig';
 
-import setCurrentUser from './store/user/user.action';
-import { fetchCategoriesAsync } from './store/categories/categories.action';
+import { checkUserSession } from './store/user/user.action';
+
+import { fetchCategoriesStart } from './store/categories/categories.action';
 
 import Navigation from './routes/navigation/Navigation';
 import Home from './routes/home/Home';
@@ -18,18 +15,11 @@ const App = () => {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		const unsubscribe = onAuthStateChangedListener((user) => {
-			if (user) {
-				createUserDocumentFromAuth(user);
-			}
-			dispatch(setCurrentUser(user));
-		});
-
-		return unsubscribe;
+		dispatch(checkUserSession());
 	}, [dispatch]);
 
 	useEffect(() => {
-		dispatch(fetchCategoriesAsync());
+		dispatch(fetchCategoriesStart());
 	}, [dispatch]);
 
 	return (

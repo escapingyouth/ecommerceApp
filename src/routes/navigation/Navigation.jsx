@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { ReactComponent as Logo } from '../../assets/svgs/crown.svg';
 import CartIcon from '../../components/cart-icon/CartIcon';
@@ -9,7 +9,7 @@ import ModalBox from '../../components/modal/ModalBox';
 import Auth from '../../components/auth/Auth';
 import CartDropdown from '../../components/cart-dropdown/CartDropdown';
 
-import { signOutUser } from '../../utilities/firebase/firebaseConfig';
+import { signOutStart } from '../../store/user/user.action';
 
 import selectCurrentUser from '../../store/user/user.selector';
 
@@ -28,6 +28,8 @@ import {
 } from './navigation.styles.jsx';
 
 const Navigation = () => {
+	const dispatch = useDispatch();
+
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [open, setOpen] = useState(false);
 
@@ -39,6 +41,8 @@ const Navigation = () => {
 	};
 
 	const currentUser = useSelector(selectCurrentUser);
+
+	const signOutUser = () => dispatch(signOutStart());
 
 	return (
 		<>
