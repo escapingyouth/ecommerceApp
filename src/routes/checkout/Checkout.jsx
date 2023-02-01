@@ -43,11 +43,11 @@ const Checkout = () => {
 					<div className='order-details'>
 						<div className='cart-totals-sub'>
 							<span className='items'>{cartCount} items</span>
-							<span className='price'> GH₵{cartTotal}</span>
+							<span className='price'> ${cartTotal}</span>
 						</div>
 						<div className='cart-totals-main'>
 							<span className='title'>Total</span>
-							<span className='price'>GH₵{cartTotal}</span>
+							<span className='price'>${cartTotal}</span>
 						</div>
 					</div>
 					<div className='order-buttons'>

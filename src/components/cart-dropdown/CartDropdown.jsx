@@ -64,11 +64,11 @@ const CartDropdown = () => {
 				<CartTotals>
 					<div className='cart-totals-sub'>
 						<span className='total-items'>{cartCount} items</span>
-						<span className='total-price'> GH₵{cartTotal}</span>
+						<span className='total-price'> ${cartTotal}</span>
 					</div>
 					<div className='cart-totals-main'>
 						<span className='total-title'>Total</span>
-						<span className='total-price'>GH₵{cartTotal}</span>
+						<span className='total-price'>${cartTotal}</span>
 					</div>
 				</CartTotals>
 				<CartButtonsContainer>

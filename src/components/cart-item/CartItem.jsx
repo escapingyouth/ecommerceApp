@@ -38,7 +38,7 @@ const CartItem = ({ cartItem }) => {
 			</ImageContainer>
 			<CartItemDetails>
 				<h3 className='name'>{name}</h3>
-				<span className='price'>GH₵{price}.00</span>
+				<span className='price'>${price}.00</span>
 				<span className='remove' onClick={clearItemHandler}>
 					Remove
 				</span>

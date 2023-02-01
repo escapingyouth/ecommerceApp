@@ -44,7 +44,7 @@ const CheckoutItem = ({ cartItem }) => {
 			</CheckoutImageContainer>
 			<ItemDetails>
 				<span className='name'>{name}</span>
-				<span className='price'>GH₵{price}</span>
+				<span className='price'>${price}</span>
 				<QuantityControlContainer>
 					<QuantityButton onClick={removeItemHandler}>-</QuantityButton>
 					<span className='quantity'>{quantity}</span>
@@ -54,7 +54,7 @@ const CheckoutItem = ({ cartItem }) => {
 
 			<ItemTotal>
 				<CloseIcon onClick={clearItemHandler} />
-				<span>GH₵{price * quantity}</span>
+				<span>${price * quantity}</span>
 			</ItemTotal>
 		</CheckoutItemContainer>
 	);
