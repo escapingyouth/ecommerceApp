@@ -31,15 +31,28 @@
 <br>
 <br>
 
-# Viewing the project 🔍
+# Building the project
 
-## Cloning 🧑‍🤝‍🧑
+<br>
+<br>
+
+## Cloning
 
 ```shell
 $ cd ~/workspace
 $ git clone https://github.com/escapingyouth/ecommerceApp.git
 $ cd ecommerceApp
 ```
+
+<br>
+<br>
+
+## Install dependencies
+
+In your terminal after you clone your project down, remember to run either `yarn` or `npm install` to install all the dependencies in the project.
+
+<br>
+<br>
 
 ## Running the project 🏃‍♀️💨
 

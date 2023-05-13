@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { ReactComponent as Logo } from '../../assets/svgs/crown.svg';
+import { ReactComponent as Logo } from '../../assets/svgs/logo.svg';
 import CartIcon from '../../components/cart-icon/CartIcon';
 
 import ModalBox from '../../components/modal/ModalBox';
