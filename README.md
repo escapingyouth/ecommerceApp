@@ -54,7 +54,7 @@ In your terminal after you clone your project down, remember to run either `yarn
 <br>
 <br>
 
-## Running the project 🏃‍♀️💨
+## Running the project
 
 ```shell
 $ npm run start
