@@ -5,11 +5,12 @@ import userActionTypes from './user.types';
 import {
 	signInSuccess,
 	signInFailed,
-	signUpSuccess,
 	signUpFailed,
 	signOutSuccess,
 	signOutFailed
-} from './user.action';
+} from './user.reducer';
+
+import { signUpSuccess } from './user.action';
 
 import {
 	getCurrentUser,

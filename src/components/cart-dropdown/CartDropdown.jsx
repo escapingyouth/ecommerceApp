@@ -8,7 +8,7 @@ import {
 	selectCartTotal
 } from '../../store/cart/cart.selector';
 
-import { setIsCartOpen } from '../../store/cart/cart.action';
+import { setIsCartOpen } from '../../store/cart/cart.reducer';
 
 import CloseIcon from '../close-icon/CloseIcon';
 import Button from '../button/Button';

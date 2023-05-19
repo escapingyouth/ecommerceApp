@@ -1,35 +1,39 @@
-import userActionTypes from './user.types';
+import { createSlice } from '@reduxjs/toolkit';
 
-const userDefaultState = {
+const initialState = {
 	currentUser: null,
 	isLoading: false,
 	error: null
 };
 
-const userReducer = (state = userDefaultState, action) => {
-	const { type, payload } = action;
-
-	switch (type) {
-		case userActionTypes.signInSuccess:
-			return {
-				...state,
-				currentUser: payload
-			};
-		case userActionTypes.signOutSuccess:
-			return {
-				...state,
-				currentUser: null
-			};
-		case userActionTypes.signInFailed:
-		case userActionTypes.signUpFailed:
-		case userActionTypes.signOutFailed:
-			return {
-				...state,
-				error: payload
-			};
-		default:
-			return state;
+const userSlice = createSlice({
+	name: 'user',
+	initialState,
+	reducers: {
+		signInSuccess(state, action) {
+			state.currentUser = action.payload;
+		},
+		signOutSuccess(state, action) {
+			state.currentUser = null;
+		},
+		signInFailed(state, action) {
+			state.error = action.payload;
+		},
+		signUpFailed(state, action) {
+			state.error = action.payload;
+		},
+		signOutFailed(state, action) {
+			state.error = action.payload;
+		}
 	}
-};
+});
 
-export default userReducer;
+export const {
+	signInSuccess,
+	signOutSuccess,
+	signInFailed,
+	signOutFailed,
+	signUpFailed
+} = userSlice.actions;
+
+export const userReducer = userSlice.reducer;

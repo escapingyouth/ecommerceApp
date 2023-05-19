@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import { checkUserSession } from './store/user/user.action';
 
-import { fetchCategoriesStart } from './store/categories/categories.action';
+import { fetchCategoriesStart } from './store/categories/categories.reducer';
 
 import Navigation from './routes/navigation/Navigation';
 import Home from './routes/home/Home';
@@ -16,11 +16,11 @@ const App = () => {
 
 	useEffect(() => {
 		dispatch(checkUserSession());
-	}, [dispatch]);
+	}, []);
 
 	useEffect(() => {
 		dispatch(fetchCategoriesStart());
-	}, [dispatch]);
+	}, []);
 
 	return (
 		<>

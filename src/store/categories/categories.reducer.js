@@ -1,35 +1,33 @@
-import categoriesActionTypes from './categories.types';
+import { createSlice } from '@reduxjs/toolkit';
 
-const categoriesDefaultState = {
+const initialState = {
 	categories: [],
 	isLoading: false,
 	error: null
 };
 
-const categoriesReducer = (state = categoriesDefaultState, action = {}) => {
-	const { type, payload } = action;
-
-	switch (type) {
-		case categoriesActionTypes.fetchCategoriesStart:
-			return {
-				...state,
-				isLoading: true
-			};
-		case categoriesActionTypes.fetchCategoriesSuccess:
-			return {
-				...state,
-				categories: payload,
-				isLoading: false
-			};
-		case categoriesActionTypes.fetchCategoriesFailed:
-			return {
-				...state,
-				isLoading: false,
-				error: payload
-			};
-		default:
-			return state;
+const categoriesSlice = createSlice({
+	name: 'category',
+	initialState,
+	reducers: {
+		fetchCategoriesStart(state) {
+			state.isLoading = true;
+		},
+		fetchCategoriesSuccess(state, action) {
+			state.categories = action.payload;
+			state.isLoading = false;
+		},
+		fetchCategoriesFailed(state, action) {
+			state.isLoading = false;
+			state.error = action.payload;
+		}
 	}
-};
+});
 
-export default categoriesReducer;
+export const {
+	fetchCategoriesStart,
+	fetchCategoriesSuccess,
+	fetchCategoriesFailed
+} = categoriesSlice.actions;
+
+export const categoriesReducer = categoriesSlice.reducer;
