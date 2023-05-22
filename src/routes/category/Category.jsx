@@ -30,7 +30,7 @@ const Category = () => {
 		case 'mens':
 			content = (
 				<p>
-					Find what fits the king you are. Checkout our collection of men's
+					Find what fits the king you are. Check out our collection of men's
 					clothing
 				</p>
 			);

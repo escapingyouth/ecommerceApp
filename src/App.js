@@ -8,6 +8,7 @@ import { fetchCategoriesStart } from './store/categories/categories.reducer';
 
 import Navigation from './routes/navigation/Navigation';
 import Home from './routes/home/Home';
+import Basket from './routes/basket/Basket';
 import Checkout from './routes/checkout/Checkout';
 import Category from './routes/category/Category';
 
@@ -27,9 +28,10 @@ const App = () => {
 			<Routes>
 				<Route path='/' element={<Navigation />}>
 					<Route index element={<Home />} />
-					<Route path='checkout' element={<Checkout />} />
+					<Route path='basket' element={<Basket />} />
 					<Route path=':category' element={<Category />} />
 				</Route>
+				<Route path='checkout/*' element={<Checkout />} />
 			</Routes>
 		</>
 	);

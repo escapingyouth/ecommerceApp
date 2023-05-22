@@ -14,7 +14,7 @@ import { signOutStart } from '../../store/user/user.action';
 import selectCurrentUser from '../../store/user/user.selector';
 
 import {
-	Header,
+	NavHeader,
 	NavBar,
 	NavMenu,
 	NavLink,
@@ -46,7 +46,7 @@ const Navigation = () => {
 
 	return (
 		<>
-			<Header>
+			<NavHeader>
 				<NavBar>
 					<LogoContainer to='/'>
 						<Logo />
@@ -91,7 +91,7 @@ const Navigation = () => {
 					<Auth handleClose={handleClose} />
 				</ModalBox>
 				<CartDropdown />
-			</Header>
+			</NavHeader>
 			<Outlet />
 		</>
 	);

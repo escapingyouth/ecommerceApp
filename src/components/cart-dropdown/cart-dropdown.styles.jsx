@@ -15,8 +15,6 @@ export const CartDropdownContainer = styled.div`
 	transition: 0.3s ease-out;
 	box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.25);
 
-	
-
 	@media screen and (max-width: 64em) {
 		width: 35%;
 	}
@@ -37,7 +35,7 @@ export const CartDropdownContainer = styled.div`
 		isCartOpen &&
 		css`
 			right: 0;
-		`}};
+		`};
 `;
 export const CartDropdownHeader = styled.div`
 	display: flex;

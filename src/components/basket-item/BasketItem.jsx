@@ -9,18 +9,18 @@ import {
 import CloseIcon from '../close-icon/CloseIcon';
 
 import {
-	CheckoutItemContainer,
-	CheckoutImageContainer,
+	BasketItemContainer,
+	BasketImageContainer,
 	ItemDetails,
 	ItemTotal
-} from './checkout-item.styles';
+} from './basket-item.styles';
 
 import {
 	QuantityButton,
 	QuantityControlContainer
 } from '../cart-item/cart-item.styles';
 
-const CheckoutItem = ({ cartItem }) => {
+const BasketItem = ({ cartItem }) => {
 	const dispatch = useDispatch();
 
 	const { name, primaryImage, price, quantity } = cartItem;
@@ -32,10 +32,10 @@ const CheckoutItem = ({ cartItem }) => {
 	const clearItemHandler = () => dispatch(clearItemFromCart(cartItem));
 
 	return (
-		<CheckoutItemContainer>
-			<CheckoutImageContainer>
+		<BasketItemContainer>
+			<BasketImageContainer>
 				<img src={primaryImage} alt={name} />
-			</CheckoutImageContainer>
+			</BasketImageContainer>
 			<ItemDetails>
 				<span className='name'>{name}</span>
 				<span className='price'>${price}</span>
@@ -50,8 +50,8 @@ const CheckoutItem = ({ cartItem }) => {
 				<CloseIcon onClick={clearItemHandler} />
 				<span>${price * quantity}</span>
 			</ItemTotal>
-		</CheckoutItemContainer>
+		</BasketItemContainer>
 	);
 };
 
-export default CheckoutItem;
+export default BasketItem;

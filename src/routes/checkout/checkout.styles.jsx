@@ -1,88 +1,78 @@
 import styled from 'styled-components';
 
-import { BaseButton } from '../../components/button/button.styles';
+import { ReactComponent as PadlockSvg } from '../../assets/svgs/padlock.svg';
+import { ReactComponent as LogoSvg } from '../../assets/svgs/logo.svg';
+import { ReactComponent as PhoneSvg } from '../../assets/svgs/phone.svg';
 
-export const CheckoutSection = styled.section`
-	margin: 7rem auto;
-	height: 100%;
-	padding: 0 5em;
-
-	h1 {
-		font-size: 2.5rem;
-		font-weight: 500;
-	}
-	& > ${BaseButton} {
-		display: inline-block;
-		width: max-content;
-		padding: 1em;
-	}
-
-	@media screen and (max-width: 64em) {
-		padding: 0 1em;
-
-		h1 {
-			font-size: 2.3rem;
-		}
-	}
-	@media screen and (max-width: 34em) {
-		padding: 0 0.5em;
-	}
-	@media screen and (max-width: 26em) {
-		h1 {
-			font-size: 2rem;
-		}
-	}
-`;
-export const CheckoutContainer = styled.div`
+export const CheckoutHeader = styled.header`
 	display: flex;
-	align-items: flex-start;
-	gap: 1rem;
-	margin: 1.8rem 0;
-	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid #ccc;
+	padding: 0.5em 3em;
 
-	@media screen and (max-width: 42em) {
-		display: block;
+	.secure-checkout {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+
+	.contact {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.8rem;
 	}
 `;
-export const CheckoutItems = styled.div`
+
+export const PadlockIcon = styled(PadlockSvg)`
+	width: 1rem;
+	height: 1rem;
+`;
+export const LogoIcon = styled(LogoSvg)`
+	fill: '#000';
+	path {
+		fill: #000;
+	}
+`;
+export const PhoneIcon = styled(PhoneSvg)``;
+
+export const CheckoutMain = styled.main`
+	padding: 2em 3em;
+`;
+
+export const CheckoutProgress = styled.div`
+	margin-bottom: 6rem;
+`;
+export const ProgressPoints = styled.ol`
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: minmax(0, 1fr);
+	grid-gap: 0.8rem;
+	width: 100%;
+`;
+
+export const DeliveryTab = styled.li`
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
+	gap: 1rem;
 `;
-export const CartDetails = styled.div`
-	flex-basis: 70%;
-
-	@media screen and (max-width: 52em) {
-		flex-basis: 60%;
-	}
-	@media screen and (max-width: 34em) {
-		margin-bottom: 2rem;
-	}
+export const PaymentTab = styled.li`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 1rem;
 `;
-export const OrderContainer = styled.div`
-	flex-basis: 30%;
-	padding: 1em;
-	border: 1px solid #ccc;
 
-	@media screen and (max-width: 52em) {
-		flex-basis: 40%;
-	}
-
-	.cart-totals-sub,
-	.cart-totals-main {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 2rem;
-	}
-	.cart-totals-sub {
-		padding-bottom: 1em;
-		border-bottom: 1px solid #ccc;
-	}
-	.cart-totals-main {
-		.title,
-		.price {
-			font-size: 1.5rem;
-			font-weight: 500;
-		}
-	}
+export const ProgressBar = styled.div`
+	width: 100%;
+	height: 0.4rem;
+	background-color: #222;
+	border-radius: 6px;
 `;
+
+export const OrderSummary = styled.article``;
+
+export const OrderDetails = styled.div``;

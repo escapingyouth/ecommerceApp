@@ -38,9 +38,15 @@ const CartDropdown = () => {
 	};
 
 	const navigate = useNavigate();
+
+	const goToBasketHandler = () => {
+		navigate('/basket');
+		dispatch(setIsCartOpen(false));
+	};
+
 	const goToCheckoutHandler = () => {
 		navigate('/checkout');
-		setIsCartOpen(false);
+		dispatch(setIsCartOpen(false));
 	};
 
 	const renderedCartItems = cartItems.map((item) => (
@@ -72,10 +78,15 @@ const CartDropdown = () => {
 					</div>
 				</CartTotals>
 				<CartButtonsContainer>
-					<Button buttonType={ButtonTypeClasses.inverted}>Checkout</Button>
 					<Button
 						buttonType={ButtonTypeClasses.inverted}
 						onClick={goToCheckoutHandler}
+					>
+						Checkout
+					</Button>
+					<Button
+						buttonType={ButtonTypeClasses.inverted}
+						onClick={goToBasketHandler}
 					>
 						Basket
 					</Button>

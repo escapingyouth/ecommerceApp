@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { QuantityControlContainer } from '../cart-item/cart-item.styles';
 
-export const CheckoutItemContainer = styled.div`
+export const BasketItemContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	font-size: 1rem;
@@ -15,7 +15,7 @@ export const CheckoutItemContainer = styled.div`
 		font-size: 0.8rem;
 	}
 `;
-export const CheckoutImageContainer = styled.div`
+export const BasketImageContainer = styled.div`
 	width: 5rem;
 	min-width: 3rem;
 	img {

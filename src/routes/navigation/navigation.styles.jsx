@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import { ReactComponent as ProfileSvg } from '../../assets/svgs/profile-icon.svg';
 import LogoutIcon from '@mui/icons-material/Logout';
 
-export const Header = styled.header`
+export const NavHeader = styled.header`
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -20,8 +20,9 @@ export const NavBar = styled.nav`
 	justify-content: space-between;
 	align-items: center;
 	padding: 0.5em 1em;
-	background-color: #000;
 	height: 4rem;
+	background-color: rgba(0, 0, 0, 0.9233);
+	backdrop-filter: blur(10px);
 `;
 
 export const NavMenu = styled.ul`
@@ -37,7 +38,7 @@ export const NavMenu = styled.ul`
 		width: 50%;
 		background-color: #000;
 		box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.25);
-		${({ isActive }) => isActive && isActiveNavMenu}};
+		${({ isActive }) => isActive && isActiveNavMenu}
 	}
 `;
 
@@ -140,7 +141,7 @@ export const HamburgerMenu = styled.div`
 		}
 
 		${({ isActive }) => isActive && isActiveHamburgerMenu}
-	} ;
+	}
 `;
 
 export const HamburgerBar = styled.span`
