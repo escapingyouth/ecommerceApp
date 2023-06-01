@@ -38,7 +38,7 @@ const BasketItem = ({ cartItem }) => {
 			</BasketImageContainer>
 			<ItemDetails>
 				<span className='name'>{name}</span>
-				<span className='price'>${price}</span>
+				<span className='price'>${price}.00</span>
 				<QuantityControlContainer>
 					<QuantityButton onClick={removeItemHandler}>-</QuantityButton>
 					<span className='quantity'>{quantity}</span>

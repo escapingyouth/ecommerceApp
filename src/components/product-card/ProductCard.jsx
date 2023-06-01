@@ -33,7 +33,7 @@ const ProductCard = ({ product }) => {
 				<ProductDetailsContainer>
 					<ProductDetails>
 						<h3 className='product-name'>{name}</h3>
-						<span className='product-price'>${price}</span>
+						<span className='product-price'>${price}.00</span>
 					</ProductDetails>
 				</ProductDetailsContainer>
 				<ProductIconContainer onClick={addProductToCart}>

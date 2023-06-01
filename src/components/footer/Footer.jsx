@@ -52,12 +52,12 @@ const Footer = () => {
 					<h3>Quick Links</h3>
 					<FooterLinksContainer>
 						<FooterLink to='/'>Home</FooterLink>
-						<FooterLink to='/mens'>Mens</FooterLink>
-						<FooterLink to='/womens'>Womens</FooterLink>
-						<FooterLink to='/kids'>Kids</FooterLink>
-						<FooterLink to='/shoes'>Shoes</FooterLink>
-						<FooterLink to='/beauty'>Beauty</FooterLink>
-						<FooterLink to='/accessories'>Accessories</FooterLink>
+						<FooterLink to='/collection/mens'>Mens</FooterLink>
+						<FooterLink to='/collection/womens'>Womens</FooterLink>
+						<FooterLink to='/collection/kids'>Kids</FooterLink>
+						<FooterLink to='/collection/shoes'>Shoes</FooterLink>
+						<FooterLink to='/collection/beauty'>Beauty</FooterLink>
+						<FooterLink to='/collection/accessories'>Accessories</FooterLink>
 					</FooterLinksContainer>
 				</FooterList>
 			</FooterNav>

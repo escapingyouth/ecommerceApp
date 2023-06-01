@@ -54,22 +54,22 @@ const Navigation = () => {
 
 					<NavMenu isActive={menuOpen}>
 						<NavLink>
-							<NavItem to='/mens'>Men</NavItem>
+							<NavItem to='/collection/mens'>Men</NavItem>
 						</NavLink>
 						<NavLink>
-							<NavItem to='/womens'>Women</NavItem>
+							<NavItem to='/collection/womens'>Women</NavItem>
 						</NavLink>
 						<NavLink>
-							<NavItem to='/kids'>Kids</NavItem>
+							<NavItem to='/collection/kids'>Kids</NavItem>
 						</NavLink>
 						<NavLink>
-							<NavItem to='/shoes'>Shoes</NavItem>
+							<NavItem to='/collection/shoes'>Shoes</NavItem>
 						</NavLink>
 						<NavLink>
-							<NavItem to='/beauty'>Beauty</NavItem>
+							<NavItem to='/collection/beauty'>Beauty</NavItem>
 						</NavLink>
 						<NavLink>
-							<NavItem to='/accessories'>Accessories</NavItem>
+							<NavItem to='/collection/accessories'>Accessories</NavItem>
 						</NavLink>
 					</NavMenu>
 					<RightMenu>

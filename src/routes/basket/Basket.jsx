@@ -30,7 +30,7 @@ const Basket = () => {
 	};
 
 	const goToCheckoutHandler = () => {
-		navigate('/checkout');
+		navigate('/checkout/delivery');
 	};
 
 	const renderedBasketItems = cartItems.map((cartItem) => {
@@ -47,11 +47,11 @@ const Basket = () => {
 					<div className='order-details'>
 						<div className='basket-totals-sub'>
 							<span className='items'>{cartCount} items</span>
-							<span className='price'> ${cartTotal}</span>
+							<span className='price'> ${cartTotal}.00</span>
 						</div>
 						<div className='basket-totals-main'>
 							<span className='title'>Total</span>
-							<span className='price'>${cartTotal}</span>
+							<span className='price'>${cartTotal}.00</span>
 						</div>
 					</div>
 					<div className='order-buttons'>

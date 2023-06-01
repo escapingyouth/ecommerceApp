@@ -45,7 +45,7 @@ const CartDropdown = () => {
 	};
 
 	const goToCheckoutHandler = () => {
-		navigate('/checkout');
+		navigate('/checkout/delivery');
 		dispatch(setIsCartOpen(false));
 	};
 
@@ -70,11 +70,11 @@ const CartDropdown = () => {
 				<CartTotals>
 					<div className='cart-totals-sub'>
 						<span className='total-items'>{cartCount} items</span>
-						<span className='total-price'> ${cartTotal}</span>
+						<span className='total-price'> ${cartTotal}.00</span>
 					</div>
 					<div className='cart-totals-main'>
 						<span className='total-title'>Total</span>
-						<span className='total-price'>${cartTotal}</span>
+						<span className='total-price'>${cartTotal}.00</span>
 					</div>
 				</CartTotals>
 				<CartButtonsContainer>

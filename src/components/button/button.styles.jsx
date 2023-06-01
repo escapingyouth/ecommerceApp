@@ -8,6 +8,7 @@ export const BaseButton = styled.button`
 	font-family: inherit;
 	padding: 1em 0.5em;
 	background-color: transparent;
+	border: none;
 	border-radius: 3px;
 	background-color: #000;
 	color: #fff;
