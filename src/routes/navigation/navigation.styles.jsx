@@ -37,7 +37,7 @@ export const NavMenu = styled.ul`
 		width: 50%;
 		background-color: #000;
 		box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.25);
-		${({ isActive }) => isActive && isActiveNavMenu}};
+		${({ isActive }) => isActive && isActiveNavMenu}
 	}
 `;
 
