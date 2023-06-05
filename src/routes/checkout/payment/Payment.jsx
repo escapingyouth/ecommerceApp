@@ -24,17 +24,16 @@ import {
 } from '../checkout.styles';
 
 import {
-	DeliveryFormContainer,
-	DeliveryForm,
-	NameInputContainer,
-	CountryInputContainer,
-	AddressInputContainer,
-	LocationInputContainer,
-	PhoneInputContainer,
-	CheckboxInputContainer
-} from '../delivery/delivery.styles';
-
-import { DeliveryTab, PaymentTab, ProgressBar } from './payment.styles';
+	DeliveryTab,
+	PaymentTab,
+	ProgressBar,
+	PaymentFormContainer,
+	PaymentForm,
+	CardHolderInputContainer,
+	CardInputContainer,
+	SecurityCodeInputContainer,
+	AddressContainer
+} from './payment.styles';
 
 const Payment = () => {
 	const deliveryTotal = 20;
@@ -71,80 +70,57 @@ const Payment = () => {
 						</PaymentTab>
 					</ProgressPoints>
 				</CheckoutProgress>
-				<DeliveryFormContainer>
-					<h3>Add your delivery address</h3>
-					<span>* Required fields</span>
-					<DeliveryForm>
-						<NameInputContainer>
-							<div className='first-name-input'>
-								<label htmlFor='firstName'>First name *</label>
-								<input type='text' id='firstName' required />
+				<PaymentFormContainer>
+					<h3>Card Details</h3>
+
+					<PaymentForm>
+						<CardHolderInputContainer>
+							<div className='card-holder-input'>
+								<label htmlFor='cardHolder'>Cardholder name</label>
+								<input type='text' id='cardHolder' required />
+							</div>
+						</CardHolderInputContainer>
+						<CardInputContainer>
+							<div className='card-number-input'>
+								<label htmlFor='cardNumber'>Card number</label>
+								<input type='text' id='cardNumber' required />
 							</div>
 
-							<div className='last-name-input'>
-								<label htmlFor='lastName'>Last name *</label>
-								<input type='text' id='lastName' required />
+							<div className='expiration-date-input'>
+								<label htmlFor='expirationDate'>Expiration date</label>
+								<input
+									type='text'
+									id='expirationDate'
+									placeholder='MM/YY'
+									required
+								/>
 							</div>
-						</NameInputContainer>
+						</CardInputContainer>
 
-						<CountryInputContainer>
-							<label htmlFor='country'>Country/Region *</label>
-							<select name='country' id='country'>
-								<option value='us'>United States</option>
-								<option value='uk'>United Kingdom</option>
-								<option value='ger'>Germany</option>
-								<option value='gh'>Ghana</option>
-							</select>
-						</CountryInputContainer>
-						<AddressInputContainer>
-							<div className='address-input'>
-								<label htmlFor='address'>Address *</label>
-								<input type='text' id='address' required />
+						<SecurityCodeInputContainer>
+							<div className='security-code-input'>
+								<label htmlFor='securityCode'>Security code</label>
+								<input type='text' id='securityCode' required />
 							</div>
-						</AddressInputContainer>
+						</SecurityCodeInputContainer>
+					</PaymentForm>
+				</PaymentFormContainer>
 
-						<LocationInputContainer>
-							<div className='city-state-container'>
-								<div className='city-input'>
-									<label htmlFor='city'>City *</label>
-									<input type='text' id='city' required />
-								</div>
+				<AddressContainer>
+					<h4>Delivery Address</h4>
+					<article className='delivery-address-container'>
+						<p className='name'>Michael Appiah</p>
+						<p className='address'>14 Kingsroad, London </p>
+						<p className='address-code'>GB-152 - UK </p>
+					</article>
 
-								<div className='state-input'>
-									<label htmlFor='state'>State *</label>
-									<input type='text' id='state' required />
-								</div>
-							</div>
-
-							<div className='zip-code-input'>
-								<label htmlFor='zip-code'>Postal or zip code *</label>
-								<input type='text' id='zip-code' required />
-							</div>
-						</LocationInputContainer>
-						<PhoneInputContainer>
-							<div className='country-code-input'>
-								<label htmlFor='country-code'>Country code *</label>
-								<select name='country-code' id='country-code'>
-									<option value='us'>+1</option>
-									<option value='uk'>+44</option>
-									<option value='ger'>+49</option>
-									<option value='gh'>+233</option>
-								</select>
-							</div>
-							<div className='phone-number-input'>
-								<label htmlFor='phone-number'>Phone *</label>
-								<input type='text' id='phone-number' required />
-							</div>
-						</PhoneInputContainer>
-						<CheckboxInputContainer>
-							<div className='use-billing-input'>
-								<input type='checkbox' name='use-billing' id='use-billing' />
-								<label htmlFor='use-billing'>Use as billing address</label>
-							</div>
-						</CheckboxInputContainer>
-					</DeliveryForm>
-				</DeliveryFormContainer>
-				<CancelOrder to='/basket'>Cancel</CancelOrder>
+					<h4>Billing Address</h4>
+					<article className='billing-address-container'>
+						<p className='name'>Michael Appiah</p>
+						<p className='address'>14 Kingsroad, London </p>
+						<p className='address-code'>GB-152 - UK </p>
+					</article>
+				</AddressContainer>
 
 				<OrderBoxContainer>
 					<OrderBox>
@@ -179,6 +155,8 @@ const Payment = () => {
 						Save and Continue
 					</Button>
 				</OrderBoxContainer>
+
+				<CancelOrder to='/checkout/delivery'>Back to delivery</CancelOrder>
 			</CheckoutMain>
 		</>
 	);

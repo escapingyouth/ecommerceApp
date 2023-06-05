@@ -147,7 +147,6 @@ const Delivery = () => {
 						</CheckboxInputContainer>
 					</DeliveryForm>
 				</DeliveryFormContainer>
-				<CancelOrder to='/basket'>Cancel</CancelOrder>
 
 				<OrderBoxContainer>
 					<OrderBox>
@@ -182,6 +181,8 @@ const Delivery = () => {
 						Save and Continue
 					</Button>
 				</OrderBoxContainer>
+
+				<CancelOrder to='/basket'>Cancel</CancelOrder>
 			</CheckoutMain>
 		</>
 	);
