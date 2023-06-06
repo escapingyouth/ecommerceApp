@@ -76,10 +76,24 @@ export const CheckoutMain = styled.main`
 		border: 1px solid #ccc;
 		border-radius: 3px;
 		padding: 1em 0.5em;
+		transition: all 0.3s;
 
 		&:focus {
-			outline: 1px solid #000;
+			outline: none;
+			box-shadow: 0 0.625rem 1.25rem rgba(#000, 0.1);
+			border-bottom: 3px solid #007bff;
+
+			&:invalid {
+				border-bottom: 3px solid red;
+			}
 		}
+	}
+	p[role='alert'] {
+		position: absolute;
+		color: red;
+		bottom: -1.5rem;
+		font-size: 0.9rem;
+		font-family: inherit;
 	}
 	select {
 		appearance: none;

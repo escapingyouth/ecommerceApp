@@ -51,11 +51,11 @@ export const NameInputContainer = styled.div`
 	.first-name-input,
 	.last-name-input {
 		width: 50%;
+		position: relative;
 	}
 
 	@media only screen and (max-width: 34em) {
 		flex-direction: column;
-		gap: 1rem;
 
 		.first-name-input,
 		.last-name-input {
@@ -66,7 +66,11 @@ export const NameInputContainer = styled.div`
 
 export const CountryInputContainer = styled.div``;
 
-export const AddressInputContainer = styled.div``;
+export const AddressInputContainer = styled.div`
+	.address-input {
+		position: relative;
+	}
+`;
 
 export const LocationInputContainer = styled.div`
 	.city-state-container {
@@ -78,13 +82,16 @@ export const LocationInputContainer = styled.div`
 		.city-input,
 		.state-input {
 			width: 50%;
+			position: relative;
 		}
+	}
+	.zip-code-input {
+		position: relative;
 	}
 
 	@media only screen and (max-width: 34em) {
 		.city-state-container {
 			flex-direction: column;
-			gap: 1rem;
 
 			.city-input,
 			.state-input {
@@ -102,6 +109,7 @@ export const PhoneInputContainer = styled.div`
 	.country-code-input,
 	.phone-number-input {
 		width: 50%;
+		position: relative;
 	}
 
 	@media only screen and (max-width: 34em) {

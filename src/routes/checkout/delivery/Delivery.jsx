@@ -1,4 +1,6 @@
 import { useSelector } from 'react-redux';
+
+import { useForm } from 'react-hook-form';
 import {
 	selectCartCount,
 	selectCartTotal
@@ -38,6 +40,15 @@ import {
 } from './delivery.styles';
 
 const Delivery = () => {
+	const {
+		register,
+		handleSubmit,
+		formState: { errors }
+	} = useForm({ shouldUseNativeValidation: true });
+
+	const onSubmit = (data) => console.log(data);
+	console.log(errors);
+
 	const deliveryTotal = 20;
 	const taxTotal = 0;
 
@@ -74,25 +85,41 @@ const Delivery = () => {
 						</PaymentTab>
 					</ProgressPoints>
 				</CheckoutProgress>
-				<DeliveryFormContainer>
+				<DeliveryFormContainer onSubmit={handleSubmit(onSubmit)}>
 					<h3>Add your delivery address</h3>
 					<span>* Required fields</span>
 					<DeliveryForm>
 						<NameInputContainer>
 							<div className='first-name-input'>
 								<label htmlFor='firstName'>First name *</label>
-								<input type='text' id='firstName' required />
+								<input
+									type='text'
+									{...register('firstName', {
+										required: 'Please enter your first name.'
+									})}
+								/>
+								{errors.firstName?.type === 'required' && (
+									<p role='alert'>Required</p>
+								)}
 							</div>
 
 							<div className='last-name-input'>
 								<label htmlFor='lastName'>Last name *</label>
-								<input type='text' id='lastName' required />
+								<input
+									type='text'
+									{...register('lastName', {
+										required: 'Please enter your last name.'
+									})}
+								/>
+								{errors.lastName?.type === 'required' && (
+									<p role='alert'>Required</p>
+								)}
 							</div>
 						</NameInputContainer>
 
 						<CountryInputContainer>
 							<label htmlFor='country'>Country/Region *</label>
-							<select name='country' id='country'>
+							<select {...register('country', { required: true })}>
 								<option value='us'>United States</option>
 								<option value='uk'>United Kingdom</option>
 								<option value='ger'>Germany</option>
@@ -102,7 +129,15 @@ const Delivery = () => {
 						<AddressInputContainer>
 							<div className='address-input'>
 								<label htmlFor='address'>Address *</label>
-								<input type='text' id='address' required />
+								<input
+									type='text'
+									{...register('address', {
+										required: 'Please enter your address.'
+									})}
+								/>
+								{errors.address?.type === 'required' && (
+									<p role='alert'>Required</p>
+								)}
 							</div>
 						</AddressInputContainer>
 
@@ -110,24 +145,48 @@ const Delivery = () => {
 							<div className='city-state-container'>
 								<div className='city-input'>
 									<label htmlFor='city'>City *</label>
-									<input type='text' id='city' required />
+									<input
+										type='text'
+										{...register('city', {
+											required: 'Please enter your city.'
+										})}
+									/>
+									{errors.city?.type === 'required' && (
+										<p role='alert'>Required</p>
+									)}
 								</div>
 
 								<div className='state-input'>
 									<label htmlFor='state'>State *</label>
-									<input type='text' id='state' required />
+									<input
+										type='text'
+										{...register('state', {
+											required: 'Please enter your state.'
+										})}
+									/>
+									{errors.state?.type === 'required' && (
+										<p role='alert'>Required</p>
+									)}
 								</div>
 							</div>
 
 							<div className='zip-code-input'>
-								<label htmlFor='zip-code'>Postal or zip code *</label>
-								<input type='text' id='zip-code' required />
+								<label htmlFor='zipCode'>Postal or zip code *</label>
+								<input
+									type='text'
+									{...register('zipCode', {
+										required: 'Please enter your zip code.'
+									})}
+								/>
+								{errors.zipCode?.type === 'required' && (
+									<p role='alert'>Required</p>
+								)}
 							</div>
 						</LocationInputContainer>
 						<PhoneInputContainer>
 							<div className='country-code-input'>
-								<label htmlFor='country-code'>Country code *</label>
-								<select name='country-code' id='country-code'>
+								<label htmlFor='countryCode'>Country code *</label>
+								<select {...register('countryCode', { required: true })}>
 									<option value='us'>+1</option>
 									<option value='uk'>+44</option>
 									<option value='ger'>+49</option>
@@ -135,16 +194,28 @@ const Delivery = () => {
 								</select>
 							</div>
 							<div className='phone-number-input'>
-								<label htmlFor='phone-number'>Phone *</label>
-								<input type='text' id='phone-number' required />
+								<label htmlFor='phoneNumber'>Phone *</label>
+								<input
+									type='text'
+									{...register('phoneNumber', {
+										required: 'Please enter your phone number.'
+									})}
+								/>
+								{errors.phoneNumber?.type === 'required' && (
+									<p role='alert'>Required</p>
+								)}
 							</div>
 						</PhoneInputContainer>
 						<CheckboxInputContainer>
 							<div className='use-billing-input'>
-								<input type='checkbox' name='use-billing' id='use-billing' />
-								<label htmlFor='use-billing'>Use as billing address</label>
+								<input
+									type='checkbox'
+									{...register('useBilling', { required: true })}
+								/>
+								<label htmlFor='useBilling'>Use as billing address</label>
 							</div>
 						</CheckboxInputContainer>
+						<button type='submit'>Submit</button>
 					</DeliveryForm>
 				</DeliveryFormContainer>
 
