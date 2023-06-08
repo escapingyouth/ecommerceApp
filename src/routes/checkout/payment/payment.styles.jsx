@@ -52,7 +52,11 @@ export const PaymentForm = styled.form`
 	}
 `;
 
-export const CardHolderInputContainer = styled.div``;
+export const CardHolderInputContainer = styled.div`
+	.card-holder-input {
+		position: relative;
+	}
+`;
 
 export const CardInputContainer = styled.div`
 	display: flex;
@@ -60,17 +64,26 @@ export const CardInputContainer = styled.div`
 	gap: 2rem;
 
 	.card-number-input {
+		position: relative;
 		width: 70%;
 	}
 
 	.expiration-date-input {
+		position: relative;
 		width: 30%;
 	}
 
+	@media only screen and (max-width: 52em) {
+		.expiration-date-input {
+			p[role='alert'] {
+				bottom: -2.5rem;
+			}
+		}
+	}
 	@media only screen and (max-width: 26em) {
 		flex-direction: column;
-		gap: 1rem;
 		align-items: flex-start;
+		gap: 4rem;
 
 		.card-number-input {
 			width: 100%;
@@ -78,11 +91,16 @@ export const CardInputContainer = styled.div`
 
 		.expiration-date-input {
 			width: 50%;
+
+			p[role='alert'] {
+				bottom: -1.5rem;
+			}
 		}
 	}
 `;
 export const SecurityCodeInputContainer = styled.div`
 	.security-code-input {
+		position: relative;
 		width: 30%;
 	}
 	@media only screen and (max-width: 26em) {

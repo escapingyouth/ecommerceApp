@@ -84,15 +84,17 @@ export const CheckoutMain = styled.main`
 			border-bottom: 3px solid #007bff;
 
 			&:invalid {
-				border-bottom: 3px solid red;
+				border-bottom: 3px solid #c41429;
 			}
 		}
 	}
 	p[role='alert'] {
 		position: absolute;
-		color: red;
+		color: #c41429;
 		bottom: -1.5rem;
-		font-size: 0.9rem;
+		left: 0.3rem;
+		font-size: 0.8rem;
+		font-weight: 500;
 		font-family: inherit;
 	}
 	select {

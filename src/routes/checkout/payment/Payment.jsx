@@ -1,4 +1,7 @@
 import { useSelector } from 'react-redux';
+
+import { useForm } from 'react-hook-form';
+
 import {
 	selectCartCount,
 	selectCartTotal
@@ -36,6 +39,14 @@ import {
 } from './payment.styles';
 
 const Payment = () => {
+	const {
+		register,
+		handleSubmit,
+		formState: { errors }
+	} = useForm({ shouldUseNativeValidation: true });
+
+	const onSubmit = (data) => console.log(data);
+
 	const deliveryTotal = 20;
 	const taxTotal = 0;
 
@@ -73,36 +84,65 @@ const Payment = () => {
 				<PaymentFormContainer>
 					<h3>Card Details</h3>
 
-					<PaymentForm>
+					<PaymentForm onSubmit={handleSubmit(onSubmit)}>
 						<CardHolderInputContainer>
 							<div className='card-holder-input'>
-								<label htmlFor='cardHolder'>Cardholder name</label>
-								<input type='text' id='cardHolder' required />
+								<label htmlFor='cardholderName'>Cardholder name</label>
+								<input
+									type='text'
+									{...register('cardholderName', {
+										required: 'Please enter your cardholder name.'
+									})}
+								/>
+								{errors.cardholderName?.type === 'required' && (
+									<p role='alert'>Required</p>
+								)}
 							</div>
 						</CardHolderInputContainer>
 						<CardInputContainer>
 							<div className='card-number-input'>
 								<label htmlFor='cardNumber'>Card number</label>
-								<input type='text' id='cardNumber' required />
+								<input
+									type='text'
+									{...register('cardNumber', {
+										required: 'Please enter your card number.'
+									})}
+								/>
+								{errors.cardNumber?.type === 'required' && (
+									<p role='alert'>Invalid card</p>
+								)}
 							</div>
 
 							<div className='expiration-date-input'>
 								<label htmlFor='expirationDate'>Expiration date</label>
 								<input
 									type='text'
-									id='expirationDate'
 									placeholder='MM/YY'
-									required
+									{...register('expirationDate', {
+										required: 'Please enter the expiration date.'
+									})}
 								/>
+								{errors.expirationDate?.type === 'required' && (
+									<p role='alert'>Check your expiration date</p>
+								)}
 							</div>
 						</CardInputContainer>
 
 						<SecurityCodeInputContainer>
 							<div className='security-code-input'>
 								<label htmlFor='securityCode'>Security code</label>
-								<input type='text' id='securityCode' required />
+								<input
+									type='text'
+									{...register('securityCode', {
+										required: 'Please enter the security code.'
+									})}
+								/>
+								{errors.securityCode?.type === 'required' && (
+									<p role='alert'>Invalid security code</p>
+								)}
 							</div>
 						</SecurityCodeInputContainer>
+						<button type='submit'>Submit</button>
 					</PaymentForm>
 				</PaymentFormContainer>
 

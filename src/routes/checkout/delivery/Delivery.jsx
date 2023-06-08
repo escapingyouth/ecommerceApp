@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 
 import { useForm } from 'react-hook-form';
+
 import {
 	selectCartCount,
 	selectCartTotal
@@ -47,7 +48,6 @@ const Delivery = () => {
 	} = useForm({ shouldUseNativeValidation: true });
 
 	const onSubmit = (data) => console.log(data);
-	console.log(errors);
 
 	const deliveryTotal = 20;
 	const taxTotal = 0;
@@ -85,10 +85,10 @@ const Delivery = () => {
 						</PaymentTab>
 					</ProgressPoints>
 				</CheckoutProgress>
-				<DeliveryFormContainer onSubmit={handleSubmit(onSubmit)}>
+				<DeliveryFormContainer>
 					<h3>Add your delivery address</h3>
 					<span>* Required fields</span>
-					<DeliveryForm>
+					<DeliveryForm onSubmit={handleSubmit(onSubmit)}>
 						<NameInputContainer>
 							<div className='first-name-input'>
 								<label htmlFor='firstName'>First name *</label>
