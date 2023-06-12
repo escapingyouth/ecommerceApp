@@ -78,25 +78,20 @@ export const CheckoutMain = styled.main`
 		padding: 1em 0.5em;
 		transition: all 0.3s;
 
+		&:hover {
+			border-color: #888;
+		}
+
 		&:focus {
 			outline: none;
 			box-shadow: 0 0.625rem 1.25rem rgba(#000, 0.1);
 			border-bottom: 3px solid #007bff;
-
-			&:invalid {
-				border-bottom: 3px solid #c41429;
-			}
+		}
+		&:invalid {
+			border: 1.5px solid #c41429;
 		}
 	}
-	p[role='alert'] {
-		position: absolute;
-		color: #c41429;
-		bottom: -1.5rem;
-		left: 0.3rem;
-		font-size: 0.8rem;
-		font-weight: 500;
-		font-family: inherit;
-	}
+
 	select {
 		appearance: none;
 		background-color: transparent;
@@ -160,15 +155,6 @@ export const OrderBoxContainer = styled.div`
 		display: block;
 		width: 100%;
 		margin-bottom: 3rem;
-
-		.continue-btn {
-			width: 40%;
-		}
-	}
-	@media only screen and (max-width: 34em) {
-		.continue-btn {
-			width: 60%;
-		}
 	}
 `;
 export const OrderBox = styled.div`

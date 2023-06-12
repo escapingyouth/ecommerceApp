@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Button from '../../../components/button/Button';
 
 export const ProgressBar = styled.div`
 	width: 100%;
@@ -47,16 +48,23 @@ export const PaymentForm = styled.form`
 		margin-bottom: 3rem;
 	}
 
+	.stripe-input-element {
+		width: 100%;
+		height: 3rem;
+		font-family: inherit;
+		font-size: inherit;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		padding: 1em 0.5em;
+		transition: all 0.3s;
+	}
+
 	@media only screen and (max-width: 34em) {
 		width: 100%;
 	}
 `;
 
-export const CardHolderInputContainer = styled.div`
-	.card-holder-input {
-		position: relative;
-	}
-`;
+export const CardHolderInputContainer = styled.div``;
 
 export const CardInputContainer = styled.div`
 	display: flex;
@@ -64,22 +72,13 @@ export const CardInputContainer = styled.div`
 	gap: 2rem;
 
 	.card-number-input {
-		position: relative;
 		width: 70%;
 	}
 
 	.expiration-date-input {
-		position: relative;
 		width: 30%;
 	}
 
-	@media only screen and (max-width: 52em) {
-		.expiration-date-input {
-			p[role='alert'] {
-				bottom: -2.5rem;
-			}
-		}
-	}
 	@media only screen and (max-width: 26em) {
 		flex-direction: column;
 		align-items: flex-start;
@@ -91,16 +90,11 @@ export const CardInputContainer = styled.div`
 
 		.expiration-date-input {
 			width: 50%;
-
-			p[role='alert'] {
-				bottom: -1.5rem;
-			}
 		}
 	}
 `;
 export const SecurityCodeInputContainer = styled.div`
 	.security-code-input {
-		position: relative;
 		width: 30%;
 	}
 	@media only screen and (max-width: 26em) {
@@ -111,6 +105,8 @@ export const SecurityCodeInputContainer = styled.div`
 `;
 
 export const AddressContainer = styled.div`
+	margin-top: 5rem;
+
 	h4 {
 		font-weight: 500;
 		text-transform: uppercase;
@@ -133,3 +129,5 @@ export const AddressContainer = styled.div`
 		}
 	}
 `;
+
+export const PaymentButton = styled(Button)``;

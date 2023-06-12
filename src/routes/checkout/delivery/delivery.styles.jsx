@@ -41,6 +41,10 @@ export const DeliveryForm = styled.form`
 	& > div {
 		margin-bottom: 3rem;
 	}
+
+	.continue-btn {
+		margin-bottom: 3rem;
+	}
 `;
 
 export const NameInputContainer = styled.div`
@@ -63,6 +67,26 @@ export const NameInputContainer = styled.div`
 		}
 	}
 `;
+
+export const customStyles = {
+	control: (provided, state) => ({
+		...provided,
+		border: '1px solid #ccc',
+		borderRadius: '3px',
+		boxShadow: state.isFocused ? '0 0.625rem 1.25rem rgba(#000, 0.1)' : null,
+		outline: state.isFocused ? 'none' : null,
+
+		'&:hover': {
+			borderColor: '#888'
+		}
+	}),
+	option: (provided, state) => ({
+		...provided,
+		backgroundColor: state.isFocused ? '#222' : 'white',
+		color: state.isFocused ? '#fff' : 'inherit',
+		cursor: 'pointer'
+	})
+};
 
 export const CountryInputContainer = styled.div``;
 
@@ -101,27 +125,7 @@ export const LocationInputContainer = styled.div`
 	}
 `;
 
-export const PhoneInputContainer = styled.div`
-	display: flex;
-	align-items: center;
-	gap: 2rem;
-
-	.country-code-input,
-	.phone-number-input {
-		width: 50%;
-		position: relative;
-	}
-
-	@media only screen and (max-width: 34em) {
-		flex-direction: column;
-		gap: 1rem;
-
-		.country-code-input,
-		.phone-number-input {
-			width: 100%;
-		}
-	}
-`;
+export const PhoneInputContainer = styled.div``;
 
 export const CheckboxInputContainer = styled.div`
 	input[type='checkbox'] {

@@ -27,6 +27,7 @@ const Basket = () => {
 	const navigate = useNavigate();
 	const goToHomeHandler = () => {
 		navigate('/');
+		window.scrollTo(0, 0);
 	};
 
 	const goToCheckoutHandler = () => {

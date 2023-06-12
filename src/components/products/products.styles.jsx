@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 import { ProductImageHover } from '../product-card/product-card.styles';
 
-import { ReactComponent as Spinner } from '../../assets/svgs/spinner.svg';
-
 export const ProductsSection = styled.section`
 	margin: 10rem 0;
 	position: relative;
@@ -53,11 +51,4 @@ export const ProductsCatalogue = styled.div`
 	.swiper-pagination-bullet-active {
 		background-color: #007bff;
 	}
-`;
-
-export const LoadingIcon = styled(Spinner)`
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	transform: translate(-50%, 100%);
 `;

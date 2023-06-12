@@ -4,11 +4,9 @@ import Mens from './mens/Mens';
 import Womens from './womens/Womens';
 import Accessories from './accessories/Accessories';
 
-import {
-	ProductsSection,
-	ProductsCatalogue,
-	LoadingIcon
-} from './products.styles';
+import { ProductsSection, ProductsCatalogue } from './products.styles';
+
+import Spinner from '../spinner/Spinner';
 
 import { selectIsLoading } from '../../store/categories/categories.selector';
 
@@ -20,7 +18,7 @@ const Products = () => {
 			<ProductsSection>
 				<h1>Featured products</h1>
 				{isLoading ? (
-					<LoadingIcon />
+					<Spinner />
 				) : (
 					<>
 						<ProductsCatalogue id='shoes'>

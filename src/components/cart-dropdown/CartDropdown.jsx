@@ -42,11 +42,13 @@ const CartDropdown = () => {
 	const goToBasketHandler = () => {
 		navigate('/basket');
 		dispatch(setIsCartOpen(false));
+		window.scrollTo(0, 0);
 	};
 
 	const goToCheckoutHandler = () => {
 		navigate('/checkout/delivery');
 		dispatch(setIsCartOpen(false));
+		window.scrollTo(0, 0);
 	};
 
 	const renderedCartItems = cartItems.map((item) => (
