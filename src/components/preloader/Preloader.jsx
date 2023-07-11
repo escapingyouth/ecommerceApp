@@ -1,9 +1,18 @@
-import { PreloaderContainer, PreloaderIcon } from './preloader.styles';
+import { PreloaderContainer } from './preloader.styles';
 
 const Preloader = () => {
 	return (
 		<PreloaderContainer>
-			<PreloaderIcon />
+			<div class='lds-roller'>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
 		</PreloaderContainer>
 	);
 };
