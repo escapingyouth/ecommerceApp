@@ -73,6 +73,9 @@ export const CardInputContainer = styled.div`
 
 	.card-number-input {
 		width: 70%;
+		span {
+			color: red;
+		}
 	}
 
 	.expiration-date-input {

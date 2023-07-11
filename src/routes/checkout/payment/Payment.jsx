@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useSelector } from 'react-redux';
+
+import { DeliveryFormContext } from '../../../context/DeliveryFormContext';
 
 import {
 	CardNumberElement,
@@ -52,11 +54,16 @@ const Payment = () => {
 	const cartCount = useSelector(selectCartCount);
 	const cartTotal = useSelector(selectCartTotal);
 
-	const deliveryTotal = 20;
-	const taxTotal = 0;
+	const deliveryTotal = 0.05 * cartTotal;
+	const taxTotal = 0.1 * cartTotal;
 	const amount = cartTotal + deliveryTotal + taxTotal;
 
 	const [isProcessingPayment, setIsProcessingPayment] = useState(false);
+
+	const {
+		formValues: { firstName, lastName, address, city, zipCode },
+		country
+	} = useContext(DeliveryFormContext);
 
 	const paymentHandler = async (e) => {
 		e.preventDefault();
@@ -74,7 +81,7 @@ const Payment = () => {
 			},
 			body: JSON.stringify({ amount: amount * 100 })
 		}).then((res) => res.json());
-
+		console.log(response);
 		const {
 			paymentIntent: { client_secret }
 		} = response;
@@ -138,7 +145,9 @@ const Payment = () => {
 						</CardHolderInputContainer>
 						<CardInputContainer>
 							<div className='card-number-input'>
-								<label htmlFor='cardNumber'>Card number</label>
+								<label htmlFor='cardNumber'>
+									Card number <span>*use 4242 4242 4242 4242</span>
+								</label>
 								<CardNumberElement className='stripe-input-element' />
 							</div>
 
@@ -167,16 +176,15 @@ const Payment = () => {
 				<AddressContainer>
 					<h4>Delivery Address</h4>
 					<article className='delivery-address-container'>
-						<p className='name'>Michael Appiah</p>
-						<p className='address'>14 Kingsroad, London </p>
-						<p className='address-code'>GB-152 - UK </p>
-					</article>
-
-					<h4>Billing Address</h4>
-					<article className='billing-address-container'>
-						<p className='name'>Michael Appiah</p>
-						<p className='address'>14 Kingsroad, London </p>
-						<p className='address-code'>GB-152 - UK </p>
+						<p className='name'>
+							{firstName} {lastName}
+						</p>
+						<p className='address'>
+							{address}, {city}
+						</p>
+						<p className='address-code'>
+							{zipCode} - {country.label}
+						</p>
 					</article>
 				</AddressContainer>
 
@@ -196,11 +204,11 @@ const Payment = () => {
 							</div>
 							<div className='order-delivery'>
 								<span>Delivery</span>
-								<span>{deliveryTotal}</span>
+								<span>${deliveryTotal}</span>
 							</div>
 							<div className='order-tax'>
 								<span>Estimated Tax</span>
-								<span>{taxTotal}</span>
+								<span>${taxTotal}</span>
 							</div>
 						</OrderDetails>
 						<OrderTotal>

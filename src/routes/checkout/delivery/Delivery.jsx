@@ -1,7 +1,9 @@
-import { useState, useMemo } from 'react';
+import { useMemo, useContext } from 'react';
 
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+
+import { DeliveryFormContext } from '../../../context/DeliveryFormContext';
 
 import Select from 'react-select';
 import countryList from 'react-select-country-list';
@@ -44,7 +46,6 @@ import {
 	AddressInputContainer,
 	LocationInputContainer,
 	PhoneInputContainer,
-	CheckboxInputContainer,
 	customStyles
 } from './delivery.styles';
 
@@ -54,30 +55,20 @@ const Delivery = () => {
 	const cartCount = useSelector(selectCartCount);
 	const cartTotal = useSelector(selectCartTotal);
 
-	const deliveryTotal = 20;
-	const taxTotal = 0;
+	const deliveryTotal = 0.05 * cartTotal;
+	const taxTotal = 0.1 * cartTotal;
 	const amount = cartTotal + deliveryTotal + taxTotal;
 
 	const options = useMemo(() => countryList().getData(), []);
 
-	const defaultFormFields = {
-		firstName: '',
-		lastName: '',
-		address: '',
-		city: '',
-		state: '',
-		zipCode: ''
-	};
+	const { formValues, setFormValues, country, setCountry, phone, setPhone } =
+		useContext(DeliveryFormContext);
 
-	const [country, setCountry] = useState('');
-	const [phone, setPhone] = useState('');
-	const [form, setForm] = useState(defaultFormFields);
-
-	const { firstName, lastName, address, city, state, zipCode } = form;
+	const { firstName, lastName, address, city, state, zipCode } = formValues;
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
-		setForm({ ...form, [name]: value });
+		setFormValues({ ...formValues, [name]: value });
 	};
 
 	const handleSubmit = async (e) => {
@@ -209,16 +200,10 @@ const Delivery = () => {
 									country={'us'}
 									value={phone}
 									onChange={(phone) => setPhone(phone)}
-									name
 								/>
 							</div>
 						</PhoneInputContainer>
-						<CheckboxInputContainer>
-							<div className='use-billing-input'>
-								<input type='checkbox' />
-								<label htmlFor='useBilling'>Use as billing address</label>
-							</div>
-						</CheckboxInputContainer>
+
 						<Button
 							buttonType={ButtonTypeClasses.base}
 							className='continue-btn'
@@ -245,11 +230,11 @@ const Delivery = () => {
 							</div>
 							<div className='order-delivery'>
 								<span>Delivery</span>
-								<span>{deliveryTotal}</span>
+								<span>${deliveryTotal}</span>
 							</div>
 							<div className='order-tax'>
 								<span>Estimated Tax</span>
-								<span>{taxTotal}</span>
+								<span>${taxTotal}</span>
 							</div>
 						</OrderDetails>
 						<OrderTotal>

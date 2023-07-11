@@ -125,11 +125,19 @@ export const LocationInputContainer = styled.div`
 	}
 `;
 
-export const PhoneInputContainer = styled.div``;
+export const PhoneInputContainer = styled.div`
+	.react-tel-input .form-control {
+		width: 48%;
+		height: 3rem;
+	}
+	.react-tel-input .form-control:focus {
+		border: 1px solid #ccc;
+		box-shadow: none;
+	}
 
-export const CheckboxInputContainer = styled.div`
-	input[type='checkbox'] {
-		margin-right: 0.3rem;
-		cursor: pointer;
+	@media only screen and (max-width: 34em) {
+		.react-tel-input .form-control {
+			width: 100%;
+		}
 	}
 `;

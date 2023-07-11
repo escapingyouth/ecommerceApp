@@ -124,6 +124,7 @@ export const CheckoutMain = styled.main`
 	}
 	@media only screen and (max-width: 26em) {
 		padding: 0.5em;
+		/* overflow: hidden; */
 	}
 `;
 
