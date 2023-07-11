@@ -21,7 +21,7 @@ const App = () => {
 	useEffect(() => {
 		const timeoutId = setTimeout(() => {
 			setIsLoading(false);
-		}, 700000000);
+		}, 5000);
 
 		return () => clearTimeout(timeoutId);
 	}, []);
